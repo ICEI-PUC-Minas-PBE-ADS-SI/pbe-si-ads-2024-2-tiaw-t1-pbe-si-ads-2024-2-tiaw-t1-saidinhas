@@ -1,18 +1,20 @@
-# Nome do projeto
+# Saidinhas
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O objetivo do projeto é desenvolver uma aplicação web que sugere novos restaurantes e locais de lazer para os usuários, com base em suas preferências e filtros personalizados. A aplicação utiliza gamificação para engajar os usuários, propondo desafios e recompensas à medida que exploram novos estabelecimentos e pratos. A ideia é criar uma plataforma dinâmica que beneficie tanto os consumidores finais quanto os estabelecimentos, utilizando elementos lúdicos para criar uma experiência divertida ao cliente enquanto proporciona aos restaurantes uma forma inovadora de atrair clientes.
+
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Edimar Henrique Caetano
+* Gabriel Henrique da Silva Santos
+* Geovanna Quezia Oliveira de Cassia
+* Krycia Figueiredo Azevedo
+* Sara de Almeida Pasolini
+* Yasmym Silva Cardoso
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Clóvis Lemos Tavares
 
 
 
