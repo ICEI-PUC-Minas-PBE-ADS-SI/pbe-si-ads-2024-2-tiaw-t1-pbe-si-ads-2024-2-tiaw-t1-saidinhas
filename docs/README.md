@@ -2,13 +2,16 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** Saidinhas
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Edimar Henrique Caetano](https://github.com/Edimar09)
+  * [Gabriel Henrique da Silva Santos](https://github.com/gabrielHS204)
+  * [Geovanna Quezia Oliveira de Cassia](https://github.com/GeovannaCassia)
+  * [Krycia Figueiredo Azevedo](https://github.com/Kryciaf)
+  * [Sara de Almeida Pasolini](https://github.com/SaraPasolini)
+  * [Yasmym Silva Cardoso](https://github.com/Yasmym-silva)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -28,73 +31,73 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+ A indústria de restaurantes enfrenta um cenário complexo, onde a concorrência acirrada e a evolução das expectativas do consumidores criam desafios significativos para atrair novos clientes, engajar os atuais, enquanto lidam com a pressão por serviços de alta qualidade e eficiência. Paralelamente, os consumidores se deparam com a dificuldade de encontrar novos lugares para explorar em meio a um mar de opções, resultando em frustração e indecisão.
+ 
+ A falta de uma ferramenta que conecte de maneira eficaz os consumidores a estabelecimentos que atendam suas preferências e desejos pode levar à perda de oportunidades tanto para os clientes quanto para os restaurantes (SERRA, 2020).
+ 
+ O desafio que este projeto pretende solucionar está relacionado diretamente com a criação de uma solução tecnológica que não apenas melhore a eficiência operacional dos restaurantes, mas também proporcione aos consumidores uma forma simples e eficaz de descobrir novos lugares que se alinhem aos seus interesses. Disponibilizar uma aplicação útil, que consiga capturar a atenção e engajar usuários, por meio de ferramentas interativas, como sistemas de recompensas, níveis e contagem de pontos que são acumulados ao completar desafios.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O principal objetivo deste projeto é desenvolver uma solução intuitiva que facilite a busca por restaurantes, bares e centros comerciais para momentos de socialização e refeições. Além de melhorar a experiência do cliente ao encontrar o local ideal, a solução também servirá como uma ferramenta para os proprietários gerenciarem seus clientes e aprimorarem o atendimento.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+    3.1 Objetivos Específicos
+    
+* Desenvolver uma aplicação que simplifique a busca e escolha do cliente por restaurantes e bares;
+* Implementar um sistema de gamificação, com recompensas, para incentivar e premiar os clientes;
+* Analisar os fatores que mais atraem e ajudam na retenção de clientes;
+* Proporcionar uma análise sobre a adoção de tecnologias de gestão empresarial customizando relatórios de acesso de usuários;
+* Melhorar a eficiência operacional relacionada ao serviço de reservas e gestão de pagamentos;
+* Conectar os donos de estabelecimentos diretamente com o cliente final
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+A escolha de desenvolver uma solução que facilite a busca por restaurantes, bares e centros comerciais pode ser justificada pela crescente demanda dos consumidores por experiências gastronômicas personalizadas e ágeis, além do desafio de proprietários de restaurantes e bares de se destacar em um mercado saturado, onde a reputação online e o engajamento do cliente são cruciais para o sucesso.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Em um cenário onde a concorrência é intensa e as opções são vastas, é essencial que os clientes possam encontrar rapidamente locais que atendam às suas preferências e necessidades. A dificuldade em fazer essas escolhas pode levar à insatisfação e desmotivação.
+
+Sair para comer em bares e restaurantes já é um hábito bastante enraizado dos brasileiros. 93% dos entrevistados fazem refeições fora do lar, mais da metade deles de duas a cinco vezes por mês. O principal motivo é o lazer, como ir a alguma celebração ou festa (76,6%), conversar com amigos e se divertir (76,3%) ou beber (64,8%). Dessa forma, otimizar o tempo na escolha de um ambiente agradável, é essencial para que o cliente se sinta mais motivado a consumir algo fora de sua casa e tornar o estabelecimento mais propício à procura na sua região (VIEIRA, 2024).
+
+Um estudo que aborda essa necessidade foi conduzido por GOMES (2023), que relata que, numa pesquisa inicial realizada com 65 participantes entre 18 e 60 anos sobre a criação de um aplicativo para mapeamento de estabelecimentos no ramo alimentício, 100% dos entrevistados responderam que o aplicativo ajudaria. Desses, 26,9% disseram sair para comer fora de casa 1 vez na semana, e ainda 91% gostam de conhecer novos lugares para comer. E 97% deles afirmou que o aplicativo mudaria a forma com que conduzem as buscas por esses novos lugares.
+
+Esses dados, aliados aos dados já mencionados, corroboram fortemente a importância da criação de um ambiente para resolução da carência na procura por locais, como bares e restaurantes, uma vez que aumentaria a praticidade e traria mais satisfação no ato da procura. A implementação de uma plataforma que não apenas facilite a descoberta de novos estabelecimentos, mas também ofereça recursos para gerenciamento de reservas e pagamentos e disponibilize de forma “lúdica” a gamificação como forma de incentivo pode resultar em uma relação mais forte entre consumidores e restaurantes e torna a experiência mais envolvente, incentivando a fidelização e promovendo visitas regulares.
+
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Embora seja um desafio descobrir novos locais para refeições ou lazer, e até mesmo encontrar opções gastronômicas que se destaquem, o público-alvo desta aplicação foi definido como homens e mulheres de todas as faixas etárias, com interesse em explorar novos restaurantes e bares e que busquem mais autonomia na escolha do local ideal.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Para entender melhor nosso público, conduzimos entrevistas qualitativas, que revelaram alguns pontos de interesse
+ 1. É comum observar que os usuários frequentemente enfrentam dificuldades ao tentar identificar um local interessante para suas saídas de lazer. Essa dificuldade surge, em grande parte, da vasta quantidade de opções disponíveis, o que pode gerar uma sensação de indecisão. Além disso, muitos usuários não têm acesso a informações claras e detalhadas dos estabelecimentos, como atrações específicas, eventos especiais, reputação do local, opiniões de outros clientes e a relação custo-benefício ou características únicas que poderiam tornar o local mais atraente. Esse processo de decisão é muitas vezes impactado pela falta de ferramentas eficazes que ajudem a comparar as diferentes opções de maneira prática e objetiva;
+
+ 2. Para a escolha do local ideal para sair, os usuários tendem a preferir ambientes que ofereçam não apenas entretenimento, mas também uma experiência gastronômica de alta qualidade. Eles valorizam espaços que proporcionem um equilíbrio entre diversão e conforto, como áreas amplas e agradáveis para descanso, e uma variedade de opções de alimentação que atendam às mais diversas preferências. A infraestrutura do local, acessibilidade, design acolhedor e o conforto oferecido, também é um fator decisivo para a escolha. Locais que conseguem atender a essas expectativas tendem a se destacar e a conquistar uma base fiel de visitantes;
+ 
+ 3. As ferramentas de busca são projetadas para serem eficientes, sobretudo quando o usuário sabe como utilizá-las adequadamente. No entanto, usuários com menos conhecimento ou experiência nessas plataformas podem enfrentar diversos obstáculos durante a busca. Um exemplo comum é não saber exatamente quais termos de pesquisa usar, o que pode resultar em respostas irrelevantes ou abrangentes, fazendo com que o usuário não encontre exatamente o que procura;
+ 
+ 4. Usuários que tiveram experiências positivas em um local, muitas vezes sentem-se motivados a compartilhar essa experiência com outras pessoas e tendem a se sentir à vontade para recomendar o local. Entretanto, é importante destacar que, embora o desejo de recomendar seja alto, muitos usuários preferem fazê-lo de maneira informal. Em vez de usar aplicativos ou plataformas online para deixar suas avaliações, muitos ainda optam por recomendar verbalmente durante conversas pessoais com conhecidos.
+ 
+Foi também elaborado um questionário direcionado aos proprietários de centros comerciais mas, infelizmente, não recebemos respostas.
+
+---
 
 # Product Discovery
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+- [Matriz CSD](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/blob/1d0042e50dc12149b251bd1d59941c8a42697a8c/docs/files/02%20-%20Matriz%20CSD.md)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+- [Mapa de stakeholders e perfil do usuário](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/blob/master/docs/files/Mapa%20de%20stakeholders%20e%20perfil%20de%20usu%C3%A1rio.pdf)
+
+- [Entrevistas qualitativas e Highlights de pesquisa](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/blob/1d0042e50dc12149b251bd1d59941c8a42697a8c/docs/files/Entrevista%20e%20Highlights%20de%20Pesquisa%20.pdf)
+
+
+
+-- -- -- - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+
+
+
 
 ## Etapa de Definição
 
