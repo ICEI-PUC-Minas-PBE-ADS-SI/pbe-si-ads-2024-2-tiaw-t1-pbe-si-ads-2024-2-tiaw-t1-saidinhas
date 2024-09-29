@@ -1,6 +1,7 @@
 # Saidinhas
 
-O objetivo do projeto é desenvolver uma aplicação web que sugere novos restaurantes e locais de lazer para os usuários, com base em suas preferências e filtros personalizados. A aplicação utiliza gamificação para engajar os usuários, propondo desafios e recompensas à medida que exploram novos estabelecimentos e pratos. A ideia é criar uma plataforma dinâmica que beneficie tanto os consumidores finais quanto os estabelecimentos, utilizando elementos lúdicos para criar uma experiência divertida ao cliente enquanto proporciona aos restaurantes uma forma inovadora de atrair clientes.
+O objetivo do projeto é desenvolver uma aplicação web que sugere novos restaurantes e locais de lazer para os usuários, com base em suas preferências e filtros personalizados. A aplicação utiliza gamificação para engajar os usuários, propondo desafios e recompensas à medida que exploram novos estabelecimentos e pratos.
+A ideia é criar uma plataforma dinâmica que beneficie tanto os consumidores finais quanto os estabelecimentos, utilizando elementos lúdicos para criar uma experiência divertida ao cliente enquanto proporciona aos restaurantes uma forma inovadora de atrair clientes.
 
 
 ## Alunos integrantes da equipe
