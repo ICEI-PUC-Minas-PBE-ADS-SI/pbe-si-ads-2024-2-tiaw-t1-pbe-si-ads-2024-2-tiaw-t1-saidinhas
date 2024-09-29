@@ -21,7 +21,7 @@
 | 5. Facilitar a gestão de clientes, atendimentos, reservas e pagamentos. |
 
 
-# PERSONA
+# Persona 1
 
 **Nome:** João Fernandes  
 **Idade:** 32 anos  
@@ -69,10 +69,53 @@ Essa pessoa não tolera atitudes grosseiras ou esnobes, motivo pelo qual nossa a
 Ela se irrita profundamente quando seus desejos não são atendidos ou quando o local que pretende visitar não corresponde às suas expectativas, causando frustração.
 
 
+# Persona 2
 
-# Persona (Empresarial)
+**Nome:** Ana Clara Lopes  
+**Idade**: 28 anos  
+**Hobby**: Explorar novos restaurantes e bares, fotografia de comida, cozinhar pratos diferentes em casa  
+**Trabalho**: Gerente de Marketing Digital  
+**Personalidade**: Extrovertida, curiosa, adora descobrir novas tendências e compartilhar experiências nas redes sociais.
+**Sonhos**: Abrir sua própria empresa de marketing, escrever um livro e viajar pelo mundo experimentando a culinária de diferentes culturas.
 
-### Nome: Restaurante do Zé
+---
+
+#### Objetos e Lugares
+**Quais objetos físicos e digitais essa pessoa usa? Quando, onde e como ela os usa?**
+
+**Objetos Físicos:**
+- Smartphone - usa constantemente para procurar lugares e tirar fotos.
+- Notebook - trabalha remotamente de cafés e restaurantes.
+- Câmera digital - para fotografia.
+
+**Objetos Digitais:**
+- Aplicativos de redes sociais (Instagram, TikTok) durante o tempo livre, mapas online para planejar suas saídas.
+
+---
+
+#### Objetivos Chave
+**Quais são os objetivos chave da pessoa durante a utilização do serviço? Por que eles precisam deste serviço?**
+
+Descobrir novos restaurantes que se alinhem aos seus gostos, participar de desafios que a motivem a explorar novos lugares e compartilhar essas experiências com seus seguidores. O serviço simplificaria o processo de encontrar novas experiências gastronômicas e encontrar amigos.
+
+---
+
+#### Como Devemos Tratá-la
+**Como devemos tratá-la para que ela se sinta bem? Quais os tipos de comportamento que deixam essa pessoa feliz?**
+
+Devemos oferecer sugestões personalizadas e novidades que a surpreendam. Ana Clara se sente valorizada quando percebe que o serviço a conhece bem e entrega conteúdo relevante. Ela aprecia novos lugares, com novas experiências divertidas, recompensas e interação personalizada.
+
+---
+
+#### Nunca Devemos
+**O que nunca devemos fazer em relação a essa pessoa? Que tipo de atitude ela não suporta? O que deixa essa pessoa furiosa?**
+
+Não devemos ignorar suas preferências, sugestões genéricas poderiam frustrar rapidamente, mas ao mesmo tempo não podemos trazer sugestões sem novidades ou desafios que surpreendam. Como Ana Clara sempre está antenada com as novidades, não podemos deixar de sempre atualizá-la.
+
+
+# Persona 3 (Empresarial)
+
+**Nome**: Restaurante do Zé
 **Setor**: Alimentício  
 **Tamanho**: Empresa de pequeno porte (10 Funcionários)  
 **Tempo de Mercado**: 5 anos
@@ -85,28 +128,28 @@ Aumentar a visibilidade e atrair mais clientes.
 
 ---
 
-### Objetos e Lugares
+#### Objetos e Lugares
 **Quais objetos físicos e digitais essa pessoa usa? Quando, onde e como ela os usa?**
 
-#### Objetos Físicos:
+**Objetos Físicos**:
 - Celular
 - Fotos do serviço
 - Agendamento de mesas
 
-#### Objetos Digitais:
+**Objetos Digitais**:
 - Instagram - Divulgação
 - WhatsApp - Agendamento de mesas
 
 ---
 
-### Objetivos Chave
+#### Objetivos Chave
 **Quais são os objetivos dessa pessoa durante a utilização do serviço? Por que elas precisam deste serviço?**
 
 Ao utilizar essa aplicação, o restaurante ganhará mais visibilidade, fidelizará clientes e receberá feedbacks valiosos para aprimorar seus serviços. Esse serviço é essencial para melhorar o atendimento, impulsionar a divulgação e atrair novos clientes interessados no que o restaurante oferece.
 
 ---
 
-### Como Devemos Tratá-la
+#### Como Devemos Tratá-la
 **Como devemos tratá-la para que ela se sinta bem? Quais os tipos de comportamento que deixam essa pessoa feliz?**
 
 Devemos oferecer suporte técnico rápido e eficiente, garantindo uma comunicação clara e transparente com o restaurante. Fornecer opções para personalizar a aplicação conforme as necessidades específicas do restaurante.
@@ -115,7 +158,7 @@ Assegurar um treinamento acessível, recursos de apoio contínuos e feedback con
 
 ---
 
-### Nunca Devemos
+#### Nunca Devemos
 **O que nunca devemos fazer em relação a essa pessoa? Que tipo de atitude ela não suporta? O que deixa essa pessoa furiosa?**
 
 É essencial evitar problemas como falhas no processamento de pagamentos, erros no sistema de agendamento e a criação de leads (clientes) falsos. O restaurante não deve reduzir o número de visitas ou diminuir a frequência com que já é frequentado.
@@ -123,3 +166,56 @@ Assegurar um treinamento acessível, recursos de apoio contínuos e feedback con
 Ignorar o feedback do restaurante, não fornecer todas as ferramentas necessárias e não manter uma comunicação clara e eficiente.
 
 Instabilidade na aplicação e não oferecer suporte técnico adequado e atualização suficiente. Falhas constantes no sistema.
+
+
+# Persona 4 (EMPRESARIAL)
+
+**Nome**: Império do Sabor
+**Setor**: Alimentício
+**Tamanho**: Empresa de grande porte (25 Funcionários)
+**Tempo de Mercado**: 15 anos
+
+#### Objetivo:
+Proporcionar um ambiente único e acolhedor, oferecendo uma experiência gastronômica com comida típica brasileira em um espaço que atende e receba todos os tipos de clientes, promovendo uma atmosfera amigável e inclusiva.
+
+#### Desafios:
+Gerenciar a alta demanda de clientes e otimizar o atendimento e agendamento.
+
+---
+
+#### OBJETOS E LUGARES
+**Quais objetos físicos e digitais essa pessoa usa? Quando, onde e como ela os usa?**
+
+**Objetos Físicos**:
+- Celular – Fotos do serviço e agendamento de mesas.
+
+**Objetos Digitais**:
+- Instagram e Facebook – Divulgação, postagem de novidades e cardápios.
+- WhatsApp – Agendamento de mesas.
+
+---
+
+#### OBJETIVOS CHAVE
+**Quais são os objetivos chave da pessoa durante a utilização do serviço? Por que eles precisam deste serviço?**
+
+O restaurante terá uma visão aprimorada da demanda de clientes e poderá gerenciar o atendimento de forma centralizada, incluindo divulgação, pagamentos, agendamentos, reservas e feedbacks. Esse serviço é essencial para compreender melhor o perfil dos clientes, acompanhar a demanda e implementar melhorias contínuas conforme o número de frequentadores aumenta.
+
+---
+
+#### COMO DEVEMOS TRATÁ-LA
+**Como devemos tratá-la para que ela se sinta bem? Quais os tipos de comportamento que deixam essa pessoa feliz?**
+
+Devemos oferecer suporte técnico rápido e eficiente, garantindo uma comunicação clara e transparente com o restaurante. Fornecer opções para personalizar a aplicação conforme as necessidades específicas do restaurante. Gerenciar suas filas para simplificar o processo de agendamento.
+
+Recursos de apoio contínuos e feedback construtivo para facilitar o uso da aplicação. Proporcionar relatórios detalhados e atualizações de novas funções regulares com base nas necessidades e sugestões do restaurante.
+
+---
+
+#### NUNCA DEVEMOS
+**O que nunca devemos fazer em relação a essa pessoa? Que tipo de atitude ela não suporta? O que a deixa essa pessoa furiosa?**
+
+É essencial evitar problemas com falhas no processamento de pagamentos, erros no sistema de agendamento e a criação de leads/clientes falsos. Evitar uma gestão desorganizada, uma interface complicada e um processo de agendamento difícil.
+
+Ignorar o feedback do restaurante, não fornecer todas as ferramentas necessárias e não manter uma comunicação clara e eficiente.
+
+Instabilidade da aplicação e não oferecer suporte técnico adequado. Falhas constantes no sistema.
