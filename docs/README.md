@@ -92,29 +92,11 @@ Foi também elaborado um questionário direcionado aos proprietários de centros
 - [Entrevistas qualitativas e Highlights de pesquisa](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/blob/1d0042e50dc12149b251bd1d59941c8a42697a8c/docs/files/Entrevista%20e%20Highlights%20de%20Pesquisa%20.pdf)
 
 
-
--- -- -- - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-
-
-
-
 ## Etapa de Definição
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+- [Personas Cliente Final e Empresarial](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/blob/1af0a6efe427aaece8ce0fa8e4a8d2cbdff774f3/docs/files/01%20-%20Especifica%C3%A7%C3%A3o%20das%20Personas.md)
 
 # Product Design
 
@@ -122,67 +104,95 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 ## Histórias de Usuários
 
-Com base na análise das personas foram identificadas as seguintes histórias de usuários:
+- Com base na análise das personas foram identificadas as seguintes histórias de usuários para o *Cliente final*:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
+| Eu como [QUEM]         | quero/desejo [O QUE]                                                    | para [POR QUE]                                                                                      |
+|------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Cliente Final           | Me cadastrar no aplicativo                                             | Buscar por novos locais baseados em filtros de minha preferência e participar de desafios para receber e resgatar pontos. |
+| Cliente Final           | Acessar um questionário introdutório sobre minhas preferências         | O aplicativo possa personalizar meus interesses desde o início e já me recomendar locais com base nas minhas respostas.     |
+| Cliente Final           | A descrição por completo do local onde desejo ir                       | De antemão obter informações sobre o seu funcionamento (horários e dias da semana), localização e características. |
+| Cliente Final           | Receber sugestões de restaurantes baseadas em meus gostos              | Eu possa encontrar facilmente lugares que atendam às minhas preferências sem perder muito tempo pesquisando. |
+| Cliente Final           | Aplicar filtros personalizados (ex.: tipo de comida, faixa de preço, proximidade) | Eu possa encontrar lugares que se alinhem exatamente com o que estou buscando no momento. |
+| Cliente Final           | Visualizar o cardápio dos restaurantes sugeridos diretamente no aplicativo | Eu possa avaliar as opções antes de decidir fazer uma visita e tenha maior agilidade no pedido ao chegar lá. |
+| Cliente Final           | Uma ferramenta que me permite fazer reservas online                    | Escolher o local desejado onde quero estar e tornar meu atendimento mais ágil.                         |
+| Cliente Final           | Participar de desafios do tipo "visite o restaurante X este mês"       | Eu possa ganhar recompensas e gamificar minhas saídas com amigos.                                      |
+| Cliente Final           | Uma ferramenta para avaliar pratos e restaurantes                     | Eu possa expressar minha opinião e sempre ver avaliações feitas por outras pessoas sobre os restaurantes. |
+| Cliente Final           | Ter acesso aos lugares que visitei através do histórico               | Eu possa revisitar lugares que já conheci e gostei, acompanhando o histórico das visitas.               |
+| Cliente Final           | Um sistema de gamificação/recompensa                                  | Incentivar a visita aos locais com programas para resgatar pontos, promoções ou cupons.               |
+| Cliente Final           | Ter acesso aos pontos, promoções e cupons que ganhei através do histórico | Automatizar o uso de pontos e cupons para planejar minhas próximas saídas e saber quantos pontos e promoções ainda tenho. |
+| Cliente Final           | Uma ferramenta de busca direta                                        | Para ir diretamente a um lugar que já tenho em mente.                                                 |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+
+- Com base na análise das personas foram identificadas as seguintes histórias de usuários para o *Cliente empresarial*:
+
+
+| Eu como [QUEM]         | quero/desejo [O QUE]                                                    | para [POR QUE]                                                                                      |
+|------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Cliente Empresarial     | Cadastrar meu estabelecimento no aplicativo                            | Permitir que os usuários filtrem suas preferências e encontrem mais facilmente o que oferecemos, com o objetivo de atrair nosso público-alvo de forma mais eficaz. |
+| Cliente Empresarial     | Cadastrar meus horários de funcionamento no aplicativo                 | Os clientes saibam exatamente quando estamos abertos e possam planejar suas visitas.                 |
+| Cliente Empresarial     | Cadastrar meu cardápio, preços, imagens e descrições no aplicativo      | Proporcionar ao nosso cliente uma experiência mais simples ao realizar seu pedido e otimizar o tempo de processamento dos pedidos. |
+| Cliente Empresarial     | Criar e lançar desafios como "visite-nos esta semana e ganhe 10% de desconto" | Eu possa atrair novos clientes e aumentar o movimento em dias de menor demanda.                     |
+| Cliente Empresarial     | Permitir que os clientes façam reservas diretamente pelo aplicativo     | Eu consiga gerenciar melhor a ocupação das mesas e evitar lotação.                                   |
+| Cliente Empresarial     | Receber relatórios sobre quantos clientes completaram os desafios e visitaram o meu local | Eu possa avaliar a eficácia das minhas campanhas e ajustar estratégias futuras.                      |
+| Cliente Empresarial     | Acessar feedback dos clientes após a visita                            | Eu possa entender sua experiência e melhorar continuamente.                                          |
+| Cliente Empresarial     | Um relatório sobre a interação do cliente com meu estabelecimento       | Compreender melhor quantas pessoas visitaram meu estabelecimento através do aplicativo ou quantas acessaram a descrição do local e não realizaram a visita. |
+| Cliente Empresarial     | Um sistema de geolocalização                                           | Facilitar a jornada dos usuários, mostrando a localização, a distância e o tempo necessário para percorrer o trajeto. |
+| Cliente Empresarial     | Uma ferramenta segura para o pagamento                                 | Acelerar o pagamento dos clientes e simplificar o processo do pedido, visando gerenciar um maior número de clientes em uma demanda alta. |
+| Cliente Empresarial     | Um sistema de gamificação e recompensas                                | Assinarmos com o aplicativo com o objetivo de atrair mais clientes, por meio de recompensas (como cupons e descontos), e incentivar a nossa base de usuários. |
+
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+##### Proposta para *Cliente Final*
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
+![Proposta de Valor Cliente Final](docs/images/proposta_valor_cliente_final.png)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+##### Proposta para *Cliente Empresarial*
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+![Proposta de Valor Cliente Empresarial](docs/images/proposta_valor_cliente_empresarial.png)
+
 
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
+| RF   | Requisitos Funcionais                                                                                 | Prioridade |
+| ---- | ------------------------------------------------------------------------------------------------------ | ---------- |
+| RF 01| Cadastro dos usuários que deve incluir os campos obrigatórios: nome completo, CPF/CNPJ, e-mail, telefone, endereço e senha | Alta       |
+| RF 02| Login dos usuários através do e-mail ou telefone                                             | Alta       |
+| RF 03| Questionário inicial para identificar interesses e sugerir opções com base nessas preferências | Alta       |
+| RF 04| Filtro de busca avançada                                                                     | Alta       |
+| RF 05| Histórico de acesso aos locais visitados                                                     | Média      |
+| RF 06| Histórico de recompensas                                                                     | Média      |
+| RF 07| Sistema de reserva                                                                           | Média      |
+| RF 08| Sistema de sugestões ao cliente                                                              | Média      |
+| RF 09| Gamificação (acúmulo de pontos, promoções, cupons)                                           | Alta       |
+| RF 10| Visualizar informações do local, sob a perspectiva do cliente                                | Média      |
+| RF 11| Visualização do cardápio sob a perspectiva do cliente                                        | Média      |
+| RF 12| Acessibilidade, como tema claro e escuro                                                     | Baixa      |
+| RF 13| Sistema de avaliação                                                                         | Média      |
+| RF 14| Sistema de pagamento                                                                         | Média      |
+| RF 15| Suporte ao usuário                                                                           | Alta       |
+| RF 16| Cadastro de cardápio e outros serviços oferecidos pelo cliente comercial                     | Alta       |
+| RF 17| Cadastro de promoções e descontos para a gamificação das visitações ao cliente comercial      | Alta       |
+| RF 18| Relatório sobre a interação do cliente com o comércio                                        | Média      |
+| RF 19| Geolocalização                                                                               | Baixa      |
 
-| ID     | Descrição do Requisito                                   | Prioridade |
-| ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
 
 ### Requisitos não Funcionais
+| RNF   | Requisitos Não Funcionais                                                                                         |
+| ----- | ------------------------------------------------------------------------------------------------------------------ |
+| RNF 01| A aplicação será desenvolvida com HTML 5, CSS e Javascript.                                                        |
+| RNF 02| Legislação - Agência Nacional de Vigilância Sanitária                                                             |
+| RNF 03| Lei Geral de Proteção de Dados Pessoais (LGPD), Lei nº 13.709/2018.                                                |
+| RNF 04| A aplicação fará uso da moeda oficial do Brasil, o real.                                                           |
+| RNF 05| A aplicação fará uso do idioma oficial do Brasil, PT-BR.                                                           |
+| RNF 06| A disponibilidade da aplicação será de 24x7.                                                                      |
+| RNG 07| O tempo de resposta da aplicação não deverá exceder 1 segundo.                                                     |
+| RNF 08| Será utilizado o GitHub como plataforma de desenvolvimento.                                                       |
+| RNF 09| Deverá ser um sistema responsivo para se ajustar a qualquer dispositivo.                                           |
 
-| ID      | Descrição do Requisito                                                              | Prioridade |
-| ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Projeto de Interface
 
@@ -190,42 +200,28 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 ### Wireframes
 
-Estes são os protótipos de telas do sistema.
+- [Estes são os protótipos de telas do sistema](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/blob/7531949e51100c2b30fdef809a738101888aa913/docs/files/Prot%C3%B3tipos.pdf)
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
-
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
-
-Descrição para a tela XPTO
-
-![Exemplo de wireframe](images/exemplo-wireframe.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
+**User FLow Cliente Final**
+![USer Flow Cliente Final](docs/images/flow_cliente_final.png)
 
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
+**User FLow Cliente Empresarial**
+![USer Flow Cliente Empresarial](docs/images/flow_empresarial.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+
+
+
+
+-- -- -- - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+
+
+
+
+
 
 ### Protótipo Interativo
 
