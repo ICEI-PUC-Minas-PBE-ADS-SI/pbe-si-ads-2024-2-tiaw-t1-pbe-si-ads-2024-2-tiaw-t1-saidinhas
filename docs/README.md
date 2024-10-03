@@ -145,11 +145,11 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 ##### Proposta para *Cliente Final*
 
-![Proposta de Valor Cliente Final](docs/images/proposta_valor_cliente_final.png)
+![Proposta de Valor Cliente Final](images/proposta_valor_cliente_final.png)
 
 ##### Proposta para *Cliente Empresarial*
 
-![Proposta de Valor Cliente Empresarial](docs/images/proposta_valor_cliente_empresarial.png)
+![Proposta de Valor Cliente Empresarial](images/proposta_valor_cliente_empresarial.png)
 
 
 ## Requisitos
@@ -206,10 +206,10 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 ### User Flow
 
 **User FLow Cliente Final**
-![USer Flow Cliente Final](docs/images/flow_cliente_final.png)
+![USer Flow Cliente Final](images/flow_cliente_final.png)
 
 **User FLow Cliente Empresarial**
-![USer Flow Cliente Empresarial](docs/images/flow_empresarial.png)
+![USer Flow Cliente Empresarial](images/flow_empresarial.png)
 
 
 
