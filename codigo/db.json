@@ -1,0 +1,86 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": 2,
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "id": 3
+    },
+    {
+      "login": "kry",
+      "senha": "123",
+      "nome": "kry",
+      "email": "kry",
+      "id": 4
+    }
+  ],
+  "menu": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "Entrada",
+        "items": [
+          {
+            "id": 101,
+            "name": "Salada Ceasar",
+            "description": "Salada com alface, croutons, parmesão e molho caesar",
+            "price": "87.00",
+            "available": false,
+            "image_url": "salada"
+          },
+          {
+            "id": 102,
+            "name": "1",
+            "description": "Salada com alface, croutons, parmesão e molho caesar",
+            "price": "0.01",
+            "available": true,
+            "image_url": "salada"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Prato Principal",
+        "items": [
+          {
+            "id": 201,
+            "name": "Filé Mignon com Fritas",
+            "description": "Filé mignon grelhado acompanhado de batatas fritas",
+            "price": "39.90",
+            "available": true,
+            "image_url": "file"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Bebidas",
+        "items": [
+          {
+            "id": 301,
+            "name": "Coca-Cola Lata",
+            "description": "Refrigerante Coca-Cola 350ml",
+            "price": 5,
+            "available": true,
+            "image_url": "refrigerante"
+          }
+        ]
+      }
+    ]
+  }
+}

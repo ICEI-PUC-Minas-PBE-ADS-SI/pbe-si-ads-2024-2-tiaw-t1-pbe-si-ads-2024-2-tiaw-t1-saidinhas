@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saidinhas</title>
+    <link rel="stylesheet" href="../../assets/css/styleRestaurante.css" />
+    <script src="../../assets/js/cardapio.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="logo">
+        <h1>Saidinhas</h1>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-utensils"></i> Cardápio</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
+                    <li><a href="#"><i class="fas fa-tags"></i> Promoções</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#">Sair</a>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="menu-items">
+                <div class="menu-header">
+                    <h2>Cardápio</h2>
+                    <button class="add-btn">Cadastrar</button> <!-- Mover aqui -->
+                </div>
+
+                <nav class="category-nav">
+                    <button class="category-btn" data-category="all">Todos</button>
+                    <button class="category-btn" data-category="Entrada">Entrada</button>
+                    <button class="category-btn" data-category="Prato Principal">Prato Principal</button>
+                    <button class="category-btn" data-category="Bebidas">Bebidas</button>
+                </nav>
+
+                <div id="items-list" class="items-list"></div>
+
+                <div id="items-list-vazio" class="items-list-vazio"></div>
+                
+                <div id="editModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Editar Item</h2>
+                        <form id="editForm">
+                            <label for="itemName">Nome:</label>
+                            <input type="text" id="itemName" name="name" required>
+
+                            <label for="itemDescription">Descrição:</label>
+                            <textarea id="itemDescription" name="description" required></textarea>
+
+                            <label for="itemPrice">Preço:</label>
+                            <input type="number" id="itemPrice" name="price" step="0.01" required>
+
+                            <div class="checkbox-container">
+                                <label for="itemAvailable">Disponível:</label>
+                                <input type="checkbox" id="itemAvailable" name="available">
+                            </div>
+
+                            <button type="submit">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
