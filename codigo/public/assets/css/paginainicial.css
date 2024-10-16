@@ -6,7 +6,7 @@
 }
 
 .left {
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
     overflow: hidden;
   
@@ -19,20 +19,34 @@
     object-fit: cover;
 }
 
+.formulario-container {
+    position: relative;
+    width: 40vw;
+    height: 80vh;
+   margin-left: 80px;
+}
+
+.bemvindo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
 
 .formulario {
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
-
-.formulario img {
-    border: 0%;
-  
+    margin-top: 350px;
+    background-color: transparent;
 }
 
 p {
@@ -43,18 +57,9 @@ p {
 }
 
 .option-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: -100000000%;
-    margin: -1000%;
+    text-decoration: none;
 }
 
 .option-button:hover {
-    background-color: #0056b3;
+    background-color: #c82333;
 }
