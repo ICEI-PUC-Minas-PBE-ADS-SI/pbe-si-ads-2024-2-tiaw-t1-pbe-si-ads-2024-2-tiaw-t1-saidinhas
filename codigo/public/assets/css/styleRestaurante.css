@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -28,7 +29,9 @@ body {
     width: 100%;
     background-color: #e02727;
     color: white;
-    padding: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .logo h1 {
@@ -37,9 +40,9 @@ body {
 }
 
 .menu-header {
-    display: flex; /* Usar flexbox para alinhar os itens */
-    justify-content: space-between; /* Espaciar os itens entre si */
-    align-items: center; /* Centralizar verticalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -60,7 +63,7 @@ body {
 }
 
 .add-btn:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    background-color: #45a049; 
 }
 
 .menu li {
@@ -100,6 +103,7 @@ body {
     flex-grow: 1;
     background-color: #f9f9f9;
     padding: 20px;
+    overflow: auto;
 }
 
 .category-nav {
@@ -130,9 +134,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    /* Importante para permitir o posicionamento absoluto do span */
     margin-bottom: 20px;
-    /* Espaçamento entre os itens */
 }
 
 .items-list {
@@ -152,10 +154,10 @@ body {
     text-align: center;
 }
 
-.items-list-vazio h2 {
-    font-size: 2em;
+.items-list-vazio h2, h3 {
+    font-size: 1.5em;
     color: #888;
-    margin: 0;
+    margin-top: 20px;
 }
 
 .item img {
@@ -174,6 +176,11 @@ body {
     margin-bottom: 5px;
 }
 
+h4 {
+    font-size: 1.6em;
+    color: #868686;
+}
+
 .availability-tag {
     position: absolute;
     top: 10px;
@@ -181,11 +188,9 @@ body {
     font-size: 0.9em;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.8);
-    /* Fundo com opacidade */
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Sombra para destacar */
 }
 
 .edit-btn {
@@ -290,4 +295,81 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100px;
+}
+
+.input-pesquisar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-pesquisar:focus {
+    border-color: #ffc0c0;
+    box-shadow: 0 0 10px rgba(255, 192, 192, 0.5);
+}
+
+.input-pesquisar::placeholder {
+    color: #bbb;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbb;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.select-tipo {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+    background-color: white;
+}
+
+.inputs-wrapper {
+    display: flex;
+    gap: 8px
+}
+
+.select-tipo:focus {
+    border-color: #ffc0c0;
+    box-shadow: 0 0 10px rgba(255, 192, 192, 0.5);
+}
+
+.select-wrapper {
+    width: 200px;
+}
+
+.select-wrapper::after {
+    content: '\25BC';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbb;
+    font-size: 18px;
+    pointer-events: none;
 }

@@ -18,7 +18,7 @@ function criarItem(item, categoryName) {
 
     const img = document.createElement('img');
     const imageName = item.image_url;
-    img.src = `/public/assets/images/${imageName}.jpg`;
+    img.src = `/codigo/public/assets/images/${imageName}.jpg`;
     img.alt = item.name;
 
     const detailsDiv = document.createElement('div');

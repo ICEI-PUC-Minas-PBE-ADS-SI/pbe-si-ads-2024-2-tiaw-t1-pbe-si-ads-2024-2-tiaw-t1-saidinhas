@@ -39,7 +39,7 @@
             "id": 101,
             "name": "Salada Ceasar",
             "description": "Salada com alface, croutons, parmesão e molho caesar",
-            "price": "87.00",
+            "price": "90.00",
             "available": false,
             "image_url": "salada"
           },
@@ -82,5 +82,39 @@
         ]
       }
     ]
-  }
+  },
+  "restaurantes": [
+    {
+      "id": 1,
+      "nome": "Restaurante Mineiro",
+      "tipo": "brasileira",
+      "distancia": "2km",
+      "avaliacao": 4.8,
+      "faixa_preco": "R$ 29,90"
+    },
+    {
+      "id": 2,
+      "nome": "Sushi Express",
+      "tipo": "japonesa",
+      "distancia": "5km",
+      "avaliacao": 4.6,
+      "faixa_preco": "R$ 59,90"
+    },
+    {
+      "id": 3,
+      "nome": "Café Central",
+      "tipo": "cafeterias",
+      "distancia": "1.5km",
+      "avaliacao": 4.7,
+      "faixa_preco": "R$ 19,90"
+    },
+    {
+      "id": 4,
+      "nome": "Fit & Fresh",
+      "tipo": "saudável",
+      "distancia": "3.2km",
+      "avaliacao": 4.9,
+      "faixa_preco": "R$ 23.70"
+    }
+  ]
 }
