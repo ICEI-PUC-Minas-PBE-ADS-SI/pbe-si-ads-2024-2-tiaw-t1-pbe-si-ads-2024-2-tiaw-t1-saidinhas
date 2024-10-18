@@ -193,6 +193,39 @@ h4 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.trash-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-modal-btns {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.delete-modal-btn {
+    background-color: #e02727;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    background-color: #ebebeb;
+    color: black;
+}
+
 .edit-btn {
     background-color: #e02727;
     color: white;

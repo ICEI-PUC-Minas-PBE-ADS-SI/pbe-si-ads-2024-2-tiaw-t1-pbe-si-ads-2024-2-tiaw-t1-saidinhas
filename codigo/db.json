@@ -50,6 +50,22 @@
             "price": "0.01",
             "available": true,
             "image_url": "salada"
+          },
+          {
+            "id": 1729207011841,
+            "name": "Teste krycia",
+            "description": "Descrição",
+            "price": "29.00",
+            "available": true,
+            "image_url": "https://s2-oglobo.glbimg.com/MD1_gg8cx1FgBBx_ZIKBSci1YPA=/0x0:1361x907/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/5/B/5cdNh1RqeRocBOLQRs2g/adega-santiago-ambiente-credito-rodrigo-azevedo-8-1-.jpg"
+          },
+          {
+            "id": 1729211057010,
+            "name": "Test",
+            "description": "adawdad",
+            "price": "323.00",
+            "available": true,
+            "image_url": "https://cdn-0.caminhoslanguages.com/wp-content/uploads/2020/04/traditional-brazilian-foods-1.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1"
           }
         ]
       },
