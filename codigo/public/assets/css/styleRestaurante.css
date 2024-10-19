@@ -141,11 +141,20 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-top: 5px;
 }
 
 .item-details p {
     padding: 6px;
 }
+
+.item-detailsFiltro p {
+    padding: 4px;
+    font-size: 14px;
+}
+
+
+
 
 .items-list-vazio {
     align-items: center;

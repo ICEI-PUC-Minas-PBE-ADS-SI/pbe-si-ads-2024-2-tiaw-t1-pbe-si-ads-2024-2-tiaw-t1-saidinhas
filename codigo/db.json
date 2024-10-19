@@ -87,34 +87,34 @@
     {
       "id": 1,
       "nome": "Restaurante Mineiro",
-      "tipo": "brasileira",
-      "distancia": "2km",
+      "tipo": "Brasileira",
+      "distancia": "2 km",
       "avaliacao": 4.8,
-      "faixa_preco": "R$ 29,90"
+      "faixa_preco": "$"
     },
     {
       "id": 2,
       "nome": "Sushi Express",
-      "tipo": "japonesa",
-      "distancia": "5km",
+      "tipo": "Japonesa",
+      "distancia": "5 km",
       "avaliacao": 4.6,
-      "faixa_preco": "R$ 59,90"
+      "faixa_preco": "$"
     },
     {
       "id": 3,
       "nome": "Café Central",
-      "tipo": "cafeterias",
-      "distancia": "1.5km",
+      "tipo": "Cafeterias",
+      "distancia": "1.5 km",
       "avaliacao": 4.7,
-      "faixa_preco": "R$ 19,90"
+      "faixa_preco": "$$"
     },
     {
       "id": 4,
       "nome": "Fit & Fresh",
-      "tipo": "saudável",
-      "distancia": "3.2km",
+      "tipo": "Saudável",
+      "distancia": "3.2 km",
       "avaliacao": 4.9,
-      "faixa_preco": "R$ 23.70"
+      "faixa_preco": "$$$"
     }
   ]
 }
