@@ -252,7 +252,7 @@ h4 {
     margin: 5% auto;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    width: 50%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: slide-down 0.3s ease-out;
@@ -273,6 +273,20 @@ h4 {
     color: #ff0000;
 }
 
+.close1 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close1:hover {
+    color: #ff0000;
+}
+
 .modal-content h2 {
     margin-top: 0;
     font-size: 24px;
@@ -285,15 +299,16 @@ h4 {
 .modal-content form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .modal-content input[type="text"],
 .modal-content textarea,
+.modal-content select,
 .modal-content input[type="number"] {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 13px;
     border-radius: 5px;
     border: 1px solid #ddd;
     box-sizing: border-box;
@@ -302,6 +317,11 @@ h4 {
 .modal-content textarea {
     resize: vertical;
     min-height: 100px;
+}
+
+.modal-content label {
+    font-size: 15px;
+    margin-top: 5px;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -314,7 +334,7 @@ h4 {
     border: none;
     padding: 12px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: px;
     cursor: pointer;
     transition: background-color 0.3s;
 }

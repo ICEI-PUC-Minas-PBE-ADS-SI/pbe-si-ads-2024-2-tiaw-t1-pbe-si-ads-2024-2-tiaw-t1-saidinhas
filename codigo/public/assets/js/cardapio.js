@@ -41,9 +41,9 @@ function criarItem(item, categoryName) {
 
     const trashBtn = document.createElement('button');
     trashBtn.classList.add('trash-btn');
-    trashBtn.innerHTML = '<i class="fa fa-trash"></i>'; 
+    trashBtn.innerHTML = '<i class="fa fa-trash"></i>';
     trashBtn.id = `trashBtn${item.id}`;
-    trashBtn.addEventListener('click', () => excluirItem(item.id));
+    trashBtn.addEventListener('click', () => abrirModalConfirmacao(item.id));
     trashBtn.style.float = 'left';
     trashBtn.style.color = 'red';
 
@@ -84,12 +84,19 @@ function renderizarCardapio(categories) {
     });
 
     const categoryButtons = document.querySelectorAll('.category-btn');
+
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
             const selectedCategory = button.dataset.category;
             filterItems(selectedCategory, categories);
         });
     });
+
+    const addBtn = document.querySelector('.add-btn');
+
+    addBtn.onclick = function () {
+        abrirModalCadastro()
+    };
 }
 
 function filterItems(selectedCategory, categories) {
@@ -130,14 +137,11 @@ function abrirModalEdicao(item, categoryName) {
 
     editForm.onsubmit = function (e) {
         e.preventDefault();
-
         item.name = document.getElementById('itemName').value;
         item.description = document.getElementById('itemDescription').value;
         item.price = parseFloat(document.getElementById('itemPrice').value);
         item.available = document.getElementById('itemAvailable').checked;
-
         salvarDadosEditados(item, categoryName);
-
         modal.style.display = 'none';
     };
 }
@@ -155,9 +159,6 @@ async function salvarDadosEditados(item, categoryName) {
         filteredItem.price = parseFloat(item.price).toFixed(2);
         filteredItem.available = item.available;
 
-        console.log('Item atualizado:', filteredItem);
-        console.log('Data atualizado:', data);
-
         const updateResponse = await fetch(`${API_URL}`, {
             method: 'PUT',
             headers: {
@@ -169,33 +170,114 @@ async function salvarDadosEditados(item, categoryName) {
         if (!updateResponse.ok) {
             throw new Error('Erro ao atualizar o item: ' + updateResponse.statusText);
         }
-
-        const updatedData = await updateResponse.json();
-        console.log('Dados atualizados com sucesso:', updatedData);
     } catch (error) {
         console.error('Erro:', error);
     }
 }
 
-let itemToDeleteId;
+function abrirModalCadastro() {
+    const modal = document.getElementById('addModal');
+    const closeBtn = document.querySelector('.modal .close1');
+    const cadastroForm = document.getElementById('addForm');
 
-async function excluirItem(itemId) {
-    itemToDeleteId = itemId; 
-    const confirmDeleteModal = document.getElementById('confirmDeleteModal');
-    confirmDeleteModal.style.display = 'block'; 
+    modal.style.display = 'block';
+
+    closeBtn.onclick = function () {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    cadastroForm.onsubmit = function (e) {
+        e.preventDefault();
+        const newItem = {
+            name: document.getElementById('newItemName').value,
+            description: document.getElementById('newItemDescription').value,
+            price: parseFloat(document.getElementById('newItemPrice').value),
+            available: document.getElementById('newItemAvailable').checked,
+            image_url: document.getElementById('newItemImage').value
+        };
+
+        const categoryName = document.getElementById('newItemCategory').value;
+
+        salvarNovoItem(newItem, categoryName);
+        modal.style.display = 'none';
+    };
 }
 
+async function salvarNovoItem(item, categoryName) {
+    const response = await fetch(`${API_URL}`);
+    const data = await response.json();
 
-document.getElementById('confirmDeleteBtn').onclick = async function () {
+    const filteredCategory = data.categories.find(category => category.name === categoryName);
+
+    if (filteredCategory) {
+        item.id = Date.now();
+        filteredCategory.items.push(item);
+    } else {
+        console.error('Categoria não encontrada.');
+        return;
+    }
+
+    const updateResponse = await fetch(`${API_URL}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
+    if (!updateResponse.ok) {
+        throw new Error('Erro ao salvar o novo item: ' + updateResponse.statusText);
+    }
+}
+
+function abrirModalConfirmacao(itemId) {
+    const confirmModal = document.getElementById('confirmDeleteModal');
+    const confirmBtn = document.getElementById('confirmDeleteBtn');
+    const cancelBtn = document.getElementById('cancelDeleteBtn');
+    const closeBtn = document.querySelector('#confirmDeleteModal .close');
+
+    confirmModal.style.display = 'block';
+
+    function fecharModal() {
+        confirmModal.style.display = 'none';
+    }
+
+    confirmBtn.onclick = function () {
+        excluirItem(itemId);
+        fecharModal();
+    };
+
+    cancelBtn.onclick = closeBtn.onclick = function () {
+        fecharModal();
+    };
+
+    window.onclick = function (event) {
+        if (event.target === confirmModal) {
+            fecharModal();
+        }
+    };
+}
+
+async function excluirItem(itemId) {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(`${API_URL}`);
         const data = await response.json();
 
         data.categories.forEach(category => {
-            category.items = category.items.filter(item => item.id !== itemToDeleteId);
+            const itemIndex = category.items.findIndex(item => item.id === itemId);
+            if (itemIndex !== -1) {
+                category.items.splice(itemIndex, 1);
+
+            }
         });
 
-        const updateResponse = await fetch(API_URL, {
+        const updateResponse = await fetch(`${API_URL}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -204,86 +286,12 @@ document.getElementById('confirmDeleteBtn').onclick = async function () {
         });
 
         if (!updateResponse.ok) {
-            throw new Error('Erro ao excluir o item: ' + updateResponse.statusText);
+            throw new Error('Erro ao atualizar o cardápio: ' + updateResponse.statusText);
         }
 
-        console.log('Item excluído com sucesso');
-        carregarCardapio(renderizarCardapio);
-        document.getElementById('confirmDeleteModal').style.display = 'none'; 
+        renderizarCardapio(data.categories);
     } catch (error) {
-        console.error('Erro:', error);
-    }
-};
-
-document.getElementById('cancelDeleteBtn').onclick = function () {
-    document.getElementById('confirmDeleteModal').style.display = 'none'; 
-};
-
-document.querySelector('#confirmDeleteModal .close').onclick = function () {
-    document.getElementById('confirmDeleteModal').style.display = 'none'; 
-};
-
-const addBtn = document.querySelector('.add-btn');
-const addModal = document.getElementById('addModal');
-const closeAddModalBtn = document.querySelector('#addModal .close');
-const addForm = document.getElementById('addForm');
-
-addBtn.onclick = function () {
-    addModal.style.display = 'block';
-};
-
-closeAddModalBtn.onclick = function () {
-    addModal.style.display = 'none';
-};
-
-window.onclick = function (event) {
-    if (event.target == addModal) {
-        addModal.style.display = 'none';
-    }
-};
-
-addForm.onsubmit = async function (e) {
-    e.preventDefault();
-
-    const newItem = {
-        id: Date.now(),
-        name: document.getElementById('addItemName').value,
-        description: document.getElementById('addItemDescription').value,
-        price: parseFloat(document.getElementById('addItemPrice').value).toFixed(2),
-        available: document.getElementById('addItemAvailable').checked,
-        image_url: document.getElementById('addItemImageUrl').value
-    };
-
-    await salvarNovoItem(newItem);
-    addModal.style.display = 'none';
-};
-
-async function salvarNovoItem(newItem) {
-    try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
-
-        data.categories[0].items.push(newItem);
-
-        const updateResponse = await fetch(API_URL, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        if (!updateResponse.ok) {
-            throw new Error('Erro ao cadastrar o item: ' + updateResponse.statusText);
-        }
-
-        const updatedData = await updateResponse.json();
-        console.log('Novo item cadastrado com sucesso:', updatedData);
-
-        carregarCardapio(renderizarCardapio);
-
-    } catch (error) {
-        console.error('Erro:', error);
+        console.error('Erro ao excluir item:', error);
     }
 }
 
