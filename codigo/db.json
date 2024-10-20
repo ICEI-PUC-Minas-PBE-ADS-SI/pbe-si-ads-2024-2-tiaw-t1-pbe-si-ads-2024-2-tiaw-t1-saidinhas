@@ -1,4 +1,14 @@
 {
+  "paginaIncial": [
+    {
+      "id": 1,
+      "opcao": "Tenho um CNPJ"
+    },
+    {
+      "id": 2,
+      "opcao": "Buscar Restaurantes"
+    }
+  ],
   "usuarios": [
     {
       "id": 1,
@@ -27,6 +37,30 @@
       "nome": "kry",
       "email": "kry",
       "id": 4
+    },
+    {
+      "nome": "tccfcfvhb",
+      "cnpj": "858493959",
+      "email": "fhufhu@whuwh",
+      "cep": "122345",
+      "logradouro": "57347hsjs",
+      "bairro": "fjdfhjfh",
+      "cidade": "rheuhrurh",
+      "estado": "hhsuhw",
+      "senha": "1",
+      "id": 5
+    },
+    {
+      "nome": "po",
+      "cnpj": "8679076",
+      "email": "fhufhu@444",
+      "cep": "122345",
+      "logradouro": "547hsjs",
+      "bairro": "fhjfh",
+      "cidade": "rheurh",
+      "estado": "hhw",
+      "senha": "444",
+      "id": 6
     }
   ],
   "menu": {
@@ -131,6 +165,44 @@
       "distancia": "3.2km",
       "avaliacao": 4.9,
       "faixa_preco": "R$ 23.70"
+    }
+  ],
+  "usuario": [
+    {
+      "nome completo": "Barbie Vitória",
+      "cpf": "85890923400",
+      "email": "barbie@gmail.com",
+      "cep": "0000006",
+      "logradouro": "rua pink",
+      "bairro": "sonhos",
+      "cidade": "Malibu",
+      "estado": "texas",
+      "senha": "0000",
+      "id": 1
+    },
+    {
+      "nome": "tutut",
+      "cpf": "456789",
+      "email": "tutu@gmail.com",
+      "cep": "34678",
+      "logradouro": "fgrtcjde",
+      "bairro": "ertyu",
+      "cidade": "juijklo",
+      "estado": "tyhbngfo",
+      "senha": "00",
+      "id": 2
+    },
+    {
+      "nome": "tutut",
+      "cpf": "456789",
+      "email": "tutu@gmail.com",
+      "cep": "34678",
+      "logradouro": "fgrtcjde",
+      "bairro": "ertyu",
+      "cidade": "juijklo",
+      "estado": "tyhbngfo",
+      "senha": "00",
+      "id": 3
     }
   ]
 }
