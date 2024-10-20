@@ -191,8 +191,8 @@
   ]
 }
 
-{
-  "doctype": "html",
+
+ { "apre": "html",
   "html": {
     "lang": "pt-BR",
     "head": {
@@ -337,3 +337,4 @@
     }
   }
 }
+
