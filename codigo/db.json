@@ -73,33 +73,9 @@
             "id": 101,
             "name": "Salada Ceasar",
             "description": "Salada com alface, croutons, parmesão e molho caesar",
-            "price": "90.00",
+            "price": "87.00",
             "available": false,
             "image_url": "salada"
-          },
-          {
-            "id": 102,
-            "name": "1",
-            "description": "Salada com alface, croutons, parmesão e molho caesar",
-            "price": "0.01",
-            "available": true,
-            "image_url": "salada"
-          },
-          {
-            "id": 1729207011841,
-            "name": "Teste krycia",
-            "description": "Descrição",
-            "price": "29.00",
-            "available": true,
-            "image_url": "https://s2-oglobo.glbimg.com/MD1_gg8cx1FgBBx_ZIKBSci1YPA=/0x0:1361x907/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/5/B/5cdNh1RqeRocBOLQRs2g/adega-santiago-ambiente-credito-rodrigo-azevedo-8-1-.jpg"
-          },
-          {
-            "id": 1729211057010,
-            "name": "Test",
-            "description": "adawdad",
-            "price": "323.00",
-            "available": true,
-            "image_url": "https://cdn-0.caminhoslanguages.com/wp-content/uploads/2020/04/traditional-brazilian-foods-1.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1"
           }
         ]
       },
@@ -114,6 +90,14 @@
             "price": "39.90",
             "available": true,
             "image_url": "file"
+          },
+          {
+            "name": "PF",
+            "description": "PF grande",
+            "price": "30.00",
+            "available": false,
+            "image_url": "https://img.freepik.com/fotos-gratis/composicao-de-comida-brasileira-deliciosa-de-alto-angulo_23-2148739223.jpg?t=st=1729356547~exp=1729360147~hmac=c6e4901b8fbd3ef49731ce6b789570aa4cdc5101a9e6ee4380484aad4b442505&w=826",
+            "id": 1729356578957
           }
         ]
       },
@@ -137,34 +121,34 @@
     {
       "id": 1,
       "nome": "Restaurante Mineiro",
-      "tipo": "brasileira",
-      "distancia": "2km",
+      "tipo": "Brasileira",
+      "distancia": "2 km",
       "avaliacao": 4.8,
-      "faixa_preco": "R$ 29,90"
+      "faixa_preco": "$"
     },
     {
       "id": 2,
       "nome": "Sushi Express",
-      "tipo": "japonesa",
-      "distancia": "5km",
+      "tipo": "Japonesa",
+      "distancia": "5 km",
       "avaliacao": 4.6,
-      "faixa_preco": "R$ 59,90"
+      "faixa_preco": "$"
     },
     {
       "id": 3,
       "nome": "Café Central",
-      "tipo": "cafeterias",
-      "distancia": "1.5km",
+      "tipo": "Cafeterias",
+      "distancia": "1.5 km",
       "avaliacao": 4.7,
-      "faixa_preco": "R$ 19,90"
+      "faixa_preco": "$$"
     },
     {
       "id": 4,
       "nome": "Fit & Fresh",
-      "tipo": "saudável",
-      "distancia": "3.2km",
+      "tipo": "Saudável",
+      "distancia": "3.2 km",
       "avaliacao": 4.9,
-      "faixa_preco": "R$ 23.70"
+      "faixa_preco": "$$$"
     }
   ],
   "usuario": [

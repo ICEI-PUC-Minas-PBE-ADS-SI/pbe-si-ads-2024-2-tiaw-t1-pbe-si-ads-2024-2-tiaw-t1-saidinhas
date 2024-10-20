@@ -1,0 +1,124 @@
+#navbar {
+    background-color: #e02727 !important;
+}
+
+#logo {
+    width: 100px;
+}
+
+#menu_lateral {
+    width: 100px;
+    height: 100% !important;
+    background-color: #e02727;
+}
+
+#logout {
+    margin-top: 450px !important;
+}
+
+.item-menu {
+    text-decoration: none;
+}
+
+.sidebar {
+    height: 100vh; 
+    background-color: #e02727;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.photo-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.photo-item img {
+    width: 70%;
+}
+
+.photo-item button {
+    align-self: center;
+}
+
+.nav-item button {
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.nav-item button:hover {
+    background-color: #e02727;
+    color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Remove pontos das listas */
+.menu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu li {
+    padding: 10px 0px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 10px;
+    position: relative;
+}
+
+.menu li a i {
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.menu li a.active,
+.menu li a:hover {
+    background-color: #b30000;
+}
+
+.logout {
+    margin-top: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+}

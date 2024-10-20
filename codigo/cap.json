@@ -1,0 +1,265 @@
+{
+    "document": {
+      "type": "html",
+      "lang": "pt-BR",
+      "head": {
+        "meta": [
+          {
+            "charset": "UTF-8"
+          },
+          {
+            "name": "viewport",
+            "content": "width=device-width, initial-scale=1.0"
+          }
+        ],
+        "title": "Cardápio",
+        "link": {
+          "rel": "stylesheet",
+          "href": "cap.css"
+        }
+      },
+      "body": {
+        "header": {
+          "logo": {
+            "link": {
+              "href": "apresentacard.html",
+              "class": "nav-link",
+              "image": {
+                "src": "logo.jpg",
+                "alt": "logo"
+              }
+            }
+          },
+          "title": "informações do Cardápio",
+          "icons": {
+            "button": {
+              "class": "btn btn-danger",
+              "text": "Login"
+            }
+          }
+        },
+        "container": {
+          "menu_sections": [
+            {
+              "title": "Entradas",
+              "cards": [
+                {
+                  "image": {
+                    "src": "sando.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Sanduíche natural",
+                  "description": "É um alimento composto por duas fatias de pão com um recheio entre elas.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 15,00",
+                    "points": 5
+                  }
+                },
+                {
+                  "image": {
+                    "src": "sushi.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Sushi",
+                  "description": "É um bolinho de arroz enrolado com uma alga.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 35,00",
+                    "points": 12
+                  }
+                },
+                {
+                  "image": {
+                    "src": "tomato.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Bruschetta",
+                  "description": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 20,00",
+                    "points": 8
+                  }
+                },
+                {
+                  "image": {
+                    "src": "salada.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Salada Caprese",
+                  "description": "É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 25,00",
+                    "points": 9
+                  }
+                }
+              ]
+            },
+            {
+              "title": "Pratos Principais",
+              "cards": [
+                {
+                  "image": {
+                    "src": "bife.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Filé Mignon",
+                  "description": "Filé de carne bovina grelhado, servido com molho de vinho tinto.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 55,00",
+                    "points": 25
+                  }
+                },
+                {
+                  "image": {
+                    "src": "risoto.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Risoto de Frutos do Mar",
+                  "description": "Arroz arbóreo cremoso com camarões, lulas e mexilhões.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 45,00",
+                    "points": 22
+                  }
+                },
+                {
+                  "image": {
+                    "src": "rice.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Arroz e feijão",
+                  "description": "arroz soltinho com feijão com muito caldo, servido em um prato.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 18,00",
+                    "points": 14
+                  }
+                },
+                {
+                  "image": {
+                    "src": "pasta.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Macarrão ao molho",
+                  "description": "Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 22,00",
+                    "points": 20
+                  }
+                }
+              ]
+            },
+            {
+              "title": "Sobremesas",
+              "cards": [
+                {
+                  "image": {
+                    "src": "torta.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Torta de Limão",
+                  "description": "Deliciosa torta de limão com merengue e base crocante.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 18,00",
+                    "points": 28
+                  }
+                },
+                {
+                  "image": {
+                    "src": "gelato.jpg",
+                    "alt": "comida",
+                    "style": {
+                      "width": "200px",
+                      "border_radius": "8px"
+                    }
+                  },
+                  "title": "Gelato de Chocolate",
+                  "description": "Gelato cremoso de chocolate, feito com chocolate belga.",
+                  "button": {
+                    "text": "Mais informações",
+                    "onclick": "mostrarInfo(this)"
+                  },
+                  "info": {
+                    "price": "R$ 15,00",
+                    "points": 18
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "script": "function mostrarInfo(button) { const info = button.nextElementSibling; info.style.display = info.style.display === 'block' ? 'none' : 'block'; }"
+      }
+    }
+  }
+  
+  
