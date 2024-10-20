@@ -1,0 +1,253 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #f00;
+}
+.menu-section {
+    margin-bottom: 20px;
+}
+.card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.card h3 {
+    margin: 0;
+    color: #ff0000;
+}
+.card p {
+    color: #555;
+}
+.button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #245d44;
+}
+.info {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+    font-style: italic;
+}
+header {
+background-color: rgb(227, 49, 33);
+color: white;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header .logo {
+font-size: 24px;
+font-weight: bold;
+margin-left: 20px;
+}
+.header input {
+padding: 5px;
+border-radius: 5px;
+border: none;
+
+}
+.header .icons {
+display: flex;
+align-items: center;
+margin-right: 20px;
+
+}
+
+
+
+.header .icons a {
+color: #fff;
+margin-left: 15px;
+text-decoration: none;
+font-size: 18px;
+}
+
+
+header h1 {
+margin: 0;
+}
+
+header input[type="text"] {
+padding: 8px;
+border-radius: 5px;
+border: none;
+margin-right: 10px;
+}
+
+header button {
+background-color: white;
+border: none;
+border-radius: 5px;
+padding: 8px 15px;
+cursor: pointer;
+}
+/* Responsividade */
+@media (max-width: 1200px)and  (max-width: 1024px) {
+    .filter-section {
+        width: 30%; /* Ajusta a largura para telas médias */
+        margin-right: 15px; /* Ajusta a margem */
+    }
+  
+    .explorer-section {
+        width: 70%; /* Ajusta a largura para telas médias */
+    }
+  }
+  @media (max-width: 1024px) {
+    #Device
+    #Laptop
+    .filter-section {
+        width: 30%; /* Ajusta a largura para telas médias */
+        margin-right: 15px; /* Ajusta a margem */
+    }
+  
+    .explorer-section {
+        width: 70%; /* Ajusta a largura para telas médias */
+    }
+  }
+  @media (max-width: 1400px) {
+    .filter-section {
+        width: 30%; /* Ajusta a largura para telas médias */
+        margin-right: 15px; /* Ajusta a margem */
+    }
+  
+    .explorer-section {
+        width: 70%; /* Ajusta a largura para telas médias */
+    }
+  }
+  @media (max-width: 575.98px)and (max-width: 767.98px) {
+    #Device
+    #Tablet
+    .search-bar input {
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
+    }
+  
+    .item-card p {
+        font-size: 14px; /* Tamanho de fonte menor nos cards */
+    }
+  
+    /* Ajustes para garantir que o layout se mantenha coerente */
+    .container {
+        flex-direction: column; /* Altera a direção do container para coluna em telas menores */
+    }
+  }
+  @media (max-width: 575.98px) {
+    #Device
+    .search-bar input {
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
+    }
+  
+    .item-card p {
+        font-size: 14px; /* Tamanho de fonte menor nos cards */
+    }
+  
+    /* Ajustes para garantir que o layout se mantenha coerente */
+    .container {
+        flex-direction: column; /* Altera a direção do container para coluna em telas menores */
+    }
+  }
+  
+  @media (max-width: 576px)  {
+    .search-bar input {
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
+    }
+  
+    .item-card p {
+        font-size: 14px; /* Tamanho de fonte menor nos cards */
+    }
+  
+    /* Ajustes para garantir que o layout se mantenha coerente */
+    .container {
+        flex-direction: column; /* Altera a direção do container para coluna em telas menores */
+    }
+  }
+  
+    
+  @media (max-width: 767.98px) {
+    #Device
+    #Tablet
+    .search-bar input {
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
+    }
+  
+    .item-card p {
+        font-size: 14px; /* Tamanho de fonte menor nos cards */
+    }
+  
+    /* Ajustes para garantir que o layout se mantenha coerente */
+    .container {
+        flex-direction: column; /* Altera a direção do container para coluna em telas menores */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .filter-section {
+        width: 100%; /* Fica em linha única em telas menores */
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+  
+    .explorer-section {
+        width: 100%; /* Fica em linha única em telas menores */
+    }
+  
+    .explorer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+    }
+  }
+  @media (max-width: 900px) and  (max-width: 932px) {
+    #Device
+    .filter-section {
+        width: 100%; /* Fica em linha única em telas menores */
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+  
+    .explorer-section {
+        width: 100%; /* Fica em linha única em telas menores */
+    }
+  
+    .explorer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+    }
+  }
+  
+  
+  @media (max-width: 768px) {}
+    .search-bar input {
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
+    }
+  
