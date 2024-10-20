@@ -190,3 +190,150 @@
     }
   ]
 }
+
+{
+  "doctype": "html",
+  "html": {
+    "lang": "pt-BR",
+    "head": {
+      "meta": [
+        { "charset": "UTF-8" },
+        { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
+      ],
+      "link": [
+        {
+          "href": "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",
+          "rel": "stylesheet"
+        },
+        {
+          "href": "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
+          "rel": "stylesheet"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "apresentacar.css"
+        }
+      ],
+      "title": "Saidinhas",
+      "style": ".product { border: 1px solid #ddd; padding: 10px; margin: 10px; text-align: center; } .product img { max-width: 100%; height: auto; }"
+    },
+    "body": {
+      "header": {
+        "class": "header",
+        "div": [
+          {
+            "class": "logo",
+            "img": { "src": "logo.jpg", "alt": "logo" }
+          },
+          {
+            "class": "search-bar",
+            "input": {
+              "type": "text",
+              "id": "search-input",
+              "placeholder": "Buscar..."
+            },
+            "button": {
+              "onclick": "search()",
+              "img": { "src": "lupa.jpg", "alt": "Lupa" }
+            }
+          },
+          {
+            "class": "icons",
+            "a": [
+              { "href": "#", "img": { "src": "home.jpg", "alt": "home" } },
+              { "href": "#", "img": { "src": "user.jpg", "alt": "avatar" } }
+            ],
+            "button": { "class": "btn btn-danger", "text": "Login" }
+          }
+        ],
+        "script": {
+          "function": "search",
+          "keywords": {
+            "Bruschetta": "cap.html",
+            "Salada Caprese": "cap.html",
+            "Filé Mignon": "cap.html",
+            "Risoto": "cap.html",
+            "Macarrão": "cap.html",
+            "Torta de Limão": "cap.html",
+            "Gelato": "cap.html",
+            "Sanduíche": "cap.html",
+            "Sushi": "cap.html"
+          }
+        }
+      },
+      "div": {
+        "id": "myCarousel",
+        "class": "carousel slide",
+        "data-ride": "carousel",
+        "carousel-indicators": [
+          { "data-target": "#myCarousel", "data-slide-to": "0", "class": "active" },
+          { "data-target": "#myCarousel", "data-slide-to": "1" },
+          { "data-target": "#myCarousel", "data-slide-to": "2" }
+        ],
+        "carousel-inner": [
+          { "class": "item active", "img": { "src": "pizza.jpg", "alt": "pizza" } },
+          { "class": "item", "img": { "src": "taco.jpg", "alt": "taco" } },
+          { "class": "item", "img": { "src": "buguer.jpg", "alt": "buguer" } }
+        ],
+        "left-carousel-control": {
+          "href": "#myCarousel",
+          "data-slide": "prev",
+          "span": { "class": "glyphicon glyphicon-chevron-left" }
+        },
+        "right-carousel-control": {
+          "href": "#myCarousel",
+          "data-slide": "next",
+          "span": { "class": "glyphicon glyphicon-chevron-right" }
+        }
+      },
+      "content": {
+        "h2": "Travellers' Choice: Restaurantes sofisticados",
+        "products": [
+          {
+            "product": {
+              "img": { "src": "sando.jpg", "alt": "comida" },
+              "link": { "href": "cap.html", "text": "Sanduíche Natural" }
+            }
+          },
+          {
+            "product": {
+              "img": { "src": "rice.jpg", "alt": "comida" },
+              "link": { "href": "cap.html", "text": "Arroz e feijão" }
+            }
+          },
+          {
+            "product": {
+              "img": { "src": "sushi.jpg", "alt": "Sushi" },
+              "link": { "href": "cap.html", "text": "Sushi" }
+            }
+          },
+          {
+            "product": {
+              "img": { "src": "pasta.jpg", "alt": "comida" },
+              "link": { "href": "cap.html", "text": "Macarrão ao molho" }
+            }
+          },
+          {
+            "product": {
+              "img": { "src": "bife.jpg", "alt": "comida" },
+              "link": { "href": "cap.html", "text": "Filé Mignon" }
+            }
+          },
+          {
+            "product": {
+              "img": { "src": "torta.jpg", "alt": "comida" },
+              "link": { "href": "cap.html", "text": "Torta de Limão" }
+            }
+          }
+        ]
+      },
+      "script": [
+        { "src": "https://code.jquery.com/jquery-3.5.1.slim.min.js" },
+        { "src": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" },
+        { "src": "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" },
+        { "src": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" },
+        { "src": "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" }
+      ]
+    }
+  }
+}
