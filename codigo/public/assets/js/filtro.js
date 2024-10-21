@@ -23,14 +23,16 @@ function criarItemRestaurante(restaurante) {
     img.alt = restaurante.nome;
 
     const detailsDiv = document.createElement('div');
-    detailsDiv.classList.add('item-details');
+    detailsDiv.classList.add('item-detailsFiltro');
 
     const title = document.createElement('h4');
     title.textContent = restaurante.nome;
 
-    const tipo = document.createElement('p');
-    tipo.textContent = `Tipo: ${restaurante.tipo}`;
-
+    const tipo = document.createElement('span');
+    tipo.textContent = `${restaurante.tipo}`;
+    tipo.classList.add('availability-tag');
+    tipo.style.color = 'green';
+    
     const distancia = document.createElement('p');
     distancia.textContent = `Distância: ${restaurante.distancia}`;
 
@@ -56,6 +58,9 @@ function renderizarRestaurantes(restaurantes) {
     const itemsList = document.getElementById('items-list');
     const itemsListVazio = document.getElementById('items-list-vazio');
 
+    itemsList.innerHTML = '';
+    itemsListVazio.innerHTML = '';
+
     if (!restaurantes || restaurantes.length === 0) {
         itemsListVazio.innerHTML = '<h2>Nenhum restaurante disponível.</h2>';
         return;
@@ -77,78 +82,20 @@ function renderizarRestaurantes(restaurantes) {
     });
 }
 
-function filterItems(selectedCategory, restaurantes) {
-    const itemsList = document.getElementById('items-list');
-    itemsList.innerHTML = '';
+function filtrarRestaurantes() {
+    const tipoSelecionado = document.querySelector('.select-tipo').value;
+    const nomePesquisado = document.querySelector('.input-pesquisar').value.toLowerCase();
 
-    restaurantes.forEach(restaurante => {
-        if (selectedCategory === 'all' || restaurante.tipo === selectedCategory) {
-            const itemDiv = criarItemRestaurante(restaurante);
-            itemsList.appendChild(itemDiv);
-        }
-    });
-}
-
-const searchInput = document.querySelector('.input-pesquisar');
-
-const selectTipo = document.querySelector('.select-tipo');
-
-selectTipo.addEventListener('change', () => {
-    const selectedTipo = selectTipo.value;
-    console.log(restaurantes);
-    filterItemsPorTipo(selectedTipo, restaurantes);
-});
-
-searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    filtrarRestaurantes(searchTerm);
-});
-
-function filterItemsPorTipo(selectedCategory, restaurantes) {
-    const itemsList = document.getElementById('items-list');
-    const itemsListVazio = document.getElementById('items-list-vazio');
-    itemsList.innerHTML = '';
-
-    let hasVisibleItems = false;
-
-    restaurantes.forEach(restaurante => {
-        if (selectedCategory === 'all' || restaurante.tipo === selectedCategory) {
-            const itemDiv = criarItemRestaurante(restaurante);
-            itemsList.appendChild(itemDiv);
-            hasVisibleItems = true;
-        }
+    const restaurantesFiltrados = restaurantes.filter(restaurante => {
+        const nomeInclui = restaurante.nome.toLowerCase().includes(nomePesquisado);
+        const tipoCorreto = tipoSelecionado === 'all' || restaurante.tipo === tipoSelecionado; 
+        return nomeInclui && tipoCorreto; 
     });
 
-    if (!hasVisibleItems) {
-        itemsListVazio.style.display = 'block'; 
-    } else {
-        itemsListVazio.style.display = 'none';  
-    }
+    renderizarRestaurantes(restaurantesFiltrados);
 }
 
-function filtrarRestaurantes(searchTerm) {
-    const items = document.querySelectorAll('.item');
-    let hasVisibleItems = false;
-
-    items.forEach(item => {
-        const itemName = item.querySelector('h4').textContent.toLowerCase();
-        const itemTipo = item.querySelector('p').textContent.toLowerCase();
-
-        if (itemName.includes(searchTerm) || itemTipo.includes(searchTerm)) {
-            item.style.display = 'block';
-            hasVisibleItems = true;
-        } else {
-            item.style.display = 'none';
-        }
-    });
-
-    const itemsListVazio = document.getElementById('items-list-vazio');
-
-    if (!hasVisibleItems) {
-        itemsListVazio.style.display = 'block';
-    } else {
-        itemsListVazio.style.display = 'none';
-    }
-}
+document.querySelector('.select-tipo').addEventListener('change', filtrarRestaurantes);
+document.querySelector('.input-pesquisar').addEventListener('input', filtrarRestaurantes);
 
 carregarRestaurantes(renderizarRestaurantes);

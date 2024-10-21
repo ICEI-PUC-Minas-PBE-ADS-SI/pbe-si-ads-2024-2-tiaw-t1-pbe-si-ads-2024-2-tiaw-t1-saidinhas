@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldinhas</title>
+    <link rel="stylesheet" href="local.css">
+    <!-- Inclua o link do Font Awesome se ainda não estiver incluído -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.jpg" alt="logo"></div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar..." />
+                    <img src="lupa.jpg" alt="Lupa">
+                </button>
+            </div>
+        <div class="icons">
+            <button class="btn btn-danger">Login</button>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <a href="#"><i class="fas fa-user"></i> Perfil</a>
+        <a href="cap.html"><i class="fas fa-utensils"></i> Cardápio</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Reservas</a>
+        <a href="#"><i class="fas fa-tags"></i> Promoções</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Localização</a>
+        <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+    </div>
+    
+
+    <div class="content">
+        <h2>Bon appétit!</h2>
+        <h2>Localização</h2>
+        <div class="location-container">
+            <div class="location-info">
+                <input type="text" value="Rua: Santa Maria das Graças, 156" readonly>
+                <input type="text" value="Bairro: Santa Tereza" readonly>
+                <input type="text" value="Cidade: Belo Horizonte" readonly>
+                <input type="text" value="CEP: 31010-030" readonly>
+                <input type="text" value="Estado: Minas Gerais" readonly>
+            </div>
+            <div class="map">
+                <img src="mapa.jpg" alt="Mapa ilustrando a localização do restaurante">
+            </div>
+        </div>
+
+        <div class="contacts">
+            <p>Contatos:</p>
+            <p>Número: 31-12345-6789</p>
+            <p>Email: bonappetit@gmail.com</p>
+        </div>
+    </div>
+
+    
+    <script>
+        function search() {
+            const query = document.getElementById("search").value;
+            alert("Você buscou por: " + query);
+        }
+    </script>
+</body>
+</html>
