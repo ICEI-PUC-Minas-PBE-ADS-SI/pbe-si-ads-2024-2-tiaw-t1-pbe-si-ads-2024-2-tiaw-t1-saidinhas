@@ -191,7 +191,11 @@
   ],
 
   "reserva":[
-    {}
+    {
+      "restaurante":"Restaurante 1",
+      "data": "12/10/24",
+      "hora":"12:00"
+    }
   ]
 }
 
