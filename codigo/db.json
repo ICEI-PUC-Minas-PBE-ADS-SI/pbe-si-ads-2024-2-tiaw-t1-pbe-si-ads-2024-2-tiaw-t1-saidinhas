@@ -132,5 +132,9 @@
       "avaliacao": 4.9,
       "faixa_preco": "R$ 23.70"
     }
+  ],
+
+  "reserva":[
+    {}
   ]
 }
