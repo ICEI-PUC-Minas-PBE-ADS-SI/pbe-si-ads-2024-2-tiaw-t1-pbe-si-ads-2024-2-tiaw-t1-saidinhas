@@ -61,6 +61,18 @@
       "estado": "hhw",
       "senha": "444",
       "id": 6
+    },
+    {
+      "nome": "hot dog",
+      "cnpj": "4623747274",
+      "email": "dgagch@cnsnvn",
+      "cep": "473858",
+      "logradouro": "fhdvn",
+      "bairro": "fhshv",
+      "cidade": "skbkdkj",
+      "estado": "mg",
+      "senha": "123",
+      "id": 7
     }
   ],
   "menu": {
@@ -189,13 +201,11 @@
       "id": 3
     }
   ],
-
-  "reserva":[
+  "reserva": [
     {
-      "restaurante":"Restaurante 1",
+      "restaurante": "Restaurante 1",
       "data": "12/10/24",
-      "hora":"12:00"
+      "hora": "12:00"
     }
   ]
 }
-
