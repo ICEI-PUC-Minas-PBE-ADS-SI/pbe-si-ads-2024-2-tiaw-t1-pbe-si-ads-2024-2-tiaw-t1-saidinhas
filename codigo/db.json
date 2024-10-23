@@ -209,91 +209,100 @@
     }
   ]
 
-
-  ,"apresentacard": {
-    "title": "Saidinhas",
-    "header": {
-      "logo": "logo.jpg",
-      "searchBar": {
-        "placeholder": "Buscar...",
-        "searchFunction": "search()"
+  
+    ,"apresentacard": {
+      "title": "Saidinhas",
+      "header": {
+        "logo": "logo.jpg",
+        "searchBar": {
+          "placeholder": "Buscar...",
+          "searchFunction": "search()"
+        },
+        "icons": [
+          {
+            "type": "home",
+            "image": "home.jpg",
+            "link": "#"
+          },
+          {
+            "type": "user",
+            "image": "user.jpg",
+            "link": "#"
+          },
+          {
+            "type": "button",
+            "text": "Login",
+            "class": "btn btn-danger"
+          }
+        ]
       },
-      "icons": [
-        {
-          "type": "home",
-          "image": "home.jpg",
-          "link": "#"
-        },
-        {
-          "type": "user",
-          "image": "user.jpg",
-          "link": "#"
-        },
-        {
-          "type": "button",
-          "text": "Login",
-          "class": "btn btn-danger"
-        }
-      ]
+      "carousel": {
+        "images": [
+          {
+            "src": "pizza.jpg",
+            "alt": "pizza"
+          },
+          {
+            "src": "taco.jpg",
+            "alt": "taco"
+          },
+          {
+            "src": "buguer.jpg",
+            "alt": "buguer"
+          }
+        ]
+      },
+      "content": {
+        "title": "Travellers' Choice: Restaurantes sofisticados",
+        "products": [
+          {
+            "name": "Sanduíche Natural",
+            "image": "sando.jpg",
+            "link": "cap.html",
+            "alt": "comida"
+          },
+          {
+            "name": "Arroz e feijão",
+            "image": "rice.jpg",
+            "link": "cap.html",
+            "alt": "comida"
+          },
+          {
+            "name": "Sushi",
+            "image": "sushi.jpg",
+            "link": "cap.html",
+            "alt": "Sushi"
+          },
+          {
+            "name": "Macarrão ao molho",
+            "image": "pasta.jpg",
+            "link": "cap.html",
+            "alt": "comida"
+          },
+          {
+            "name": "Filé Mignon",
+            "image": "bife.jpg",
+            "link": "cap.html",
+            "alt": "comida"
+          },
+          {
+            "name": "Torta de Limão",
+            "image": "torta.jpg",
+            "link": "cap.html",
+            "alt": "comida"
+          }
+        ]
+      }
     },
-    "carousel": {
-      "images": [
-        {
-          "src": "pizza.jpg",
-          "alt": "pizza"
-        },
-        {
-          "src": "taco.jpg",
-          "alt": "taco"
-        },
-        {
-          "src": "buguer.jpg",
-          "alt": "buguer"
-        }
-      ]
-    },
-    "content": {
-      "title": "Travellers' Choice: Restaurantes sofisticados",
-      "products": [
-        {
-          "name": "Sanduíche Natural",
-          "image": "sando.jpg",
-          "link": "cap.html",
-          "alt": "comida"
-        },
-        {
-          "name": "Arroz e feijão",
-          "image": "rice.jpg",
-          "link": "cap.html",
-          "alt": "comida"
-        },
-        {
-          "name": "Sushi",
-          "image": "sushi.jpg",
-          "link": "cap.html",
-          "alt": "Sushi"
-        },
-        {
-          "name": "Macarrão ao molho",
-          "image": "pasta.jpg",
-          "link": "cap.html",
-          "alt": "comida"
-        },
-        {
-          "name": "Filé Mignon",
-          "image": "bife.jpg",
-          "link": "cap.html",
-          "alt": "comida"
-        },
-        {
-          "name": "Torta de Limão",
-          "image": "torta.jpg",
-          "link": "cap.html",
-          "alt": "comida"
-        }
-      ]
+    "scripts": {
+      "searchFunction": "function search() { ... }",
+      "carouselControl": {
+        "previous": "glyphicon glyphicon-chevron-left",
+        "next": "glyphicon glyphicon-chevron-right"
+      }
     }
-  }
+  
+
 
   
     ,"cardapio": {
