@@ -6,7 +6,7 @@ function search() {
     const keywords = {
         "Bruschetta": "cap.html",
         "Salada Caprese": "cap.html",
-        "Salada": "cap.html",
+        "Salada":"cap.html",
         "Filé Mignon": "cap.html",
         "Filé": "cap.html",
         "Risoto de Frutos do Mar": "cap.html",

@@ -208,4 +208,254 @@
       "hora": "12:00"
     }
   ]
+
+
+  ,"apresentacard": {
+    "title": "Saidinhas",
+    "header": {
+      "logo": "logo.jpg",
+      "searchBar": {
+        "placeholder": "Buscar...",
+        "searchFunction": "search()"
+      },
+      "icons": [
+        {
+          "type": "home",
+          "image": "home.jpg",
+          "link": "#"
+        },
+        {
+          "type": "user",
+          "image": "user.jpg",
+          "link": "#"
+        },
+        {
+          "type": "button",
+          "text": "Login",
+          "class": "btn btn-danger"
+        }
+      ]
+    },
+    "carousel": {
+      "images": [
+        {
+          "src": "pizza.jpg",
+          "alt": "pizza"
+        },
+        {
+          "src": "taco.jpg",
+          "alt": "taco"
+        },
+        {
+          "src": "buguer.jpg",
+          "alt": "buguer"
+        }
+      ]
+    },
+    "content": {
+      "title": "Travellers' Choice: Restaurantes sofisticados",
+      "products": [
+        {
+          "name": "Sanduíche Natural",
+          "image": "sando.jpg",
+          "link": "cap.html",
+          "alt": "comida"
+        },
+        {
+          "name": "Arroz e feijão",
+          "image": "rice.jpg",
+          "link": "cap.html",
+          "alt": "comida"
+        },
+        {
+          "name": "Sushi",
+          "image": "sushi.jpg",
+          "link": "cap.html",
+          "alt": "Sushi"
+        },
+        {
+          "name": "Macarrão ao molho",
+          "image": "pasta.jpg",
+          "link": "cap.html",
+          "alt": "comida"
+        },
+        {
+          "name": "Filé Mignon",
+          "image": "bife.jpg",
+          "link": "cap.html",
+          "alt": "comida"
+        },
+        {
+          "name": "Torta de Limão",
+          "image": "torta.jpg",
+          "link": "cap.html",
+          "alt": "comida"
+        }
+      ]
+    }
+  }
+
+  
+    ,"cardapio": {
+        "entradas": [
+            {
+                "nome": "Sanduíche natural",
+                "descricao": "É um alimento composto por duas fatias de pão com um recheio entre elas.",
+                "preco": 15.00,
+                "pontos": 5,
+                "imagem": "sando.jpg"
+            },
+            {
+                "nome": "Sushi",
+                "descricao": "É um bolinho de arroz enrolado com uma alga.",
+                "preco": 35.00,
+                "pontos": 12,
+                "imagem": "sushi.jpg"
+            },
+            {
+                "nome": "Bruschetta",
+                "descricao": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
+                "preco": 20.00,
+                "pontos": 8,
+                "imagem": "tomato.jpg"
+            },
+            {
+                "nome": "Salada Caprese",
+                "descricao": "É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.",
+                "preco": 25.00,
+                "pontos": 9,
+                "imagem": "salada.jpg"
+            }
+        ],
+        "pratos_principais": [
+            {
+                "nome": "Filé Mignon",
+                "descricao": "Filé de carne bovina grelhado, servido com molho de vinho tinto.",
+                "preco": 55.00,
+                "pontos": 25,
+                "imagem": "bife.jpg"
+            },
+            {
+                "nome": "Risoto de Frutos do Mar",
+                "descricao": "Arroz arbóreo cremoso com camarões, lulas e mexilhões.",
+                "preco": 45.00,
+                "pontos": 22,
+                "imagem": "risoto.jpg"
+            },
+            {
+                "nome": "Arroz e feijão",
+                "descricao": "Arroz soltinho com feijão com muito caldo, servido em um prato.",
+                "preco": 18.00,
+                "pontos": 14,
+                "imagem": "rice.jpg"
+            },
+            {
+                "nome": "Macarrão ao molho",
+                "descricao": "Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.",
+                "preco": 22.00,
+                "pontos": 20,
+                "imagem": "pasta.jpg"
+            }
+        ],
+        "sobremesas": [
+            {
+                "nome": "Torta de Limão",
+                "descricao": "Deliciosa torta de limão com merengue e base crocante.",
+                "preco": 18.00,
+                "pontos": 28,
+                "imagem": "torta.jpg"
+            },
+            {
+                "nome": "Gelato de Chocolate",
+                "descricao": "Gelato cremoso de chocolate, feito com chocolate belga.",
+                "preco": 15.00,
+                "pontos": 18,
+                "imagem": "gelato.jpg"
+            }
+        ]
+    }
+  
+    
+      ,"local": {
+          "titulo": "Saidinhas",
+          "cabecalho": {
+              "logo": "logo.jpg",
+              "barraDeBusca": {
+                  "placeholder": "Buscar...",
+                  "iconeLupa": "lupa.jpg"
+              },
+              "botoes": [
+                  {
+                      "classe": "btn btn-danger",
+                      "texto": "Login"
+                  }
+              ]
+          },
+          "sidebar": [
+              {
+                  "icone": "fas fa-user",
+                  "texto": "Perfil",
+                  "link": "#"
+              },
+              {
+                  "icone": "fas fa-utensils",
+                  "texto": "Cardápio",
+                  "link": "cap.html"
+              },
+              {
+                  "icone": "fas fa-calendar-alt",
+                  "texto": "Reservas",
+                  "link": "#"
+              },
+              {
+                  "icone": "fas fa-tags",
+                  "texto": "Promoções",
+                  "link": "#"
+              },
+              {
+                  "icone": "fas fa-map-marker-alt",
+                  "texto": "Localização",
+                  "link": "#"
+              },
+              {
+                  "icone": "fas fa-sign-out-alt",
+                  "texto": "Log out",
+                  "link": "#",
+                  "classe": "logout"
+              }
+          ],
+          "conteudo": {
+              "tituloPrincipal": "Bon appétit!",
+              "localizacao": {
+                  "titulo": "Localização",
+                  "endereco": {
+                      "rua": "Rua: Santa Maria das Graças, 156",
+                      "bairro": "Santa Tereza",
+                      "cidade": "Belo Horizonte",
+                      "cep": "31010-030",
+                      "estado": "Minas Gerais"
+                  },
+                  "mapaImagem": "mapa.jpg"
+              },
+              "contatos": {
+                  "titulo": "Contatos",
+                  "telefone": "31-12345-6789",
+                  "email": "bonappetit@gmail.com"
+              }
+          },
+          "scripts": [
+              {
+                  "funcao": "search",
+                  "descricao": "Função para busca que exibe um alerta com a query."
+              }
+          ]
+      }
+    
+    
+
 }
+
+
+
+
+ 
