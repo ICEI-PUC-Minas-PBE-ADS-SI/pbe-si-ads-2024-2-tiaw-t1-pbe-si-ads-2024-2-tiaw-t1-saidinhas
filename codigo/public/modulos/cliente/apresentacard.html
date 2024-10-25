@@ -6,67 +6,21 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Saidinhas</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/apresentacar.css">
+    <link rel="stylesheet" href="../../assets/css/apresentacard.css">
 
-    <style>
-        .product {
-            border: 1px solid #ddd; /* Borda dos cards */
-            padding: 10px; /* Espaçamento interno */
-            margin: 10px; /* Espaçamento externo */
-            text-align: center; /* Centraliza o conteúdo */
-        }
-        .product img {
-            max-width: 100%; /* Ajusta a imagem para caber no card */
-            height: auto; /* Mantém a proporção da imagem */
-        }
-    </style>
+
 </head>
 <body>
     <header class="header">
-        <div class="logo"><img src="../../assets/images/logo_saidinha.jpeg" alt="logo"></div>
+        <div class="logo"><img src="../../assets/images/logo.jpg" alt="logo"></div>
 
-        <script>
-            function search() {
-                const input = document.getElementById("search-input").value.toLowerCase();
-                
-                // Mapeamento de palavras-chave para URLs específicas
-                const keywords = {
-                   "Bruschetta": "cap.html",
-                   "Salada Caprese": "cap.html",
-                   "Salada": "cap.html",
-                   "Filé Mignon": "cap.html",
-                   "Filé": "cap.html",
-                   "Risoto de Frutos do Mar": "cap.html",
-                   "Risoto": "cap.html",
-                   "Arroz e feijão": "cap.html",
-                   "Macarrão ao molho": "cap.html",
-                   "Macarrão": "cap.html",
-                   "Torta de Limão": "cap.html",
-                   "Torta": "cap.html",
-                   "Gelato de Chocolate": "cap.html",
-                    "Gelato": "cap.html",
-                    "Sanduíche natural": "cap.html",
-                    "Sanduíche": "cap.html",
-                    "Sushi": "cap.html",
-                };
-        
-                if (input in keywords) {
-                    // Redireciona para a URL correspondente à palavra-chave
-                    window.location.href = keywords[input];
-                } else if (input) {
-                    // Redireciona para outra página, passando o termo de busca na URL
-                    window.location.href = `cap.html?query=${encodeURIComponent(input)}`;
-                } else {
-                    alert("Por favor, digite um termo para buscar.");
-                }
-            }
-        </script>
+    
         </head>
         <body>
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Buscar..." />
                 <button onclick="search()">
-                    <img src="../../assets/images/lupa.png" alt="Lupa">
+                    <img src="../../assets/images/lupa.jpg" alt="Lupa">
                 </button>
             </div>
         </body>
@@ -74,8 +28,8 @@
 
 
         <div class="icons">
-            <a href="#"><img src="../../assets/images/lupa.png" alt="home"></a>
-            <a href="#"><img src="../../assets/images/lupa.png" alt="avatar"></a>
+            <a href="#"><img src="../../assets/images/home.jpg" alt="home"></a>
+            <a href="#"><img src="../../assets/images/user.jpg" alt="avatar"></a>
             <button class="btn btn-danger">Login</button>
         </div>
     </header>
@@ -88,13 +42,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="item active">
-                <img src="../../assets/images/" alt="pizza">
+                <img src="../../assets/images/pizza.jpg" alt="pizza">
             </div>
             <div class="item">
-                <img src="../../assets/images/" alt="taco">
+                <img src="../../assets/images/taco.jpg" alt="taco">
             </div>
             <div class="item">
-                <img src="../../assets/images/" alt="buguer">
+                <img src="../../assets/images/buguer.jpg" alt="buguer">
             </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -113,7 +67,7 @@
             <div class="product">
             <div class="card-body">
                 <a href="cap.html">
-                    <img src="sando.jpg" alt="comida">
+                    <img src="../../assets/images/sando.jpg" alt="comida">
                 <h2 class="text-danger"></h2>
                   <a href="cap.html" class="text-danger">Sanduíche Natural</a>
               </div>
@@ -122,7 +76,7 @@
                 <div class="card-body">
                     <a href="cap.html">
                     <h2 class="text-danger"></h2>
-                    <img src="rice.jpg" alt="comida">
+                    <img src="../../assets/images/rice.jpg" alt="comida">
                       <a href="cap.html" class="text-danger">Arroz e feijão</a>
                 </div>
             </div>
@@ -130,7 +84,7 @@
                 <div class="card-body">
                     <a href="cap.html">
                     <h2 class="text-danger"></h2>
-                <img src="sushi.jpg" alt="Sushi">
+                <img src="../../assets/images/sushi.jpg" alt="Sushi">
                 <a href="cap.html" class="text-danger">Sushi</a>
 
                </div>
@@ -139,7 +93,7 @@
                 <div class="card-body">
                     <a href="cap.html">
                     <h2 class="text-danger"></h2>
-                <img src="pasta.jpg" alt="comida">
+                <img src="../../assets/images/pasta.jpg" alt="comida">
                 <a href="cap.html" class="text-danger">Macarrão ao molho</a>
 
                </div>
@@ -148,7 +102,7 @@
                 <div class="card-body">
                     <a href="cap.html">
                     <h2 class="text-danger"></h2>
-                <img src="bife.jpg" alt="comida">
+                <img src="../../assets/images/bife.jpg" alt="comida">
                 <a href="cap.html" class="text-danger">Filé Mignon</a>
 
                </div>
@@ -157,7 +111,7 @@
                 <div class="card-body">
                     <a href="cap.html">
                     <h2 class="text-danger"></h2>
-                <img src="torta.jpg" alt="comida">
+                <img src="../../assets/images/torta.jpg" alt="comida">
                 <a href="cap.html" class="text-danger">Torta de Limão</a>
 
                </div>
@@ -170,19 +124,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-        document.querySelector('input[type="text"]').addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase();
-            const products = document.querySelectorAll('.product');
-            products.forEach(product => {
-                const title = product.querySelector('h3').textContent.toLowerCase();
-                if (title.includes(query)) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        });
-    </script>
+    
+    <script src="../../assets/js/apre.js"></script>
+
+
 </body>
 </html>

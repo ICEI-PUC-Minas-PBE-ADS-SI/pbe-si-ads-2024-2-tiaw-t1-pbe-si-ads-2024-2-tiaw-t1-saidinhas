@@ -3,7 +3,7 @@ const_URL = '/assets/reserva/reserva.html';
 
 var db_reserva={};
 
-.then(response => response.json())
+then(response => response.json())
         .then(data => {
             
             db_reserva.push;
