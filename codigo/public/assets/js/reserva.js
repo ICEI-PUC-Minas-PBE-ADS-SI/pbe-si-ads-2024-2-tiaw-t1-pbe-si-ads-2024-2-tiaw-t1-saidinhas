@@ -1,41 +1,48 @@
 
-const API_RESERVA='http://localhoost:3000/reserva';
-const_URL = '/assets/reserva/reserva.html';
-
-var db_reserva = {};
-
-const confirmar=document.getElementById('confirmarRC');
+const API_RESERVA='http://localhost:3000/reserva';
+const_URL = '/modulos/reserva/reserva.html';
 
 async function salvarreserva(){
 
     const novareserva={
-        restaurante:document.getElementById('restauranteRC').value,
-        data:document.getElementById('dataRC').value,
-        hora:document.getElementById('horaRC').value
+        restaurante: document.getElementById('restauranteRC').value,
+        data: document.getElementById('dataRC').value,
+        hora: document.getElementById('horaRC').value
+    };
+
+    try{
+
+        const response = await fetch(API_RESERVA,{
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(novareserva)
+        });
+        if (!response.ok) {
+            throw new Error('Erro ao realizar sua reserva: ' + response.statusText);
+        }
+
+        const salvareserva = await response.json();
+        console.log('Reserva realizada, consulte os seus dados', salvareserva);
+
+        
+        alert('Reserva realizada com sucesso!');
+    }catch (error) {
+        console.error('Erro:', error);
+        alert('Ocorreu ao realizar sua reserva.');
     }
-
-
-    fetch(API_RESERVA,{
-        method: 'POST',
-        Headers:{
-            'Content-type':'application/json'
-        },
-        body: JSON.stringify(novareserva)
-    })
-    .then(response => response.json())
-        .then(data => {
-            
-            db_reserva.push (novareserva);
-            document.getElementById('consultarRC').innerText=JSON.stringify(db_reserva)
-            
-        })
-    
-    .catch (erro=>{
-        document.getElementById('consultarRC').innerText='Ocorreu um erro:' + erro.message;
-    });
-
 }
 
+/*if(confirmar){
+    confirmar.addEventListener('click', salvarreserva);
+}else{
+    alert('Confirmar está null');
+}*/
 
-confirmar.addEventListener('click', salvarreserva);
-
+document.addEventListener('DOMContentLoaded', function() {
+    const confirmar=document.getElementById('confirmarRC');
+    if (confirmar) {
+        confirmar.addEventListener('click', salvarreserva);
+    }
+});
