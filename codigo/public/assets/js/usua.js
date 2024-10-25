@@ -1,9 +1,9 @@
-const API_URL = 'http://localhost:3000/usuario';
+const API_URL = 'http://localhost:3000/usuarioCliente';
 const LOGINUSUARIO_URL = "/modulos/login/Usuario.html";
 
 
 
-const API_URL_USUARIO = 'http://localhost:3000/usuario';
+const API_URL_USUARIO = 'http://localhost:3000/usuarioCliente';
 
 
 

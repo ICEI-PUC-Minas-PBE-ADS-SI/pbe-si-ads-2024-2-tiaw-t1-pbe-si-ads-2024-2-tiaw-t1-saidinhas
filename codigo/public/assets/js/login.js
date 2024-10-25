@@ -11,12 +11,12 @@
 
 
 // Página inicial de Login
-const API_URL = 'http://localhost:3000/usuarios';
+const API_URL = 'http://localhost:3000/usuariosRestaurante';
 const LOGIN_URL = "/modulos/login/login.html";
 
 
 
-const API_URL_RESTAURANTES = 'http://localhost:3000/usuarios';
+const API_URL_RESTAURANTES = 'http://localhost:3000/usuariosRestaurante';
 
 
 async function salvarRestaurante(event) {
