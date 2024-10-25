@@ -1,4 +1,13 @@
-
+.product {
+    border: 1px solid #ddd; /* Borda dos cards */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo */
+    text-align: center; /* Centraliza o conteúdo */
+}
+.product img {
+    max-width: 100%; /* Ajusta a imagem para caber no card */
+    height: auto; /* Mantém a proporção da imagem */
+}
 /* Additional styles for card layout */
 .product {
     border: 1px solid #ddd; /* Light gray border */

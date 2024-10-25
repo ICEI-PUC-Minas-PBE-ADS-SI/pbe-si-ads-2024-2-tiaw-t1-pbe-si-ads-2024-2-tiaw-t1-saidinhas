@@ -17,10 +17,10 @@ function search() {
        "Torta de Limão": "cap.html",
        "Torta": "cap.html",
        "Gelato de Chocolate": "cap.html",
-       "Gelato": "cap.html",
-       "Sanduíche natural": "cap.html",
-       "Sanduíche": "cap.html",
-       "Sushi": "cap.html",
+        "Gelato": "cap.html",
+        "Sanduíche natural": "cap.html",
+        "Sanduíche": "cap.html",
+        "Sushi": "cap.html",
     };
 
     if (input in keywords) {
@@ -33,12 +33,11 @@ function search() {
         alert("Por favor, digite um termo para buscar.");
     }
 }
-{}
 document.querySelector('input[type="text"]').addEventListener('input', function(e) {
     const query = e.target.value.toLowerCase();
     const products = document.querySelectorAll('.product');
     products.forEach(product => {
-        const title = product.querySelector('a.text-danger').textContent.toLowerCase();
+        const title = product.querySelector('h3').textContent.toLowerCase();
         if (title.includes(query)) {
             product.style.display = 'block';
         } else {
@@ -46,14 +45,3 @@ document.querySelector('input[type="text"]').addEventListener('input', function(
         }
     });
 });
-
-function mostrarInfo(button) {
-    const info = button.nextElementSibling;
-    info.style.display = info.style.display === 'block' ? 'none' : 'block';
-}
-
-
-function search() {
-    const query = document.getElementById("search-input").value; // Corrigido para usar o ID correto
-    alert("Você buscou por: " + query);
-}
