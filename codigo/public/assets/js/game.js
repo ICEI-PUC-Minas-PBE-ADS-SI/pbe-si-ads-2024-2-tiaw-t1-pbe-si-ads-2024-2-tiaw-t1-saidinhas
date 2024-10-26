@@ -1,3 +1,7 @@
+const API_URL = 'http://localhost:3000/aplicarCupomBtn';
+const LOGIN_URL = "/modulos/login/indexgame.html";
+
+
 let pontos = 0;
 
 // para acumular pontos
