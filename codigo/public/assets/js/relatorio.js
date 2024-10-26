@@ -2,12 +2,12 @@ function gerarRelatorio(){
     const diario = document.getElementById('diario');
     const semanal = document.getElementById('semanal');
     const mensal = document.getElementById('mensal');
-
-    var conteudo;
+    var minhaTabela = document.getElementById('tabela').innerHTML;
+    //var conteudo;
     
     if(diario.checked){    
         var style = "<style>";
-        style = style + "title{padding: 2px 3px;text-align: center;}";
+        style = style + "title{padding: 2px 3px;text-align: center;} tabela{width: 300px; font: 17px Calibri;} table, th, td{border: solid 1px #DDD;border-collapse: collapse;padding: 2px 3px;text-align: center;}";
         style = style + "</style>";
         // CRIA UM OBJETO WINDOW
         var win = window.open('', '', 'height=700,width=700');
@@ -16,7 +16,7 @@ function gerarRelatorio(){
         win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
         win.document.write('</head>');
         win.document.write('<body>');
-        //win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
         win.document.write('</body></html>');
         win.document.close(); 	                                         // FECHA A JANELA
         win.print();                                                            // IMPRIME O CONTEUDO

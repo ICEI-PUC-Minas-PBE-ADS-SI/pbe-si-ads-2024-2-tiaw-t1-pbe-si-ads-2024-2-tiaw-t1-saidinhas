@@ -33,8 +33,7 @@
         </aside>
 
         <main class="content">
-            <div class="novareserva">
-
+            <div class="novareserva" id="requisicao" method="post" onsubmit="salvarreserva(event)">
                 <select class="form-select border border-danger" id="restauranteRC" aria-label="Default select example"
                     required>
                     <option selected>Selecione um restaurante</option>
@@ -51,12 +50,9 @@
                 <input class="border border-danger" type="time" id="horaRC" name="hora" required>
             </div>
             <br>
-
             <button type="button" class="btn btn-danger" id="confirmarRC">
                 confirmar
             </button>
-
-
             <div class="consultar" id="consultarRC">
                 <br>
                 <br>
