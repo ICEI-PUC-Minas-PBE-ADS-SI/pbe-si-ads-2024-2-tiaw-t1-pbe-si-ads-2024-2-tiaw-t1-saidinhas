@@ -1,14 +1,4 @@
 {
-  "paginaIncial": [
-    {
-      "id": 1,
-      "opcao": "Tenho um CNPJ"
-    },
-    {
-      "id": 2,
-      "opcao": "Buscar Restaurantes"
-    }
-  ],
   "usuariosRestaurante": [
     {
       "id": 1,
@@ -37,54 +27,6 @@
       "nome": "kry",
       "email": "kry",
       "id": 4
-    },
-    {
-      "nome": "tccfcfvhb",
-      "cnpj": "858493959",
-      "email": "fhufhu@whuwh",
-      "cep": "122345",
-      "logradouro": "57347hsjs",
-      "bairro": "fjdfhjfh",
-      "cidade": "rheuhrurh",
-      "estado": "hhsuhw",
-      "senha": "1",
-      "id": 5
-    },
-    {
-      "nome": "po",
-      "cnpj": "8679076",
-      "email": "fhufhu@444",
-      "cep": "122345",
-      "logradouro": "547hsjs",
-      "bairro": "fhjfh",
-      "cidade": "rheurh",
-      "estado": "hhw",
-      "senha": "444",
-      "id": 6
-    },
-    {
-      "nome": "hot dog",
-      "cnpj": "4623747274",
-      "email": "dgagch@cnsnvn",
-      "cep": "473858",
-      "logradouro": "fhdvn",
-      "bairro": "fhshv",
-      "cidade": "skbkdkj",
-      "estado": "mg",
-      "senha": "123",
-      "id": 7
-    },
-    {
-      "nome": "cachorro quente da jennie",
-      "cnpj": "1234567",
-      "email": "jenniehotdog@gail.com",
-      "cep": "234567",
-      "logradouro": "Rua Mantra",
-      "bairro": "Pretty Girls",
-      "cidade": "Solo",
-      "estado": "Acre",
-      "senha": "0000",
-      "id": 8
     }
   ],
   "menu": {
@@ -99,7 +41,7 @@
             "description": "Salada com alface, croutons, parmesão e molho caesar",
             "price": "87.00",
             "available": false,
-            "image_url": "salada"
+            "image_url": "https://www.estadao.com.br/resizer/v2/Z725JFWNVFGX7NC7R3TDIRKVOI.jpeg?quality=80&auth=47f419b219bee557c23c67bb3f7f2fc9ab982b47943dcc4186e766e7bdd0b6b3&width=720&height=503&smart=true"
           }
         ]
       },
@@ -113,7 +55,7 @@
             "description": "Filé mignon grelhado acompanhado de batatas fritas",
             "price": "39.90",
             "available": true,
-            "image_url": "file"
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Tw7UqQ2xVGcBsREBzTD-3sA5gVgsrTNmiA&s"
           },
           {
             "name": "PF",
@@ -135,7 +77,7 @@
             "description": "Refrigerante Coca-Cola 350ml",
             "price": 5,
             "available": true,
-            "image_url": "refrigerante"
+            "image_url": "https://mercantilnovaera.vtexassets.com/arquivos/ids/206262/Refrigerante-COCA-COLA-Lata-350ml.jpg?v=638174264397000000"
           }
         ]
       }
@@ -340,28 +282,28 @@
       {
         "nome": "Sanduíche natural",
         "descricao": "É um alimento composto por duas fatias de pão com um recheio entre elas.",
-        "preco": 15.00,
+        "preco": 15,
         "pontos": 5,
         "imagem": "sando.jpg"
       },
       {
         "nome": "Sushi",
         "descricao": "É um bolinho de arroz enrolado com uma alga.",
-        "preco": 35.00,
+        "preco": 35,
         "pontos": 12,
         "imagem": "sushi.jpg"
       },
       {
         "nome": "Bruschetta",
         "descricao": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
-        "preco": 20.00,
+        "preco": 20,
         "pontos": 8,
         "imagem": "tomato.jpg"
       },
       {
         "nome": "Salada Caprese",
         "descricao": "É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.",
-        "preco": 25.00,
+        "preco": 25,
         "pontos": 9,
         "imagem": "salada.jpg"
       }
@@ -370,28 +312,28 @@
       {
         "nome": "Filé Mignon",
         "descricao": "Filé de carne bovina grelhado, servido com molho de vinho tinto.",
-        "preco": 55.00,
+        "preco": 55,
         "pontos": 25,
         "imagem": "bife.jpg"
       },
       {
         "nome": "Risoto de Frutos do Mar",
         "descricao": "Arroz arbóreo cremoso com camarões, lulas e mexilhões.",
-        "preco": 45.00,
+        "preco": 45,
         "pontos": 22,
         "imagem": "risoto.jpg"
       },
       {
         "nome": "Arroz e feijão",
         "descricao": "Arroz soltinho com feijão com muito caldo, servido em um prato.",
-        "preco": 18.00,
+        "preco": 18,
         "pontos": 14,
         "imagem": "rice.jpg"
       },
       {
         "nome": "Macarrão ao molho",
         "descricao": "Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.",
-        "preco": 22.00,
+        "preco": 22,
         "pontos": 20,
         "imagem": "pasta.jpg"
       }
@@ -400,14 +342,14 @@
       {
         "nome": "Torta de Limão",
         "descricao": "Deliciosa torta de limão com merengue e base crocante.",
-        "preco": 18.00,
+        "preco": 18,
         "pontos": 28,
         "imagem": "torta.jpg"
       },
       {
         "nome": "Gelato de Chocolate",
         "descricao": "Gelato cremoso de chocolate, feito com chocolate belga.",
-        "preco": 15.00,
+        "preco": 15,
         "pontos": 18,
         "imagem": "gelato.jpg"
       }
@@ -491,16 +433,15 @@
     {
       "codigoCupom": "CUMPO90",
       "mensagemCupom": "CUPOM",
-      "id" : 1
+      "id": 1
     }
   ],
   "suporte": [
     {
       "seu nome": "lili",
-      "seu email": "lili" ,
-      "mensagem" : "mensagem de erro",
-      "id" : 1
+      "seu email": "lili",
+      "mensagem": "mensagem de erro",
+      "id": 1
     }
   ]
 }
-

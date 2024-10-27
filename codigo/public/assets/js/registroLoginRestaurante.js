@@ -1,28 +1,8 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo realiza o registro de novos usuários e login para aplicações com 
-// backend baseado em API REST provida pelo JSONServer
-// Os dados de usuário estão localizados no arquivo db.json que acompanha este projeto.
-//
-// Autor: Rommel Vieira Carneiro (rommelcarneiro@gmail.com)
-// Data: 09/09/2024
-//
-// Código LoginApp  
-
-
-// Página inicial de Login
-const API_URL = 'http://localhost:3000/usuariosRestaurante';
-const LOGIN_URL = "/modulos/login/login.html";
-
-
-
 const API_URL_RESTAURANTES = 'http://localhost:3000/usuariosRestaurante';
-
 
 async function salvarRestaurante(event) {
     event.preventDefault(); 
 
-    
     const novoRestaurante = {
         nome: document.getElementById('txt_nome_restaurante').value,
         cnpj: document.getElementById('txt_cnpj').value,
@@ -36,7 +16,6 @@ async function salvarRestaurante(event) {
     };
 
     try {
-        
         const response = await fetch(API_URL_RESTAURANTES, {
             method: 'POST',
             headers: {
@@ -50,10 +29,10 @@ async function salvarRestaurante(event) {
         }
 
         const dadosSalvos = await response.json();
-        console.log('Restaurante salvo com sucesso:', dadosSalvos);
-
-        
+       
         alert('Restaurante cadastrado com sucesso!');
+        
+        window.location.href = 'loginRestaurante.html';
 
     } catch (error) {
         console.error('Erro:', error);
@@ -61,5 +40,43 @@ async function salvarRestaurante(event) {
     }
 }
 
+async function loginRestaurante(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    try {
+        const response = await fetch(API_URL_RESTAURANTES, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao buscar os dados de login: ' + response.statusText);
+        }
+
+        const restaurantes = await response.json();
+        
+        const restauranteEncontrado = restaurantes.find(
+            restaurante => restaurante.login === username && restaurante.senha === password
+        );
+
+        if (restauranteEncontrado) {
+            alert('Login realizado com sucesso!');
+            window.location.href = '../restaurante/perfil.html'; // Caminho para a página principal
+        } else {
+            alert('Usuário ou senha incorretos. Tente novamente.');
+        }
+
+    } catch (error) {
+        console.error('Erro:', error);
+        alert('Ocorreu um erro ao fazer login.');
+    }
+}
+
+document.getElementById('login-form').addEventListener('submit', loginRestaurante);
 
 document.getElementById('register-form').addEventListener('submit', salvarRestaurante);
