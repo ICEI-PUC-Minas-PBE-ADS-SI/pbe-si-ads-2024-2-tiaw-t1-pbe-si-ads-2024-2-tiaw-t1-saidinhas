@@ -43,7 +43,7 @@ async function salvarRestaurante(event) {
 async function loginRestaurante(event) {
     event.preventDefault();
 
-    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
     try {
@@ -61,7 +61,7 @@ async function loginRestaurante(event) {
         const restaurantes = await response.json();
         
         const restauranteEncontrado = restaurantes.find(
-            restaurante => restaurante.login === username && restaurante.senha === password
+            restaurante => restaurante.email === email && restaurante.senha === password
         );
 
         if (restauranteEncontrado) {

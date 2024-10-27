@@ -4,82 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvimento de Interfaces Web | Login de Usuário</title>
+  <title>Login de Restaurante</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  
-  <title>Login Usuário</title>
-  
-  <style>
-   html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: flex;
-    }
-
-    .left {
-      width: 50vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .left img {
-      width: 100%;
-      height: auto;
-      max-height: 100%;
-      object-fit: cover;
-    }
-
-  .container {
-  position: relative;
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -190px;
- 
-}
-
-  .login{
-    justify-content: center;
-    align-items: center;
-  }
-  
-
-  .login img{
-    justify-content: center;
-    align-items: center;
-    margin-left: 120px;
-  }
-
-
-  
-  </style>
+  <link rel="stylesheet" href="../../assets/css/paginainicial.css">
+  <title>Login Restaurante</title>
 </head>
 
 <body>
-
   <div class="left">
     <img src="../../assets/images/logoSaidinhas.png" alt="Saldinhas Logo">
   </div>
-   
-  <div class="login">
-    <img src="../../assets/images/fazerlogin-removebg-preview.png" alt="" class="fazerlogin">
+
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12">
+      <div class="col-md-12 text-center">
+        <img src="../../assets/images/fazerlogin-removebg-preview.png" alt="" class="fazerlogin">
         <h1 class="text-center"></h1>
-        <form id="login-form" method="post" onsubmit="loginUsuario(event)">
+        <form id="login-form" method="post">
           <div class="form-group mb-3" style="color: red">
-            <label for="username" class="form-label">Usuário</label>
-            <input type="text" name="username" id="username" class="form-control" required>
+            <label for="email" class="form-label">E-mail</label>
+            <input type="text" name="email" id="email" class="form-control" required>
           </div>
-          <div class="form-group mb-3" style="color: red";>
+          <div class="form-group mb-3" style="color: red;">
             <label for="password" class="form-label">Senha</label>
             <input type="password" name="password" id="password" class="form-control" required>
           </div>
@@ -88,7 +39,8 @@
           </div>
         </form>
         <div class="text-center mt-4" style="color: red;">
-          <p>Não tem uma conta? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" style="color: red;">Registrar</a></p>
+          <p>Não tem uma conta? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"
+              style="color: red;">Registrar</a></p>
         </div>
       </div>
     </div>
@@ -102,70 +54,60 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="register-form" method="post" onsubmit="salvaUsuario(event)">
+          <form id="register-form" method="post">
             <div class="form-group mb-3">
-              <label for="nome_restaurante" class="form-label">Nome Completo</label>
+              <label for="txt_nome_completo" class="form-label">Nome Completo</label>
               <input type="text" name="txt_nome_completo" id="txt_nome_completo" class="form-control" required>
             </div>
             <div class="form-group mb-3">
-              <label for="cnpj" class="form-label">CPF</label>
-              <input type="text" name="number_cpf" id="txt_cpf" class="form-control" pattern="\d*" maxlength="14" required>
+              <label for="txt_cpf" class="form-label">CPF</label>
+              <input type="text" name="number_cpf" id="txt_cpf" class="form-control" pattern="\d*" maxlength="14"
+                required>
             </div>
             <div class="form-group mb-3">
-              <label for="email_restaurante" class="form-label">Email</label>
+              <label for="txt_email_usuario" class="form-label">Email</label>
               <input type="email" name="txt_email_usuario" id="txt_email_usuario" class="form-control" required>
             </div>
             <div class="form-group mb-3">
-              <label for="cep_restaurante" class="form-label">CEP</label>
-              <input type="text" name="number_cep_usuario" id="cep_usuario" class="form-control" pattern="\d*" maxlength="8" required>
+              <label for="cep_usuario" class="form-label">CEP</label>
+              <input type="text" name="number_cep_usuario" id="cep_usuario" class="form-control" pattern="\d*"
+                maxlength="8" required>
             </div>
             <div class="form-group mb-3">
-              <label for="logradouro_restaurante" class="form-label">Logradouro</label>
-              <input type="text" name="txt_logradouro_usuario" id="txt_logradouro_usuario" class="form-control" required>
+              <label for="txt_logradouro_usuario" class="form-label">Logradouro</label>
+              <input type="text" name="txt_logradouro_usuario" id="txt_logradouro_usuario" class="form-control"
+                required>
             </div>
             <div class="form-group mb-3">
-              <label for="bairro_restaurante" class="form-label">Bairro</label>
+              <label for="txt_bairro_usuario" class="form-label">Bairro</label>
               <input type="text" name="txt_bairro_usuario" id="txt_bairro_usuario" class="form-control" required>
             </div>
             <div class="form-group mb-3">
-              <label for="cidade_restaurante" class="form-label">Cidade</label>
+              <label for="txt_cidade_usuario" class="form-label">Cidade</label>
               <input type="text" name="txt_cidade_usuario" id="txt_cidade_usuario" class="form-control" required>
             </div>
             <div class="form-group mb-3">
-              <label for="estado_restaurante" class="form-label">Estado</label>
+              <label for="txt_estado_usuario" class="form-label">Estado</label>
               <input type="text" name="txt_estado_usuario" id="txt_estado_usuario" class="form-control" required>
             </div>
             <div class="form-group mb-3">
-              <label for="senha_restaurante" class="form-label">Senha</label>
+              <label for="txt_senha_usuario" class="form-label">Senha</label>
               <input type="password" name="txt_senha_usuario" id="txt_senha_usuario" class="form-control" required>
             </div>
             <div class="form-group mb-3">
-              <label for="senha2_restaurante" class="form-label">Confirme a Senha</label>
+              <label for="txt_senha2_usuario" class="form-label">Confirme a Senha</label>
               <input type="password" name="txt_senha2_usuario" id="txt_senha2_usuario" class="form-control" required>
             </div>
             <div class="form-group text-center">
               <button type="submit" class="btn btn-danger">Registrar</button>
-  </div>
-  </div>
-
             </div>
-
-            <script src="../../assets/js/usua.js"></script>
           </form>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+  <script src="../../assets/js/loginResgistroUsuario.js"></script>
 </body>
 
 </html>
