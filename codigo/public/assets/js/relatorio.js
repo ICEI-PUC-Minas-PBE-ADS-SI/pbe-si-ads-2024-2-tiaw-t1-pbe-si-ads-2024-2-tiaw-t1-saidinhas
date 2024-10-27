@@ -2,54 +2,48 @@ function gerarRelatorio(){
     const diario = document.getElementById('diario');
     const semanal = document.getElementById('semanal');
     const mensal = document.getElementById('mensal');
-    var minhaTabela = document.getElementById('tabela').innerHTML;
-    //var conteudo;
-    
+    const datainicio =document.getElementById('datain').value;
+    const datafim =document.getElementById('datafim').value;
+
     if(diario.checked){    
-        var style = "<style>";
-        style = style + "title{padding: 2px 3px;text-align: center;} tabela{width: 300px; font: 17px Calibri;} table, th, td{border: solid 1px #DDD;border-collapse: collapse;padding: 2px 3px;text-align: center;}";
-        style = style + "</style>";
-        // CRIA UM OBJETO WINDOW
-        var win = window.open('', '', 'height=700,width=700');
+        const win = window.open('', '', 'height=700,width=700');
         win.document.write('<html><head>');
-        win.document.write('<title>Relátorio diário</title>');   // <title> CABEÇALHO DO PDF.
-        win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
-        win.document.write('</head>');
-        win.document.write('<body>');
-        win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write('<title>Relátorio Diário</title>');                             
+        win.document.write('</head><body>');
+        win.document.write('<h1>Relátorio Diário - Saidinhas</h1>');         
+        win.document.write('<h3>Restaurante:Restaurante Mineiro</h3>');
+        win.document.write('<h3>Periodo: Diário, de '+datainicio+ ' a '+datafim+'</h3>');
+        win.document.write('<h4>Quant. de visitas na sua pagina:24 <br>Quant.de reservas realizadas:12 <br>Quant.de clientes pelo saidinhas:19 <br>Média de avaliações: 4.5/5 (Muito Bom!)<br></h4>');
         win.document.write('</body></html>');
-        win.document.close(); 	                                         // FECHA A JANELA
-        win.print();                                                            // IMPRIME O CONTEUDO
+        win.document.close();                         
+        win.print();
+
     }else if(semanal.checked){
-        var style = "<style>";
-        style = style + "title{padding: 2px 3px;text-align: center;}";
-        style = style + "</style>";
-        // CRIA UM OBJETO WINDOW
-        var win = window.open('', '', 'height=700,width=700');
+        const win = window.open('', '', 'height=700,width=700');
         win.document.write('<html><head>');
-        win.document.write('<title>Relátorio semanal</title>');   // <title> CABEÇALHO DO PDF.
-        win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
-        win.document.write('</head>');
-        win.document.write('<body>');
-        //win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write('<title>Relátorio Diario</title>');                             
+        win.document.write('</head><body>');
+        win.document.write('<h1>Relátorio Semanal - Saidinhas</h1>');         
+        win.document.write('<h3>Restaurante:Restaurante Mineiro</h3>');
+        win.document.write('<h3>Periodo: Semanal, de '+datainicio+ ' a '+datafim+'</h3>');
+        win.document.write('<h4>Quant. de visitas na sua pagina:24 <br>Quant.de reservas realizadas:12 <br>Quant.de clientes pelo saidinhas:19 <br>Média de avaliações: 4.5/5 (Muito Bom!)<br></h4>');
         win.document.write('</body></html>');
-        win.document.close(); 	                                         // FECHA A JANELA
-        win.print();                                                            // IMPRIME O CONTEUDO
+        win.document.close();                         
+        win.print();
+
     }else if(mensal.checked){
-        var style = "<style>";
-        style = style + "title{padding: 2px 3px;text-align: center;}";
-        style = style + "</style>";
-        // CRIA UM OBJETO WINDOW
-        var win = window.open('', '', 'height=700,width=700');
+        const win = window.open('', '', 'height=700,width=700');
         win.document.write('<html><head>');
-        win.document.write('<title>Relátorio mensal</title>');   // <title> CABEÇALHO DO PDF.
-        win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
-        win.document.write('</head>');
-        win.document.write('<body>');
-        //win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write('<title>Relátorio Diario</title>');                             
+        win.document.write('</head><body>');
+        win.document.write('<h1>Relátorio Mensal - Saidinhas</h1>');         
+        win.document.write('<h3>Restaurante:Restaurante Mineiro</h3>');
+        win.document.write('<h3>Periodo: Mensal, de '+datainicio+ ' a '+datafim+'</h3>');
+        win.document.write('<h4>Quant. de visitas na sua pagina:24 <br>Quant.de reservas realizadas:12 <br>Quant.de clientes pelo saidinhas:19 <br>Média de avaliações: 4.5/5 (Muito Bom!)<br></h4>');
         win.document.write('</body></html>');
-        win.document.close(); 	                                         // FECHA A JANELA
-        win.print();                                                            // IMPRIME O CONTEUDO
+        win.document.close();                         
+        win.print();
+
     }
     
 }
