@@ -19,7 +19,7 @@ function criarItemRestaurante(restaurante) {
     itemDiv.dataset.tipo = restaurante.tipo;
 
     const img = document.createElement('img');
-    img.src = `/codigo/public/assets/images/${restaurante.tipo}.jpg`;
+    img.src = restaurante.image_url;
     img.alt = restaurante.nome;
 
     const detailsDiv = document.createElement('div');

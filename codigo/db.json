@@ -74,7 +74,8 @@
       "tipo": "Brasileira",
       "distancia": "2 km",
       "avaliacao": 4.8,
-      "faixa_preco": "$"
+      "faixa_preco": "$",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s"
     },
     {
       "id": 2,
@@ -82,7 +83,8 @@
       "tipo": "Japonesa",
       "distancia": "5 km",
       "avaliacao": 4.6,
-      "faixa_preco": "$"
+      "faixa_preco": "$",
+       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s"
     },
     {
       "id": 3,
@@ -90,7 +92,8 @@
       "tipo": "Cafeterias",
       "distancia": "1.5 km",
       "avaliacao": 4.7,
-      "faixa_preco": "$$"
+      "faixa_preco": "$$",
+       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s"
     },
     {
       "id": 4,
@@ -98,7 +101,8 @@
       "tipo": "Saudável",
       "distancia": "3.2 km",
       "avaliacao": 4.9,
-      "faixa_preco": "$$$"
+      "faixa_preco": "$$$",
+       "image_url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg"
     }
   ],
   "usuarioCliente": [
