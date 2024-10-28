@@ -14,6 +14,7 @@
     <div class="logo">
         <h1>Saidinhas</h1>
     </div>
+
     <div class="container">
         <aside class="sidebar">
             <nav class="menu">
@@ -29,34 +30,21 @@
         </aside>
 
         <main class="content">
-            <div class="inputs-wrapper">
-                <div class="input-wrapper">
-                    <input type="text" class="input-pesquisar" placeholder="Pesquisar...">
-                    <i class="fas fa-search"></i>
-                </div>
-    
-                <div class="select-wrapper">
-                    <select class="select-tipo">
-                        <option value="all">Todos os tipos</option>
-                        <option value="Lanches">Lanches</option>
-                        <option value="Japonesa">Japonesa</option>
-                        <option value="Brasileira">Brasileira</option>
-                        <option value="Saudável">Saudável</option>
-                        <option value="Cafeterias">Cafeterias</option>
-                        <option value="Internacional">Internacional</option>
-                    </select>
+            <div class="restaurante-detalhes">
+                <h2 id="restaurante-nome"></h2>
+                <img id="restaurante-imagem" src="" alt="Imagem do Restaurante">
+
+                <div class="detalhes">
+                    <p id="restaurante-tipo"></p>
+                    <p id="restaurante-distancia"></p>
+                    <p id="restaurante-avaliacao"></p>
+                    <p id="restaurante-faixa-preco"></p>
                 </div>
             </div>
-
-            <section class="menu-items">
-                <div id="items-list" class="items-list"></div>
-
-                <div id="items-list-vazio" class="items-list-vazio"></div>
-            </section>
         </main>
     </div>
 
-    <script src="../../assets/js/cliente/filtro.js"></script>
+    <script src="../../assets/js/cliente/cardapio.js"></script>
 </body>
 
 </html>

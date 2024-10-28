@@ -17,6 +17,7 @@ function criarItemRestaurante(restaurante) {
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('item');
     itemDiv.dataset.tipo = restaurante.tipo;
+    itemDiv.style.cursor = 'pointer';
 
     const img = document.createElement('img');
     img.src = restaurante.image_url;
@@ -33,23 +34,19 @@ function criarItemRestaurante(restaurante) {
     tipo.classList.add('availability-tag');
     tipo.style.color = 'green';
     
-    const distancia = document.createElement('p');
-    distancia.textContent = `Distância: ${restaurante.distancia}`;
-
     const avaliacao = document.createElement('p');
     avaliacao.textContent = `Avaliação: ${restaurante.avaliacao}`;
 
-    const faixaPreco = document.createElement('p');
-    faixaPreco.textContent = `Faixa de preço: ${restaurante.faixa_preco}`;
-
     detailsDiv.appendChild(title);
     detailsDiv.appendChild(tipo);
-    detailsDiv.appendChild(distancia);
     detailsDiv.appendChild(avaliacao);
-    detailsDiv.appendChild(faixaPreco);
-
+ 
     itemDiv.appendChild(img);
     itemDiv.appendChild(detailsDiv);
+
+    itemDiv.addEventListener('click', () => {
+        window.location.href = `infoRestaurante.html?id=${restaurante.id}`;
+    });
 
     return itemDiv;
 }
