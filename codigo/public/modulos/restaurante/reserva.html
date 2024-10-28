@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Saidinhas - Restaurantes</title>
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/restaurante/perfilRestaurante.css" />
     <script src="../../assets/js/perfil.js" defer></script>
@@ -34,7 +34,8 @@
         <main class="content">
             <div class="minhasreservas">
                 <h3>Reservas no meu restaurante</h3>
-                <div id="Reservas"></div>
+                <ul id="listaReservas"></ul>
+                <p id="mensagemSemReservas" style="display: none;">Seu estabelecimento ainda não tem reservas.</p>
             </div>
         </main>
 
@@ -43,6 +44,7 @@
             </script>
 
     </div>
+    <script src="../../assets/js/restaurante/reserva.js" defer></script>
 </body>
 
 </html>
