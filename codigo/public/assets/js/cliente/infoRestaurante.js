@@ -15,4 +15,10 @@ function carregarDetalhesRestaurante(id) {
         .catch(error => console.error('Erro ao carregar os detalhes do restaurante:', error));
 }
 
+function irParaCardapio() {
+    window.location.href = `cardapio.html`;
+}
+
+document.getElementById('acessar-cardapio').addEventListener('click', irParaCardapio);
+
 carregarDetalhesRestaurante(restauranteId);
