@@ -1,92 +1,104 @@
+const API_URL_RESTAURANTES = 'http://localhost:3000/restaurantes';
+const API_RESERVA = 'http://localhost:3000/reservas';
 
-const API_RESERVA='http://localhost:3000/reserva';
-const RESERVA_URL = "/modulos/reserva/reserva.html";
+function carregarRestaurantes() {
+    fetch(API_URL_RESTAURANTES)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar restaurantes');
+            }
+            return response.json();
+        })
+        .then(restaurantes => {
+            const select = document.getElementById('restauranteRC');
+            restaurantes.forEach(restaurante => {
+                const option = document.createElement('option');
+                option.value = restaurante.id; 
+                option.textContent = restaurante.nome;
+                select.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Erro:', error));
+}
 
-async function salvarreserva(event){
-    event.preventDefault(); 
+async function salvarReserva() {
+    const restauranteId = document.getElementById('restauranteRC').value;
+    const data = document.getElementById('dataRC').value;
+    const hora = document.getElementById('horaRC').value;
 
-    //Coleta de dados dos inputs
-    const novareserva={
-        restaurante: document.getElementById('restauranteRC').value,
-        data: document.getElementById('dataRC').value,
-        hora: document.getElementById('horaRC').value
-    };
+    if (!restauranteId || !data || !hora) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+    }
 
-    try{
-        console.log('nova reserva:', novareserva);
-        //Requisição de envio
-        const response = await fetch(API_RESERVA,{
+    try {
+        const responseRestaurante = await fetch(`${API_URL_RESTAURANTES}/${restauranteId}`);
+        if (!responseRestaurante.ok) {
+            throw new Error('Erro ao carregar os detalhes do restaurante');
+        }
+
+        const restaurante = await responseRestaurante.json();
+        const nomeRestaurante = restaurante.nome;
+
+        const reserva = {
+            restauranteId: restauranteId,
+            nomeRestaurante: nomeRestaurante,
+            data: data,
+            hora: hora
+        };
+
+        const response = await fetch(API_RESERVA, {
             method: 'POST',
             headers: {
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(novareserva)
-        });
-        //Reposta capturada após a requisição
-        console.log('response:', response);
-        if (!response.ok) {
-            throw new Error('Erro ao realizar sua reserva: ' + response.statusText);
-        }
-
-        //Armazena a resposta e mostra no console
-        const salvareserva = await response.json();
-        console.log('Reserva realizada, consulte os dados', salvareserva);
-
-        //Confirma a reserva mostrando um alerta na tela
-        alert('Reserva realizada com sucesso!');
-    }catch (error) {
-        //Exibe erro no console e cria um alerta
-        console.error('Erro:', error);
-        alert('Ocorreu um erro ao realizar sua reserva.');
-    }
-}
-async function obterReservas() {
-    try {
-        // Faz a requisição GET para o servidor
-        const response = await fetch(API_RESERVA, {
-            method: 'GET',
-            headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON.stringify(reserva)
         });
 
-        // Verifica se a resposta foi bem-sucedida
         if (!response.ok) {
-            throw new Error('Erro ao obter as reservas: ' + response.statusText);
+            throw new Error('Erro ao salvar a reserva: ' + response.statusText);
+        } else {
+            alert('Reserva realizada com sucesso!');
+            carregarReservas();
         }
-
-        // Converte a resposta para JSON
-        const reservas = await response.json();
-        console.log('Reservas recebidas:', reservas);
-
-        mostrarReserva(reservas);
-        
-
     } catch (error) {
         console.error('Erro:', error);
-        alert('Ocorreu um erro ao obter as reservas.');
+        alert('Erro ao realizar a reserva: ' + error.message);
     }
 }
 
-function mostrarReserva(reservados){
-    let tela = document.getElementById('consultarRC');
-    let conteudo = '';
+function carregarReservas() {
+    fetch(API_RESERVA)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar reservas');
+            }
+            return response.json();
+        })
+        .then(reservas => {
+            const listaReservas = document.getElementById('listaReservas');
+            const mensagemSemReservas = document.getElementById('mensagemSemReservas');
+            listaReservas.innerHTML = '';
 
-    console.log('Reservados: ',reservados);
-    for(i=0; i< reservados.length; i++){
-        conteudo += `<span>${reservados.reserva[i].restaurante} </span><br>
-                     <span>${reservados.reserva[i].data} </span><br>
-                     <span>${reservados.reserva[i].hora} </span>`;
-    }
-
-    tela.innerHTML = conteudo;
-   
+            if (reservas.length === 0) {
+                mensagemSemReservas.style.display = 'block';
+                listaReservas.style.display = 'none';
+            } else {
+                reservas.forEach(reserva => {
+                    const li = document.createElement('li');
+                    li.textContent = `Restaurante: ${reserva.nomeRestaurante}, Data: ${reserva.data}, Hora: ${reserva.hora}`;
+                    listaReservas.appendChild(li);
+                });
+                mensagemSemReservas.style.display = 'none';
+                listaReservas.style.display = 'block';
+            }
+        })
+        .catch(error => console.error('Erro:', error));
 }
 
-document.addEventListener('DOMContentLoaded', obterReservas);
-document.addEventListener('DOMContentLoaded', function() {
-    const confirmar=document.getElementById('confirmarRC');
-    if (confirmar) {
-        confirmar.addEventListener('click', salvarreserva);
-    }
+document.getElementById('confirmarRC').addEventListener('click', salvarReserva);
+
+document.addEventListener('DOMContentLoaded', () => {
+    carregarRestaurantes();
+    carregarReservas(); 
 });

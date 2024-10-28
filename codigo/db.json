@@ -84,7 +84,7 @@
       "distancia": "5 km",
       "avaliacao": 4.6,
       "faixa_preco": "$",
-       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s"
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s"
     },
     {
       "id": 3,
@@ -93,7 +93,7 @@
       "distancia": "1.5 km",
       "avaliacao": 4.7,
       "faixa_preco": "$$",
-       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s"
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s"
     },
     {
       "id": 4,
@@ -102,7 +102,7 @@
       "distancia": "3.2 km",
       "avaliacao": 4.9,
       "faixa_preco": "$$$",
-       "image_url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg"
+      "image_url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg"
     }
   ],
   "usuarioCliente": [
@@ -119,20 +119,22 @@
       "id": 1
     }
   ],
-  "reserva": [
+  "reservas": [
     {
-      "restaurante": "Restaurante 1",
-      "data": "2024-10-12",
-      "hora": "12:00"
+      "restauranteId": "2",
+      "nomeRestaurante": "Sushi Express",
+      "data": "2024-10-08",
+      "hora": "01:10",
+      "id": 1
+    },
+    {
+      "restauranteId": "3",
+      "nomeRestaurante": "Café Central",
+      "data": "2024-10-01",
+      "hora": "03:16",
+      "id": 2
     }
   ],
-  "scripts": {
-    "searchFunction": "function search() { ... }",
-    "carouselControl": {
-      "previous": "glyphicon glyphicon-chevron-left",
-      "next": "glyphicon glyphicon-chevron-right"
-    }
-  },
   "cardapio": {
     "entradas": [
       {

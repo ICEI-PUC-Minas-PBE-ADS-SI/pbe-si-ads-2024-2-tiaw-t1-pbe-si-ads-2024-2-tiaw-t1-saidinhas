@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="../../assets/js/perfil.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="logo">
         <h1>Saidinhas</h1>
@@ -16,9 +18,9 @@
         <aside class="sidebar">
             <nav class="menu">
                 <ul>
-                    <li><a href="perfil.html" ><i class="fas fa-user"></i> Perfil</a></li>
-                    <li><a href="reserva.html" class="active" ><i class="fas fa-calendar-alt"></i> Reservas</a></li>
-                    <li><a href="filtro.html" ><i class="fas fa-search"></i> Buscar</a></li>
+                    <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="reserva.html" class="active"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
+                    <li><a href="filtro.html"><i class="fas fa-search"></i> Buscar</a></li>
                 </ul>
             </nav>
             <div class="logout">
@@ -31,9 +33,6 @@
                 <select class="form-select border border-danger" id="restauranteRC" aria-label="Default select example"
                     required>
                     <option selected>Selecione um restaurante</option>
-                    <option value="Restaurante 1">Restaurante 1</option>
-                    <option value="Restaurante 2">Restaurante 2</option>
-                    <option value="Restaurante 3">Restaurante 3</option>
                 </select>
                 <br>
                 <br>
@@ -44,18 +43,18 @@
                 <input class="border border-danger" type="time" id="horaRC" name="hora" required>
             </div>
             <br>
-            <button type="button" class="btn btn-danger" id="confirmarRC">
-                confirmar
-            </button>
+            <button type="button" class="btn btn-danger" id="confirmarRC">Confirmar</button>
             <div class="consultar" id="consultarRC">
                 <br>
                 <br>
                 <h3>Suas Reservas</h3>
-
+                <ul id="listaReservas"></ul>
+                <p id="mensagemSemReservas" style="display: none;">Você ainda não tem reservas.</p>
             </div>
         </main>
-
-        <script src="../../assets/js/cliente/reserva.js"></script>
     </div>
+
+    <script src="../../assets/js/cliente/reserva.js" defer></script>
 </body>
+
 </html>
