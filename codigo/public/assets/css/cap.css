@@ -8,18 +8,18 @@ body {
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
-    overflow: hidden; /* Impede a barra de rolagem na janela */
+    overflow: hidden; 
 }
 
 .container {
     display: flex;
-    height: 93.5vh; /* Altura do contêiner */
+    height: 93.5vh; 
 }
 
 .sidebar {
     width: 200px;
     height: auto; /* A altura se ajustará ao conteúdo */
-    background-color: #e02727; /* Cor da barra lateral */
+    background-color: #e02727; 
     color: white;
     display: flex;
     flex-direction: column;
