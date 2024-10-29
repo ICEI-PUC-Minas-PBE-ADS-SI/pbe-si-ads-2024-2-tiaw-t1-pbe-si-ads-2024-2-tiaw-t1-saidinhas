@@ -11,6 +11,18 @@
       "estado": "MG",
       "senha": "123",
       "id": 1
+    },
+    {
+      "nome": "Quero mais",
+      "cnpj": "5292653385566",
+      "email": "gcassia@sga.pucminas.br",
+      "cep": "3268766",
+      "logradouro": "teste",
+      "bairro": "moçambique",
+      "cidade": "coreia",
+      "estado": "Russia",
+      "senha": "08112005",
+      "id": 2
     }
   ],
   "menu": {
@@ -117,22 +129,28 @@
       "estado": "MG",
       "senha": "123",
       "id": 1
+    },
+    {
+      "nome": "Geovanna Quezia Oliveira de Cassia",
+      "cpf": "05498255561",
+      "email": "gcassia@sga.pucminas.br",
+      "cep": "32672686",
+      "logradouro": "qualquer",
+      "bairro": "Esmeraldas",
+      "cidade": "Atlanta",
+      "estado": "California",
+      "senha": "08112005",
+      "id": 2
     }
   ],
   "reservas": [
-    {
-      "restauranteId": "2",
-      "nomeRestaurante": "Sushi Express",
-      "data": "2024-10-08",
-      "hora": "01:10",
-      "id": 1
-    },
     {
       "restauranteId": "3",
       "nomeRestaurante": "Café Central",
       "data": "2024-10-01",
       "hora": "03:16",
-      "id": 2
+      "obs": "Mesa para 2 adultos e 1 criança.",
+      "id": 1
     }
   ],
   "cardapio": {

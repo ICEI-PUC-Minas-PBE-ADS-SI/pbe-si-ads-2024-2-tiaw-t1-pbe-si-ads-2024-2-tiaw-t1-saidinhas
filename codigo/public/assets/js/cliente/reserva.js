@@ -25,8 +25,9 @@ async function salvarReserva() {
     const restauranteId = document.getElementById('restauranteRC').value;
     const data = document.getElementById('dataRC').value;
     const hora = document.getElementById('horaRC').value;
+    const obs = document.getElementById('tipoRC').value;
 
-    if (!restauranteId || !data || !hora) {
+    if (!restauranteId || !data || !hora || !obs) {
         alert('Por favor, preencha todos os campos!');
         return;
     }
@@ -44,7 +45,8 @@ async function salvarReserva() {
             restauranteId: restauranteId,
             nomeRestaurante: nomeRestaurante,
             data: data,
-            hora: hora
+            hora: hora,
+            obs:obs
         };
 
         const response = await fetch(API_RESERVA, {
@@ -86,7 +88,17 @@ function carregarReservas() {
             } else {
                 reservas.forEach(reserva => {
                     const li = document.createElement('li');
-                    li.textContent = `Restaurante: ${reserva.nomeRestaurante}, Data: ${reserva.data}, Hora: ${reserva.hora}`;
+                    li.classList.add('reserva-item'); 
+
+                    li.innerHTML = `
+                        <div class="reserva-info">
+                            <span class="reserva-id">Reserva n°: ${reserva.id}</span><br>
+                            <span class="reserva-restaurante">Restaurante: ${reserva.nomeRestaurante}</span><br>
+                            <span class="reserva-data">Data: ${reserva.data}</span>
+                            <span class="reserva-hora">Hora: ${reserva.hora}</span><br>
+                            <span class="reserva-obs">Observação: ${reserva.obs}</span>
+                        </div><br>
+                    `;
                     listaReservas.appendChild(li);
                 });
                 mensagemSemReservas.style.display = 'none';

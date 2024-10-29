@@ -8,39 +8,43 @@
     width: 50%;    
     height: 40px;
     border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 #tipoRC{
     font-size: 15px;
     padding: 10px;  
-    width: 50%;  
+    width: 41%;  
     height: 40px;
     border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 #nomeRC{
     font-size: 15px;
-    padding: 10px;  
+    padding: 10px;
     width: 50%;  
     height: 40px;
     border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 #dataRC{
     font-size: 15px;
-    padding: 10px;  
+    padding: 10px; 
     width: 15%;  
     height: 40px;
     border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 #horaRC{
     font-size: 15px;
-    padding: 10px;  
+    padding: 10px; 
+    margin-left: 30px;  
     width: 15%;    
     height: 40px;
     border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
+}
+.horaRC{
+    margin-left: 65px; 
 }
 #confirmarRC{
     background-color: red;
@@ -50,5 +54,40 @@
     width: 15%;    
     height: 35px;
     border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
+}
+ul {
+    list-style-type: none;
+    padding: 0;            
+    margin: 0;             
+}
+.reserva-item{
+    border: 1px solid red;
+    margin: 10px;
+    padding: 8px;
+    padding-left: 15px;
+    border-radius: 20px;
+    width: 40%;
+    height: 90px;
+}
+.reserva-id{
+    font-size: small;
+    color: red;
+    font-weight: bold;
+}
+.reserva-restaurante{
+    font-size: medium;
+    font-weight: bold;
+}
+.reserva-data{
+    font-size: medium;
+    font-style: italic;
+}
+.reserva-hora{
+    font-size: medium;
+    font-style: italic;
+    margin-left: 20px;
+}
+.reserva-obs{
+    color:red;
 }

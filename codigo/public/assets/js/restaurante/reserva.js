@@ -20,7 +20,17 @@ function carregarReservas() {
             } else {
                 reservas.forEach(reserva => {
                     const li = document.createElement('li');
-                    li.textContent = `Restaurante: ${reserva.nomeRestaurante}, Data: ${reserva.data}, Hora: ${reserva.hora}`;
+                    li.classList.add('reserva-item'); 
+
+                    li.innerHTML = `
+                        <div class="reserva-info">
+                            <span class="reserva-id">Reserva n°: ${reserva.id}</span><br>
+                            <span class="reserva-restaurante">Restaurante: ${reserva.nomeRestaurante}</span><br>
+                            <span class="reserva-data">Data: ${reserva.data}</span>
+                            <span class="reserva-hora">Hora: ${reserva.hora}</span><br>
+                            <span class="reserva-obs">Observação: ${reserva.obs}</span>
+                        </div><br>
+                    `;
                     listaReservas.appendChild(li);
                 });
                 mensagemSemReservas.style.display = 'none';

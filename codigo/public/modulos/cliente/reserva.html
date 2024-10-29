@@ -31,24 +31,30 @@
 
         <main class="content">
             <div class="novareserva" id="requisicao" method="post" onsubmit="salvarreserva(event)">
-                <select class="form-select border border-danger" id="restauranteRC" aria-label="Default select example"
+                <select class="form-select" id="restauranteRC" aria-label="Default select example"
                     required>
                     <option selected>Selecione um restaurante</option>
                 </select>
                 <br>
                 <br>
                 <label for="dataRC">Escolha uma data:</label>
-                <input class="border border-danger" type="date" id="dataRC" name="data" required>
+                <label for="horaRC" class="horaRC">Escolha um horário:</label>
 
-                <label for="horaRC">Escolha um horário:</label>
-                <input class="border border-danger" type="time" id="horaRC" name="hora" required>
+                <br>
+                <input type="date" id="dataRC" name="data" required>
+                <input  type="time" id="horaRC" name="hora" required>
+                <br>
+                <br>
+                <label for="tipoRC">Observações:</label>
+                <input type="text" id="tipoRC" name="nome" placeholder="Ex.: Mesa para 4 pessoas...">
             </div>
             <br>
-            <button type="button" class="btn btn-danger" id="confirmarRC">Confirmar</button>
+            <button type="button" id="confirmarRC">Confirmar</button>
             <div class="consultar" id="consultarRC">
                 <br>
                 <br>
                 <h3>Suas Reservas</h3>
+                <br>
                 <ul id="listaReservas"></ul>
                 <p id="mensagemSemReservas" style="display: none;">Você ainda não tem reservas.</p>
             </div>
