@@ -166,21 +166,18 @@
         "nome": "Sushi",
         "descricao": "É um bolinho de arroz enrolado com uma alga.",
         "preco": 35,
-        "pontos": 12,
         "imagem": "sushi.jpg"
       },
       {
         "nome": "Bruschetta",
         "descricao": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
         "preco": 20,
-        "pontos": 8,
         "imagem": "tomato.jpg"
       },
       {
         "nome": "Salada Caprese",
         "descricao": "É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.",
         "preco": 25,
-        "pontos": 9,
         "imagem": "salada.jpg"
       }
     ],
@@ -189,14 +186,12 @@
         "nome": "Filé Mignon",
         "descricao": "Filé de carne bovina grelhado, servido com molho de vinho tinto.",
         "preco": 55,
-        "pontos": 25,
         "imagem": "bife.jpg"
       },
       {
         "nome": "Risoto de Frutos do Mar",
         "descricao": "Arroz arbóreo cremoso com camarões, lulas e mexilhões.",
         "preco": 45,
-        "pontos": 22,
         "imagem": "risoto.jpg"
       },
       {
@@ -210,7 +205,6 @@
         "nome": "Macarrão ao molho",
         "descricao": "Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.",
         "preco": 22,
-        "pontos": 20,
         "imagem": "pasta.jpg"
       }
     ],
@@ -219,14 +213,12 @@
         "nome": "Torta de Limão",
         "descricao": "Deliciosa torta de limão com merengue e base crocante.",
         "preco": 18,
-        "pontos": 28,
         "imagem": "torta.jpg"
       },
       {
         "nome": "Gelato de Chocolate",
         "descricao": "Gelato cremoso de chocolate, feito com chocolate belga.",
         "preco": 15,
-        "pontos": 18,
         "imagem": "gelato.jpg"
       }
     ]
