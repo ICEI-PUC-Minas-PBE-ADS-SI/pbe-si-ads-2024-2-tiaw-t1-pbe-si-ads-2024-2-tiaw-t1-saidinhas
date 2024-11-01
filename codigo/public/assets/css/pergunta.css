@@ -1,0 +1,68 @@
+body {
+    background-image: url('../../assets/images/backgorund.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh; 
+    
+}
+
+
+.conhecendo {
+    width: 560px;
+    align-items: center;
+}
+
+.card {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 16px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 1; 
+}
+
+.form-check-input {
+    appearance: none;
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid red;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: red;
+}
+
+
+.continuar img{
+    margin-left: 1100px;
+    width: 300px;
+}
+
+
+
+
+

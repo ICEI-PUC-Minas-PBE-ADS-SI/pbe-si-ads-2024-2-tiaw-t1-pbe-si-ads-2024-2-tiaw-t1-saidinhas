@@ -49,7 +49,7 @@
             "id": 201,
             "name": "Filé Mignon com Fritas",
             "description": "Filé mignon grelhado acompanhado de batatas fritas",
-            "price": "39.90",
+            "price": "39.89",
             "available": true,
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Tw7UqQ2xVGcBsREBzTD-3sA5gVgsrTNmiA&s"
           },
@@ -151,6 +151,14 @@
       "hora": "03:16",
       "obs": "Mesa para 2 adultos e 1 criança.",
       "id": 1
+    },
+    {
+      "restauranteId": "1",
+      "nomeRestaurante": "Restaurante Mineiro",
+      "data": "2024-10-31",
+      "hora": "23:24",
+      "obs": "Mesa para 4",
+      "id": 2
     }
   ],
   "cardapio": {
@@ -318,6 +326,69 @@
       "seu email": "lili",
       "mensagem": "mensagem de erro",
       "id": 1
+    }
+  ],
+
+  "perguntasCliente": [
+    {
+      "id": 1,
+      "pergunta": "Qual tipo de comida você gosta?",
+      "opcoes": [
+        "Comida Japonesa",
+        "Comida da roça",
+        "Comida Italiana",
+        "Outras..."
+      ]
+    },
+    {
+      "id": 2,
+      "pergunta": "Qual é sua bebida favorita?",
+      "opcoes": [
+        "Refrigerante",
+        "Suco",
+        "Bebidas Alcoólicas",
+        "Outras..."
+      ]
+    },
+    {
+      "id": 3,
+      "pergunta": "Qual é sua sobremesa favorita?",
+      "opcoes": [
+        "Bolo",
+        "Sorvete",
+        "Pudim",
+        "Outras..."
+      ]
+    },
+    {
+      "id": 4,
+      "pergunta": "Com quem você costuma sair?",
+      "opcoes": [
+        "Amigos",
+        "Parceiro(a)",
+        "Família",
+        "Sozinho(a)"
+      ]
+    },
+    {
+      "id": 5,
+      "pergunta": "Quando você costuma sair mais?",
+      "opcoes": [
+        "Meio de semana",
+        "Finais de semana",
+        "Feriados",
+        "Outros..."
+      ]
+    },
+    {
+      "id": 6,
+      "pergunta": "Em qual horário você prefere sair?",
+      "opcoes": [
+        "Manhã",
+        "Tarde",
+        "Noite",
+        "Não tenho preferência"
+      ]
     }
   ]
 }
