@@ -38,6 +38,22 @@
             "price": "87.00",
             "available": false,
             "image_url": "https://www.estadao.com.br/resizer/v2/Z725JFWNVFGX7NC7R3TDIRKVOI.jpeg?quality=80&auth=47f419b219bee557c23c67bb3f7f2fc9ab982b47943dcc4186e766e7bdd0b6b3&width=720&height=503&smart=true"
+          },
+          {
+            "id": 102,
+            "name": "Sanduíche natural",
+            "description": "É um alimento composto por duas fatias de pão com um recheio entre elas.",
+            "price": "15.00",
+            "available": true,
+            "image_url": "https://www.saboresajinomoto.com.br/uploads/images/recipes/sanduiche_natural.webp"
+          },
+          {
+            "id": 103,
+            "name": "Bruschetta",
+            "description": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
+            "price": "20.00",
+            "available": true,
+            "image_url": "https://www.debemcomacomida.com.br/wp-content/uploads/2020/09/italian-bruschettas-7433A4M-1024x665.jpg"
           }
         ]
       },
@@ -54,12 +70,20 @@
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Tw7UqQ2xVGcBsREBzTD-3sA5gVgsrTNmiA&s"
           },
           {
+            "id": 202,
             "name": "PF",
             "description": "PF grande",
             "price": "30.00",
             "available": false,
-            "image_url": "https://img.freepik.com/fotos-gratis/composicao-de-comida-brasileira-deliciosa-de-alto-angulo_23-2148739223.jpg?t=st=1729356547~exp=1729360147~hmac=c6e4901b8fbd3ef49731ce6b789570aa4cdc5101a9e6ee4380484aad4b442505&w=826",
-            "id": 1729356578957
+            "image_url": "https://img.freepik.com/fotos-gratis/composicao-de-comida-brasileira-deliciosa-de-alto-angulo_23-2148739223.jpg?t=st=1729356547~exp=1729360147~hmac=c6e4901b8fbd3ef49731ce6b789570aa4cdc5101a9e6ee4380484aad4b442505&w=826"
+          },
+          {
+            "id": 203,
+            "name": "Sushi",
+            "description": "É um bolinho de arroz enrolado com uma alga.",
+            "price": "35.00",
+            "available": true,
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStwtdvnf-clwqkAPnZ5zScn4SNpggTUd1nyQ&s"
           }
         ]
       },
@@ -71,7 +95,7 @@
             "id": 301,
             "name": "Coca-Cola Lata",
             "description": "Refrigerante Coca-Cola 350ml",
-            "price": 5,
+            "price": "6.00",
             "available": true,
             "image_url": "https://mercantilnovaera.vtexassets.com/arquivos/ids/206262/Refrigerante-COCA-COLA-Lata-350ml.jpg?v=638174264397000000"
           }
@@ -85,36 +109,155 @@
       "nome": "Restaurante Mineiro",
       "tipo": "Brasileira",
       "distancia": "2 km",
+      "localizacao": "Rua das Flores, 123, Betim, MG",
+      "telefone": "(31) 3344-5566",
+      "descricao": "O Restaurante Sabor Mineiro traz o melhor da culinária mineira, com pratos autênticos e feitos com ingredientes frescos e selecionados. Ideal para quem quer saborear as delícias de Minas Gerais.",
+      "horario_funcionamento": {
+        "segunda_sexta": "11:00 - 22:00",
+        "sabado": "11:00 - 23:00",
+        "domingo": "11:00 - 18:00"
+      },
+      "email": "contato@sabormineiro.com",
+      "redes_sociais": {
+        "facebook": "https://www.facebook.com/sabormineiro",
+        "instagram": "https://www.instagram.com/sabormineiro",
+        "site": "https://www.sabormineiro.com"
+      },
       "avaliacao": 4.8,
-      "faixa_preco": "$",
+      "num_avaliacoes": 256,
+      "faixa_preco": "R$20 - R$80",
+      "cozinha": [
+        "Mineira",
+        "Brasileira",
+        "Vegetariana"
+      ],
+      "especialidades": [
+        "Feijoada",
+        "Tutu de feijão",
+        "Frango com quiabo",
+        "Pão de queijo artesanal"
+      ],
+      "imagens": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s"
+      ],
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s"
     },
     {
       "id": 2,
-      "nome": "Sushi Express",
-      "tipo": "Japonesa",
-      "distancia": "5 km",
-      "avaliacao": 4.6,
-      "faixa_preco": "$",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s"
-    },
-    {
-      "id": 3,
       "nome": "Café Central",
       "tipo": "Cafeterias",
       "distancia": "1.5 km",
-      "avaliacao": 4.7,
-      "faixa_preco": "$$",
+      "localizacao": "Praça do Mercado, 45, Betim, MG",
+      "telefone": "(31) 3456-7890",
+      "descricao": "O Café Central oferece um ambiente acolhedor e descontraído, ideal para apreciar um bom café e doces artesanais. Perfeito para encontros e reuniões.",
+      "horario_funcionamento": {
+        "segunda_sexta": "08:00 - 20:00",
+        "sabado": "09:00 - 21:00",
+        "domingo": "09:00 - 18:00"
+      },
+      "email": "contato@cafecentral.com",
+      "redes_sociais": {
+        "facebook": "https://www.facebook.com/cafecentral",
+        "instagram": "https://www.instagram.com/cafecentral",
+        "site": "https://www.cafecentral.com"
+      },
+      "avaliacao": 4.6,
+      "num_avaliacoes": 189,
+      "faixa_preco": "R$10 - R$50",
+      "cozinha": [
+        "Cafeteria",
+        "Doces"
+      ],
+      "especialidades": [
+        "Café gelado",
+        "Torta de limão",
+        "Brownie de chocolate"
+      ],
+      "imagens": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s"
+      ],
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s"
     },
     {
-      "id": 4,
-      "nome": "Fit & Fresh",
+      "id": 3,
+      "nome": "Fit e Fresh",
       "tipo": "Saudável",
       "distancia": "3.2 km",
-      "avaliacao": 4.9,
-      "faixa_preco": "$$$",
+      "localizacao": "Avenida das Palmeiras, 77, Betim, MG",
+      "telefone": "(31) 3789-4567",
+      "descricao": "O Fit e Fresh é uma opção saudável com pratos feitos à base de ingredientes frescos e naturais. Ideal para quem busca uma alimentação balanceada.",
+      "horario_funcionamento": {
+        "segunda_sexta": "10:00 - 21:00",
+        "sabado": "11:00 - 22:00",
+        "domingo": "fechado"
+      },
+      "email": "contato@fitefresh.com",
+      "redes_sociais": {
+        "facebook": "https://www.facebook.com/fitefresh",
+        "instagram": "https://www.instagram.com/fitefresh",
+        "site": "https://www.fitefresh.com"
+      },
+      "avaliacao": 4.7,
+      "num_avaliacoes": 98,
+      "faixa_preco": "R$15 - R$60",
+      "cozinha": [
+        "Saladas",
+        "Sucos",
+        "Vegetariana"
+      ],
+      "especialidades": [
+        "Salada Caesar",
+        "Smoothie de frutas",
+        "Wrap integral"
+      ],
+      "imagens": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg"
+      ],
       "image_url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Sushi Express",
+      "tipo": "Japonesa",
+      "distancia": "5 km",
+      "localizacao": "Rua das Acácias, 5, Betim, MG",
+      "telefone": "(31) 3789-1234",
+      "descricao": "O Sushi Express é um restaurante japonês que oferece uma experiência gastronômica única com sushis e sashimis frescos, preparados na hora.",
+      "horario_funcionamento": {
+        "segunda_sexta": "11:00 - 23:00",
+        "sabado": "12:00 - 00:00",
+        "domingo": "12:00 - 22:00"
+      },
+      "email": "contato@sushiexpress.com",
+      "redes_sociais": {
+        "facebook": "https://www.facebook.com/sushiexpress",
+        "instagram": "https://www.instagram.com/sushiexpress",
+        "site": "https://www.sushiexpress.com"
+      },
+      "avaliacao": 4.9,
+      "num_avaliacoes": 315,
+      "faixa_preco": "R$25 - R$90",
+      "cozinha": [
+        "Japonesa",
+        "Sushi"
+      ],
+      "especialidades": [
+        "Sushi de salmão",
+        "Temaki de camarão",
+        "Sashimi de atum"
+      ],
+      "imagens": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s"
+      ],
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhwLjlVjW64-k9hHKIvQfyC57CAd40D45Kw&s"
     }
   ],
   "usuarioCliente": [
@@ -320,7 +463,6 @@
       "id": 1
     }
   ],
-
   "perguntasCliente": [
     {
       "id": 1,

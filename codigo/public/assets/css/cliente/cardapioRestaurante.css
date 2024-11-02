@@ -1,0 +1,47 @@
+.category-nav {
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #ce1e1e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#items-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h3 {
+    margin: 0;
+    color: #ff0000;
+}
+
+.card p {
+    color: #555;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}

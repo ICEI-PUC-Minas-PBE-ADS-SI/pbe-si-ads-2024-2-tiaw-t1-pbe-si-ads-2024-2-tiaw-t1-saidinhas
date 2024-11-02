@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saidinhas</title>
-    <link rel="stylesheet" href="../../assets/css/cap.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/cliente/cardapioRestaurante.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -17,106 +18,37 @@
         <aside class="sidebar">
             <nav class="menu">
                 <ul>
-                    <li><a href="perfil.html" class="active"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
                     <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
-                    <li><a href="filtro.html"><i class="fas fa-search"></i> Buscar</a></li>
+                    <li><a href="filtro.html" class="active"><i class="fas fa-search"></i> Buscar</a></li>
                 </ul>
             </nav>
             <div class="logout">
                 <a href="../../index.html">Sair</a>
             </div>
         </aside>
-    
-        <div class="content"> <!-- Adicionei a classe content aqui -->
-            <div class="menu-section">
-                <h2>Entradas</h2>
-                <!-- Aqui estão suas cartas -->
-                <div class="card">
-                    <img src="../../assets/images/sando.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Sanduíche natural</h3>
-                    <p>É um alimento composto por duas fatias de pão com um recheio entre elas.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 15,00 <br>Origem:Inglesa<br>5 pontos</p>
+        <main class="content">
+            <section class="menu-items">
+                <div class="menu-header">
+                    <h2>Cardápio</h2>
                 </div>
-                <div class="card">
-                    <img src="../../assets/images/sushi.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Sushi</h3>
-                    <p>É um bolinho de arroz enrolado com uma alga. </p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 35,00 <br>Origem:Japonesa></p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/tomato.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Bruschetta</h3>
-                    <p>Pão tostado com tomate fresco, manjericão e azeite de oliva.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 20,00 <br>Origem:Italiana></p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/caprese.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Salada Caprese</h3>
-                    <p>É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 25,00 <br>Origem:Italiana</p>
-                </div>
-            </div>
-            
-            <div class="menu-section">
-                <h2>Pratos Principais</h2>
-                <!-- Aqui estão suas cartas -->
-                <div class="card">
-                    <img src="../../assets/images/bife.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Filé Mignon</h3>
-                    <p>Filé de carne bovina grelhado, servido com molho de vinho tinto.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 55,00 <br>Origem:Francesa</p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/risoto.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Risoto de Frutos do Mar</h3>
-                    <p>Arroz arbóreo cremoso com camarões, lulas e mexilhões.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 45,00 <br>Origem:Italiana</p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/rice.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Arroz e feijão</h3>
-                    <p>arroz soltinho com feijão com muito caldo, servido em um prato.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 18,00 <br>Origem:Brasileira<br>14 pontos</p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/pasta.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Macarrão ao molho</h3>
-                    <p>Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 22,00 <br>Origem:Italiana</p>
-                </div>
-            </div>
-    
-            <div class="menu-section">
-                <h2>Sobremesas</h2>
-                <!-- Aqui estão suas cartas -->
-                <div class="card">
-                    <img src="../../assets/images/torta.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Torta de Limão</h3>
-                    <p>Deliciosa torta de limão com merengue e base crocante.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 18,00 <br>Origem:Estadunidense</p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/gelato.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
-                    <h3>Gelato de Chocolate</h3>
-                    <p>Gelato cremoso de chocolate, feito com chocolate belga.</p>
-                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
-                    <p class="info">Preço: R$ 15,00 <br>Origem:Italiana</p>
-                </div>
-            </div>
-        </div>
+
+                <nav class="category-nav">
+                    <button class="category-btn" data-category="all">Todos</button>
+                    <button class="category-btn" data-category="Entrada">Entrada</button>
+                    <button class="category-btn" data-category="Prato Principal">Prato Principal</button>
+                    <button class="category-btn" data-category="Bebidas">Bebidas</button>
+                </nav>
+
+                <div id="items-list" class="items-list"></div>
+
+                <div id="items-list-vazio" class="items-list-vazio"></div>
+
+            </section>
+        </main>
     </div>
 
-    <script src="../../assets/js/cap.js"></script>
-
+    <script src="../../assets/js/cliente/cardapioRestaurante.js"></script>
 </body>
 
 </html>
