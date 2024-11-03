@@ -1,10 +1,12 @@
 const API_URL_USUARIOS = 'http://localhost:3000/usuarioCliente';
 
+
 async function salvarUsuario(event) {
     event.preventDefault();
 
     const novoUsuario = {
         nome: document.getElementById('txt_nome_completo').value,
+        data: document.getElementById('txt_data_de_nascimento').value,
         cpf: document.getElementById('txt_cpf').value,
         email: document.getElementById('txt_email_usuario').value,
         cep: document.getElementById('cep_usuario').value,
@@ -41,7 +43,7 @@ async function salvarUsuario(event) {
 async function loginUsuario(event) {
     event.preventDefault();
 
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
     try {

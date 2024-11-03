@@ -1,0 +1,117 @@
+body {
+    background-image: url('../../images/Cabeçalhopergunta.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.comecar {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.comecar button {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popIn 1s ease-out forwards;
+    animation-delay: 3s;
+}
+
+.bem-vindo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bem-vindo img {
+    width: 500px;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    opacity: 0;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 0s;
+}
+
+.text-eaquerda {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.text-eaquerda img {
+    margin-top: 50px;
+    width: 650px;
+    margin-left: 20px;
+    position: relative;
+    opacity: 0;
+    animation: slideLeft 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+
+.text-direita {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.text-direita img {
+    margin-top: 20px;
+    width: 750px;
+    margin-right: 40px;
+    position: relative;
+    opacity: 0;
+    animation: slideRight 1s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        right: -100px;
+        opacity: 0;
+    }
+
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}

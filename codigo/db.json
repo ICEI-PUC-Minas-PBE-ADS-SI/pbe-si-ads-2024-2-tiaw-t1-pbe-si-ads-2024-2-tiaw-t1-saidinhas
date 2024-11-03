@@ -23,6 +23,18 @@
       "estado": "Russia",
       "senha": "08112005",
       "id": 2
+    },
+    {
+      "nome": "cachorro quente da jisoo",
+      "cnpj": "1234567890",
+      "email": "jisoohotdog@gail.com",
+      "cep": "23456700",
+      "logradouro": "Rua Flores",
+      "bairro": "me",
+      "cidade": "all eyes on me",
+      "estado": "bahia",
+      "senha": "890",
+      "id": 3
     }
   ],
   "menu": {
@@ -263,6 +275,7 @@
   "usuarioCliente": [
     {
       "nome": "Krycia",
+      "data de nascimento": "",
       "cpf": "51561",
       "email": "kry@gmail.com",
       "cep": "25165",
@@ -275,6 +288,7 @@
     },
     {
       "nome": "Geovanna Quezia Oliveira de Cassia",
+      "data de nascimento": "",
       "cpf": "05498255561",
       "email": "gcassia@sga.pucminas.br",
       "cep": "32672686",
@@ -284,6 +298,19 @@
       "estado": "California",
       "senha": "08112005",
       "id": 2
+    },
+    {
+      "nome": "lalisa",
+      "data": "23/07/2000",
+      "cpf": "1234578900",
+      "email": "saraalmeida3606@gmail.com",
+      "cep": "56473849",
+      "logradouro": "Rua Rockstar",
+      "bairro": "tayland",
+      "cidade": "São Joaquim de Bicas",
+      "estado": "MG",
+      "senha": "909",
+      "id": 3
     }
   ],
   "reservas": [

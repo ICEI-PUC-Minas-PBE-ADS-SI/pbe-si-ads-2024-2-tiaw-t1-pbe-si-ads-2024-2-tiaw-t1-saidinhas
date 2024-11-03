@@ -1,0 +1,37 @@
+
+   html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+    }
+    .left {
+      width: 50vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .left img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  .container {
+  position: relative;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -190px;
+ 
+}
+  .login{
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login img{
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+  }
