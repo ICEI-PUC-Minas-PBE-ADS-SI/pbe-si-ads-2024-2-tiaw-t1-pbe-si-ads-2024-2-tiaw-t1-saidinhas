@@ -128,13 +128,15 @@ button.btn {
     display: inline-block;
 }
 
-button.btn.primary {
-    background-color: #007bff;
-    color: white;
+.btn-primary {
+    background-color: red !important;
+    color: yellow;
 }
 
+
+/* 
 button.btn.primary:hover {
-    background-color: #0056b3;
+    background-color: #de0e0e;
 }
 
 button.btn.secondary {
@@ -144,4 +146,4 @@ button.btn.secondary {
 
 button.btn.secondary:hover {
     background-color: #565e64;
-}
+}*/
