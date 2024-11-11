@@ -337,6 +337,7 @@
         "nome": "Sanduíche natural",
         "descricao": "É um alimento composto por duas fatias de pão com um recheio entre elas.",
         "preco": 15,
+        "origem": "Inglesa",
         "pontos": 5,
         "imagem": "sando.jpg"
       },
@@ -344,18 +345,21 @@
         "nome": "Sushi",
         "descricao": "É um bolinho de arroz enrolado com uma alga.",
         "preco": 35,
+        "origem": "Japonesa",
         "imagem": "sushi.jpg"
       },
       {
         "nome": "Bruschetta",
         "descricao": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
         "preco": 20,
+        "origem": "Italiana",
         "imagem": "tomato.jpg"
       },
       {
         "nome": "Salada Caprese",
         "descricao": "É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.",
         "preco": 25,
+        "origem": "Italiana",
         "imagem": "salada.jpg"
       }
     ],
@@ -364,18 +368,21 @@
         "nome": "Filé Mignon",
         "descricao": "Filé de carne bovina grelhado, servido com molho de vinho tinto.",
         "preco": 55,
+        "origem": "Francesa",
         "imagem": "bife.jpg"
       },
       {
         "nome": "Risoto de Frutos do Mar",
         "descricao": "Arroz arbóreo cremoso com camarões, lulas e mexilhões.",
         "preco": 45,
+        "origem": "Italiana",
         "imagem": "risoto.jpg"
       },
       {
         "nome": "Arroz e feijão",
         "descricao": "Arroz soltinho com feijão com muito caldo, servido em um prato.",
         "preco": 18,
+        "origem": "Brasileira",
         "pontos": 14,
         "imagem": "rice.jpg"
       },
@@ -383,6 +390,7 @@
         "nome": "Macarrão ao molho",
         "descricao": "Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.",
         "preco": 22,
+        "origem": "Italiana",
         "imagem": "pasta.jpg"
       }
     ],
@@ -391,12 +399,14 @@
         "nome": "Torta de Limão",
         "descricao": "Deliciosa torta de limão com merengue e base crocante.",
         "preco": 18,
+        "origem": "Estadunidense",
         "imagem": "torta.jpg"
       },
       {
         "nome": "Gelato de Chocolate",
         "descricao": "Gelato cremoso de chocolate, feito com chocolate belga.",
         "preco": 15,
+        "origem": "Italiana",
         "imagem": "gelato.jpg"
       }
     ]
