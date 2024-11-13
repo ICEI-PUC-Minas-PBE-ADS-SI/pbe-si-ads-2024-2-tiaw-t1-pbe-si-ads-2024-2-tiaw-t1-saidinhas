@@ -311,6 +311,19 @@
       "estado": "MG",
       "senha": "909",
       "id": 3
+    },
+    {
+      "nome": "jennie",
+      "data": "12031999",
+      "cpf": "1234567",
+      "email": "jennie@gamil.com",
+      "cep": "142500",
+      "logradouro": "Rua solo",
+      "bairro": "bairro",
+      "cidade": "cidade",
+      "estado": "estado",
+      "senha": "7776",
+      "id": 4
     }
   ],
   "reservas": [
@@ -412,124 +425,51 @@
     ]
   },
   "page": {
-      "title": "Saidinhas",
-      "logo": "Saidinhas",
-      "menu": [
-        {
-          "title": "Perfil",
-          "icon": "user",
-          "link": "perfil.html"
-        },
-        {
-          "title": "Reservas",
-          "icon": "calendar-alt",
-          "link": "reserva.html"
-        },
-        {
-          "title": "Buscar",
-          "icon": "search",
-          "link": "filtro.html",
-          "active": true
-        }
-      ],
-      "logout": {
-        "text": "Sair",
-        "link": "../../index.html"
-      },
-      "mainContent": {
-        "button": {
-          "id": "acessar-cardapio",
-          "text": "Acessar Cardápio",
-          "class": "botao-vermelho"
-        },
-        "restaurants": [
-          {
-            "name": "Restaurante Mineiro",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s",
-            "details": {
-              "tipo": "Brasileira",
-              "distancia": "15 km",
-              "avaliacao": 4.8,
-              "faixaDePreco": "$"
-            }
-          }
-        ]
-      }
-    },
-  "local": {
-    "titulo": "Saidinhas",
-    "cabecalho": {
-      "logo": "logo.jpg",
-      "barraDeBusca": {
-        "placeholder": "Buscar...",
-        "iconeLupa": "lupa.jpg"
-      },
-      "botoes": [
-        {
-          "classe": "btn btn-danger",
-          "texto": "Login"
-        }
-      ]
-    },
-    "sidebar": [
+    "title": "Saidinhas",
+    "logo": "Saidinhas",
+    "menu": [
       {
-        "icone": "fas fa-user",
-        "texto": "Perfil",
-        "link": "#"
+        "title": "Perfil",
+        "icon": "user",
+        "link": "perfil.html"
       },
       {
-        "icone": "fas fa-utensils",
-        "texto": "Cardápio",
-        "link": "cardapio.html"
+        "title": "Reservas",
+        "icon": "calendar-alt",
+        "link": "reserva.html"
       },
       {
-        "icone": "fas fa-calendar-alt",
-        "texto": "Reservas",
-        "link": "#"
-      },
-      {
-        "icone": "fas fa-tags",
-        "texto": "Promoções",
-        "link": "#"
-      },
-      {
-        "icone": "fas fa-map-marker-alt",
-        "texto": "Localização",
-        "link": "#"
-      },
-      {
-        "icone": "fas fa-sign-out-alt",
-        "texto": "Log out",
-        "link": "#",
-        "classe": "logout"
+        "title": "Buscar",
+        "icon": "search",
+        "link": "filtro.html",
+        "active": true
       }
     ],
-    "conteudo": {
-      "tituloPrincipal": "Bon appétit!",
-      "localizacao": {
-        "titulo": "Localização",
-        "endereco": {
-          "rua": "Rua: Santa Maria das Graças, 156",
-          "bairro": "Santa Tereza",
-          "cidade": "Belo Horizonte",
-          "cep": "31010-030",
-          "estado": "Minas Gerais"
-        },
-        "mapaImagem": "mapa.jpg"
-      },
-      "contatos": {
-        "titulo": "Contatos",
-        "telefone": "31-12345-6789",
-        "email": "bonappetit@gmail.com"
-      }
+    "logout": {
+      "text": "Sair",
+      "link": "../../index.html"
     },
-    "scripts": [
-      {
-        "funcao": "search",
-        "descricao": "Função para busca que exibe um alerta com a query."
-      }
-    ]
+    "mainContent": {
+      "button": {
+        "id": "acessar-cardapio",
+        "text": "Acessar Cardápio",
+        "class": "botao-vermelho"
+      },
+      "restaurants": [
+        {
+          "name": "Restaurante Mineiro",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s",
+          "details": {
+            "tipo": "Brasileira",
+            "distancia": "15 km",
+            "avaliacao": 4.8,
+            "faixaDePreco": "$"
+          }
+        }
+      ]
+    }
   },
+ 
   "aplicarcupom": [
     {
       "codigoCupom": "CUMPO90",
