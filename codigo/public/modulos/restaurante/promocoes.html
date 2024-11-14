@@ -16,21 +16,32 @@
     <div class="logo">
         <h1>Saidinhas</h1>
     </div>
-    <div class="container">
-        <aside class="sidebar">
-            <nav class="menu">
-                <ul>
-                    <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
-                    <li><a href="cardapio.html"><i class="fas fa-utensils"></i> Cardápio</a></li>
-                    <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
-                    <li><a href="promocoes.html" class="active"><i class="fas fa-tags"></i> Promoções</a></li>
-                    <li><a href="relatorios.html"><i class="fas fa-chart-line"></i> Relatórios</a></li>
-                </ul>
-            </nav>
-            <div class="logout">
-                <a href="../../index.html">Sair</a>
+    <aside class="sidebar">
+        <nav class="menu">
+            <ul>
+                <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="cardapio.html"><i class="fas fa-utensils"></i> Cardápio</a></li>
+                <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
+                <li><a href="promocoes.html" class="active"><i class="fas fa-tags"></i> Promoções</a></li>
+                <li><a href="relatorios.html"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+                <li><a class="logout" href="../../index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    </aside>
+    <div class="container"> <button id="add" class="btn primary" onclick="showPopup()">Adicionar Novo Card</button>
+        <div id="popup" class="popup">
+            <div class="popup-content"> <span class="close" onclick="hidePopup()">&times;</span>
+                <h2>Adicionar Novo Card</h2> <label for="titulo">Título:</label> <input type="text" id="titulo"
+                    name="titulo"><br> <label for="urlImagem">URL da Imagem:</label> <input type="text" id="urlImagem"
+                    name="urlImagem"><br> <label for="preco">Preço:</label> <input type="text" id="preco"
+                    name="preco"><br> <button  onclick="adicionarCard()">Adicionar</button>
             </div>
-        </aside>
+        </div>
+        <div id="cardsContainer" class="cards-container"> <!-- Cards existentes aqui -->
+
+        </div>
 
         <div class="card">
             <img class="card-img" src="../../assets/images/salada.jpg" alt="Card image cap">
@@ -64,7 +75,7 @@
             <img class="card-img" src="../../assets/images/bebida.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Drincks</h5>
-                <strong>R$:</strong><span id="preco2">37,50</span> <span id="desconto4"></span><br>
+                <strong>R$:</strong><span id="preco4">37,50</span> <span id="desconto4"></span><br>
                 <button class="btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
                 <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
             </div>

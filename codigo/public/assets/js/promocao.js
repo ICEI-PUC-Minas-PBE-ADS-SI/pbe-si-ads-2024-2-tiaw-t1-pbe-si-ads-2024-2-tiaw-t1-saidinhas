@@ -40,3 +40,34 @@ function toggleCaixaDesconto(button) {
         cardBody.appendChild(input);
     }
 }
+// JavaScript para controlar o popup e adicionar novos cards
+function showPopup() {
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function hidePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+function adicionarCard() {
+    var titulo = document.getElementById('titulo').value;
+    var urlImagem = document.getElementById('urlImagem').value;
+
+    var cardContainer = document.getElementById('cardsContainer');
+    var novoCard = document.createElement('div');
+    novoCard.classList.add('card');
+
+    var cardContent = `
+        <img class="card-img" src="${urlImagem}" alt="Imagem do Card">
+        <div class="card-body">
+            <h5 class="card-title">${titulo}</h5>
+            <button class="btn-primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
+            <button class="btn-secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+        </div>
+    `;
+
+    novoCard.innerHTML = cardContent;
+    cardContainer.appendChild(novoCard);
+
+    hidePopup();
+}

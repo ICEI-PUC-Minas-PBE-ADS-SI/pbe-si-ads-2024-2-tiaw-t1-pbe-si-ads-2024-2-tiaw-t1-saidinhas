@@ -8,22 +8,32 @@ body {
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+
 }
 
 .container {
     display: flex;
-    height: 93.5vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 220px;
+    /* Adicionando margem para evitar a sobreposição */
+    width: calc(100% - 220px);
+    /* Ajustando a largura para compensar a sidebar */
 }
 
 .sidebar {
+    margin-top: 50px;
     width: 200px;
-    height: auto;
+    height: 100vh;
+    position: fixed;
     background-color: #e02727;
     color: white;
     display: flex;
     flex-direction: column;
 }
+
 
 .logo {
     width: 100%;
@@ -32,6 +42,10 @@ body {
     height: 50px;
     display: flex;
     align-items: center;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+
 }
 
 .logo h1 {
@@ -43,7 +57,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .menu-header h2 {
@@ -52,14 +66,9 @@ body {
 }
 
 .logout {
-    margin-top: auto;
+    margin-top: 123px;
     text-align: center;
     padding: 20px 0;
-}
-
-.logout a {
-    color: white;
-    text-decoration: none;
 }
 
 .content {
@@ -92,12 +101,17 @@ body {
 }
 
 .card {
-    width: 20rem;
-    margin: 1rem;
-    background-color: white;
+    background-color: #861414;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 50px;
+
+
 }
 
 .card-img {
@@ -130,11 +144,9 @@ button.btn {
 
 .btn-primary {
     background-color: red !important;
-    color: yellow;
+
 }
 
-
-/* 
 button.btn.primary:hover {
     background-color: #de0e0e;
 }
@@ -146,4 +158,96 @@ button.btn.secondary {
 
 button.btn.secondary:hover {
     background-color: #565e64;
-}*/
+}
+#add{
+    margin-left: -35px;
+    margin-top: 70px;
+    height: 30px;
+    width: 100px;
+}
+/* Estilo para o popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.cards-container .card {
+    background-color: #861414;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 50px;
+}
+
+.cards-container .card-img {
+    width: 100%;
+    height: 200px;
+}
+
+.cards-container .card-body {
+    padding: 1rem;
+}
+
+.cards-container .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cards-container .card-text {
+    margin-bottom: 0.5rem;
+}
+
+button.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: red !important;
+}
+
+button.btn.primary:hover {
+    background-color: #de0e0e;
+}
+
+button.btn.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+button.btn.secondary:hover {
+    background-color: #565e64;
+}
+
