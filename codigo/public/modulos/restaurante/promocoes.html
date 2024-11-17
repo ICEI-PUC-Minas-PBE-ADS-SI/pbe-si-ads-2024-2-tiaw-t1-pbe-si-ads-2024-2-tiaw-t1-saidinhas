@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +8,7 @@
     <link rel="stylesheet" href="../../assets/css/restaurante/perfilRestaurante.css" />
     <script src="../../assets/js/perfil.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
-
 <body>
     <div class="logo">
         <h1>Saidinhas</h1>
@@ -29,61 +26,62 @@
         </nav>
     </aside>
 
-    </aside>
-    <div class="container"> <button id="add" class="btn primary" onclick="showPopup()">Adicionar Novo Card</button>
+    <div class="container">
+        <button id="add" class="btn primary" onclick="showPopup()">Adicionar Novo Card</button>
         <div id="popup" class="popup">
-            <div class="popup-content"> <span class="close" onclick="hidePopup()">&times;</span>
-                <h2>Adicionar Novo Card</h2> <label for="titulo">Título:</label> <input type="text" id="titulo"
-                    name="titulo"><br> <label for="urlImagem">URL da Imagem:</label> <input type="text" id="urlImagem"
-                    name="urlImagem"><br> <label for="preco">Preço:</label> <input type="text" id="preco"
-                    name="preco"><br> <button  onclick="adicionarCard()">Adicionar</button>
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup()">&times;</span>
+                <h2>Adicionar Novo Card</h2>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo"><br>
+                <label for="urlImagem">URL da Imagem:</label>
+                <input type="text" id="urlImagem" name="urlImagem"><br>
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco"><br>
+                <button onclick="adicionarCard()">Adicionar</button>
             </div>
         </div>
-        <div id="cardsContainer" class="cards-container"> <!-- Cards existentes aqui -->
 
-        </div>
-
-        <div class="card">
-            <img class="card-img" src="../../assets/images/salada.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title"><strong>Salada</strong></h5>
-                <p class="card-text"></p>
-                <strong>R$:</strong><span id="preco">15,00</span> <span id="desconto"></span> <br>
-                <button class="btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
-                <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+        <div id="cardsContainer" class="cards-container">
+            <div class="card">
+                <img class="card-img" src="../../assets/images/salada.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Salada</strong></h5>
+                    <p class="card-text"></p>
+                    <strong>R$:</strong><span id="preco1">15,00</span> <span id="desconto1"></span> <br>
+                    <button class="btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
+                    <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="../../assets/images/file.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">File mignon</h5>
-                <strong>R$:</strong><span id="preco2">37,50</span> <span id="desconto2"></span><br>
-                <button class=" btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
-                <button class=" btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+            <div class="card">
+                <img class="card-img" src="../../assets/images/file.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">File mignon</h5>
+                    <strong>R$:</strong><span id="preco2">37,50</span> <span id="desconto2"></span><br>
+                    <button class=" btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
+                    <button class=" btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="../../assets/images/camarao.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Bobó de camarão</h5>
-                <strong>R$:</strong><span id="preco3">67,50</span> <span id="desconto3"></span> <br>
-                <button class=" btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
-                <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+            <div class="card">
+                <img class="card-img" src="../../assets/images/camarao.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Bobó de camarão</h5>
+                    <strong>R$:</strong><span id="preco3">67,50</span> <span id="desconto3"></span> <br>
+                    <button class=" btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
+                    <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="../../assets/images/bebida.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Drincks</h5>
-                <strong>R$:</strong><span id="preco4">37,50</span> <span id="desconto4"></span><br>
-                <button class="btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
-                <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+            <div class="card">
+                <img class="card-img" src="../../assets/images/bebida.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Drincks</h5>
+                    <strong>R$:</strong><span id="preco4">37,50</span> <span id="desconto4"></span><br>
+                    <button class="btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
+                    <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                </div>
             </div>
         </div>
     </div>
     <script src="../../assets/js/promocao.js"></script>
-
-
 </body>
-
 </html>

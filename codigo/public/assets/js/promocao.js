@@ -52,6 +52,16 @@ function hidePopup() {
 function adicionarCard() {
     var titulo = document.getElementById('titulo').value;
     var urlImagem = document.getElementById('urlImagem').value;
+    var preco = document.getElementById('preco').value;
+
+    console.log('Título:', titulo);
+    console.log('URL da Imagem:', urlImagem);
+    console.log('Preço:', preco);
+
+    if (!titulo || !urlImagem || !preco) {
+        alert('Preencha todos os campos!');
+        return;
+    }
 
     var cardContainer = document.getElementById('cardsContainer');
     var novoCard = document.createElement('div');
@@ -61,8 +71,9 @@ function adicionarCard() {
         <img class="card-img" src="${urlImagem}" alt="Imagem do Card">
         <div class="card-body">
             <h5 class="card-title">${titulo}</h5>
-            <button class="btn-primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
-            <button class="btn-secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+            <strong>R$:</strong><span>${preco}</span> <span id="desconto"></span> <br>
+            <button class="btn primary" onclick="toggleCaixaNumerica(this)">Adicionar</button>
+            <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
         </div>
     `;
 
