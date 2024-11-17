@@ -38,10 +38,33 @@
     align-items: center;  
     display:flex;
 }
+#exportar{
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    margin: auto;
+    width: 50%;    
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid red;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;  
+    display:flex;
+}
 p{
     white-space: normal;
     font-style: italic;
-    color: grey;
+    color: rgb(128, 128, 128);
+}
+.identificacao{
+    height: 200px;
+    position: fixed;
+}
+#grafico2{
+    margin:auto;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
 }
 
 
