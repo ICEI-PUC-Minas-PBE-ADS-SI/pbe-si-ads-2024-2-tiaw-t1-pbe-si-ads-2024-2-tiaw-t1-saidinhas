@@ -324,6 +324,45 @@
       "estado": "estado",
       "senha": "7776",
       "id": 4
+    },
+    {
+      "nome": "Rosé",
+      "data": "12031998",
+      "cpf": "123456789",
+      "email": "rose@gmail.com",
+      "cep": "99090",
+      "logradouro": "rua rua",
+      "bairro": "bairro bairro",
+      "cidade": "cidade 3",
+      "estado": "RJ",
+      "senha": "1998",
+      "id": 5
+    },
+    {
+      "nome": "jsoo",
+      "data": "22041997",
+      "cpf": "09876543",
+      "email": "jisoo@gmail.com",
+      "cep": "462",
+      "logradouro": "flores",
+      "bairro": "bairrro",
+      "cidade": "belem do para",
+      "estado": "BA",
+      "senha": "100",
+      "id": 6
+    },
+    {
+      "nome": "jsoo",
+      "data": "22041997",
+      "cpf": "09876543",
+      "email": "jisoo22@gmail.com",
+      "cep": "462",
+      "logradouro": "flores",
+      "bairro": "bairrro",
+      "cidade": "belem do para",
+      "estado": "BA",
+      "senha": "101",
+      "id": 7
     }
   ],
   "reservas": [
@@ -469,7 +508,6 @@
       ]
     }
   },
- 
   "aplicarcupom": [
     {
       "codigoCupom": "CUMPO90",
