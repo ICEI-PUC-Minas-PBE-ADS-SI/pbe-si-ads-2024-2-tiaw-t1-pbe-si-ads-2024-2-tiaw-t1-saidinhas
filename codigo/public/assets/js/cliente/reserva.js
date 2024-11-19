@@ -87,16 +87,19 @@ function carregarReservas() {
                 listaReservas.style.display = 'none';
             } else {
                 reservas.forEach(reserva => {
+                    const id=reserva.id;
                     const li = document.createElement('li');
                     li.classList.add('reserva-item'); 
 
                     li.innerHTML = `
                         <div class="reserva-info">
+                            <button class="btn" id="excluir"><img src="../../assets/images/cesto-de-lixo.png" alt="" width="50px" ></button>
                             <span class="reserva-id">Reserva n°: ${reserva.id}</span><br>
                             <span class="reserva-restaurante">Restaurante: ${reserva.nomeRestaurante}</span><br>
                             <span class="reserva-data">Data: ${reserva.data}</span>
                             <span class="reserva-hora">Hora: ${reserva.hora}</span><br>
                             <span class="reserva-obs">Observação: ${reserva.obs}</span>
+                            
                         </div><br>
                     `;
                     listaReservas.appendChild(li);
@@ -108,9 +111,30 @@ function carregarReservas() {
         .catch(error => console.error('Erro:', error));
 }
 
+function deleteReserva (id, refreshFunction){
+    fetch(`${API_RESERVA}/${id}`, {
+        method: 'DELETE',
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert("Sua reserva foi cancelada!")
+            if (refreshFunction)
+                refreshFunction();
+        })
+        .catch(error => {
+            console.error('Erro ao remover reserva via API JSONServer:', error);
+            displayMessage("Erro ao excluir contato");
+        });
+}
+
 document.getElementById('confirmarRC').addEventListener('click', salvarReserva);
+//document.getElementById('excluir').addEventListener('click', deleteReserva(id, refreshFunction));
 
 document.addEventListener('DOMContentLoaded', () => {
     carregarRestaurantes();
     carregarReservas(); 
+    const excluir = document.getElementById('excluir');
+    if(excluir){
+        excluir.addEventListener('click', deleteReserva(id, refreshFunction));
+    }
 });

@@ -24,6 +24,7 @@ function carregarReservas() {
 
                     li.innerHTML = `
                         <div class="reserva-info">
+                        <button class="btn" id="concluir"><img src="../../assets/images/verificado (1).png" alt="" width="40px" ></button>
                             <span class="reserva-id">Reserva n°: ${reserva.id}</span><br>
                             <span class="reserva-restaurante">Restaurante: ${reserva.nomeRestaurante}</span><br>
                             <span class="reserva-data">Data: ${reserva.data}</span>
@@ -39,6 +40,12 @@ function carregarReservas() {
         })
         .catch(error => console.error('Erro:', error));
 }
+
+function updateReserva(){
+
+}
+
+document.getElementById('concluir').addEventListener('click', updateReserva);
 
 document.addEventListener('DOMContentLoaded', () => {
     carregarReservas(); 
