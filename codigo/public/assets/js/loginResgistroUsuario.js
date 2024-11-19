@@ -66,7 +66,7 @@ async function loginUsuario(event) {
 
         if (usuarioEncontrado) {
             alert('Login realizado com sucesso!');
-            window.location.href = '../cliente/antespergunta.html';
+            window.location.href = '../cliente/perfil.html';
         } else {
             alert('Usuário ou senha incorretos. Tente novamente.');
         }
