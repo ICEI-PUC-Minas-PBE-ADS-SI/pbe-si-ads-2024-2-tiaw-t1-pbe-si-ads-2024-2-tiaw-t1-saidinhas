@@ -1,5 +1,6 @@
 const API_URL_RESTAURANTES = 'http://localhost:3000/restaurantes';
 const API_RESERVA = 'http://localhost:3000/reservas';
+let id;
 
 function carregarRestaurantes() {
     fetch(API_URL_RESTAURANTES)
@@ -13,7 +14,7 @@ function carregarRestaurantes() {
             const select = document.getElementById('restauranteRC');
             restaurantes.forEach(restaurante => {
                 const option = document.createElement('option');
-                option.value = restaurante.id; 
+                option.value = restaurante.id;
                 option.textContent = restaurante.nome;
                 select.appendChild(option);
             });
@@ -46,7 +47,7 @@ async function salvarReserva() {
             nomeRestaurante: nomeRestaurante,
             data: data,
             hora: hora,
-            obs:obs
+            obs: obs
         };
 
         const response = await fetch(API_RESERVA, {
@@ -62,6 +63,7 @@ async function salvarReserva() {
         } else {
             alert('Reserva realizada com sucesso!');
             carregarReservas();
+            location.reload(true);
         }
     } catch (error) {
         console.error('Erro:', error);
@@ -87,13 +89,22 @@ function carregarReservas() {
                 listaReservas.style.display = 'none';
             } else {
                 reservas.forEach(reserva => {
-                    const id=reserva.id;
+                    id = reserva.id;
                     const li = document.createElement('li');
-                    li.classList.add('reserva-item'); 
+                    li.classList.add('reserva-item');
+
+                    const botao = document.createElement('button');
+                    botao.id = `excluir-${id}`;
+                    botao.classList.add('botao-excluir');
+
+                    const imagem = document.createElement('img');
+                    imagem.src = '../../assets/images/cesto-de-lixo.png';
+                    imagem.classList.add('imagem-excluir');
+                    
 
                     li.innerHTML = `
                         <div class="reserva-info">
-                            <button class="btn" id="excluir"><img src="../../assets/images/cesto-de-lixo.png" alt="" width="50px" ></button>
+                            
                             <span class="reserva-id">Reserva n°: ${reserva.id}</span><br>
                             <span class="reserva-restaurante">Restaurante: ${reserva.nomeRestaurante}</span><br>
                             <span class="reserva-data">Data: ${reserva.data}</span>
@@ -102,7 +113,15 @@ function carregarReservas() {
                             
                         </div><br>
                     `;
+
                     listaReservas.appendChild(li);
+                    botao.appendChild(imagem);
+                    li.appendChild(botao);
+
+                    botao.addEventListener('click', () => {
+                        console.log(`Botão da reserva ${reserva.id} clicado!`);
+                        deleteReserva(reserva.id);
+                    })
                 });
                 mensagemSemReservas.style.display = 'none';
                 listaReservas.style.display = 'block';
@@ -111,15 +130,19 @@ function carregarReservas() {
         .catch(error => console.error('Erro:', error));
 }
 
-function deleteReserva (id, refreshFunction){
+function deleteReserva(id, carregarReservas) {
+    console.log("ID:", id);
+    alert("Tem certeza que deseja cancelar sua reserva?")
     fetch(`${API_RESERVA}/${id}`, {
         method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
         .then(response => response.json())
         .then(data => {
-            alert("Sua reserva foi cancelada!")
-            if (refreshFunction)
-                refreshFunction();
+            alert('Sua reserva foi cancelada!');
+            location.reload(true);
         })
         .catch(error => {
             console.error('Erro ao remover reserva via API JSONServer:', error);
@@ -128,13 +151,17 @@ function deleteReserva (id, refreshFunction){
 }
 
 document.getElementById('confirmarRC').addEventListener('click', salvarReserva);
-//document.getElementById('excluir').addEventListener('click', deleteReserva(id, refreshFunction));
+
 
 document.addEventListener('DOMContentLoaded', () => {
     carregarRestaurantes();
-    carregarReservas(); 
-    const excluir = document.getElementById('excluir');
+    carregarReservas();
+    /*botao.addEventListener('click', deleteReserva(id, refreshFunction));
+    const excluir = document.getElementsByClassName('botao-excluir');
     if(excluir){
-        excluir.addEventListener('click', deleteReserva(id, refreshFunction));
+        excluir.addEventListener('click', deleteReserva(id, carregarReservas));
     }
+    else{
+        alert('Botão não funciona!');
+    }*/
 });

@@ -406,28 +406,20 @@
   ],
   "reservas": [
     {
-      "restauranteId": "3",
-      "nomeRestaurante": "Café Central",
-      "data": "2024-10-01",
-      "hora": "03:16",
-      "obs": "Mesa para 2 adultos e 1 criança.",
+      "restauranteId": "1",
+      "nomeRestaurante": "Restaurante Mineiro",
+      "data": "2024-11-21",
+      "hora": "12:30",
+      "obs": "Mesa para 2.",
       "id": 1
     },
     {
       "restauranteId": "1",
       "nomeRestaurante": "Restaurante Mineiro",
-      "data": "2024-10-31",
-      "hora": "23:24",
-      "obs": "Mesa para 4",
+      "data": "2024-11-22",
+      "hora": "17:00",
+      "obs": "Mesa para 2.",
       "id": 2
-    },
-    {
-      "restauranteId": "3",
-      "nomeRestaurante": "Fit e Fresh",
-      "data": "2024-11-28",
-      "hora": "23:00",
-      "obs": "Mesa para dois ",
-      "id": 3
     }
   ],
   "cardapio": {
