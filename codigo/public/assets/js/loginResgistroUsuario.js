@@ -33,7 +33,7 @@ async function salvarUsuario(event) {
 
         alert('Usuário cadastrado com sucesso!');
 
-        window.location.href = 'loginUsuario.html';
+        window.location.href = '../cliente/antespergunta.html';
     } catch (error) {
         console.error('Erro:', error);
         alert('Ocorreu um erro ao salvar os dados.');

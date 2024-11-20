@@ -363,6 +363,45 @@
       "estado": "BA",
       "senha": "101",
       "id": 7
+    },
+    {
+      "nome": "lalilsa",
+      "data": "12091998",
+      "cpf": "12345678",
+      "email": "lisa@gmail.com",
+      "cep": "2345",
+      "logradouro": "rua rua",
+      "bairro": "bairro do bairro",
+      "cidade": "cidade da cisade",
+      "estado": "PE",
+      "senha": "900",
+      "id": 8
+    },
+    {
+      "nome": "lalilsa",
+      "data": "12091998",
+      "cpf": "12345678",
+      "email": "lisa@gmail.com",
+      "cep": "2345",
+      "logradouro": "rua rua",
+      "bairro": "bairro do bairro",
+      "cidade": "cidade da cisade",
+      "estado": "PE",
+      "senha": "900",
+      "id": 9
+    },
+    {
+      "nome": "dudu",
+      "data": "12032004",
+      "cpf": "234123321",
+      "email": "dudu@gmail.com",
+      "cep": "123456",
+      "logradouro": "re",
+      "bairro": "sa",
+      "cidade": "ca",
+      "estado": "MG",
+      "senha": "300",
+      "id": 10
     }
   ],
   "reservas": [
@@ -381,6 +420,14 @@
       "hora": "23:24",
       "obs": "Mesa para 4",
       "id": 2
+    },
+    {
+      "restauranteId": "3",
+      "nomeRestaurante": "Fit e Fresh",
+      "data": "2024-11-28",
+      "hora": "23:00",
+      "obs": "Mesa para dois ",
+      "id": 3
     }
   ],
   "cardapio": {
