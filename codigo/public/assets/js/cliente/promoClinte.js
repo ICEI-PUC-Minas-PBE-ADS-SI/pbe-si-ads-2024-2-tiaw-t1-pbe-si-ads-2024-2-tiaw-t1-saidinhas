@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <img class="card-img" src="${prato.imagem}" alt="Imagem do Card">
             <div class="card-body">
                 <h5 class="card-title">${prato.nome}</h5>
-                <strong>R$:</strong><span>${prato.preco.toFixed(2)}</span> <span id="desconto">${prato.desconto}% off</span> <br>
+                <strong>R$:</strong><span>${prato.preco.toFixed(2)}
+                </span> <span id="desconto">${prato.desconto}% off</span> <br>
         `;
 
         // Verifica se há preço com desconto
