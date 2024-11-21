@@ -402,6 +402,19 @@
       "estado": "MG",
       "senha": "300",
       "id": 10
+    },
+    {
+      "nome": "kaka",
+      "data": "22062209",
+      "cpf": "12332145688",
+      "email": "kaka@gmail.com",
+      "cep": "65430",
+      "logradouro": "Rua linabes",
+      "bairro": "bairro vitoria ",
+      "cidade": "cidade do milagre",
+      "estado": "MG",
+      "senha": "610",
+      "id": 11
     }
   ],
   "reservas": [
@@ -430,28 +443,32 @@
         "preco": 15,
         "origem": "Inglesa",
         "pontos": 5,
-        "imagem": "sando.jpg"
+        "imagem": "sando.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: glúten (pão), lácteos (requeijão, maionese), ovo (maionese), soja."
       },
       {
         "nome": "Sushi",
         "descricao": "É um bolinho de arroz enrolado com uma alga.",
         "preco": 35,
         "origem": "Japonesa",
-        "imagem": "sushi.jpg"
+        "imagem": "sushi.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: peixes e frutos do mar (salmão, atum), soja (shoyu), glúten (alguns tipos de shoyu)."
       },
       {
         "nome": "Bruschetta",
         "descricao": "Pão tostado com tomate fresco, manjericão e azeite de oliva.",
         "preco": 20,
         "origem": "Italiana",
-        "imagem": "tomato.jpg"
+        "imagem": "tomato.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: glúten (pão), lácteos (caso seja adicionado queijo)."
       },
       {
         "nome": "Salada Caprese",
         "descricao": "É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.",
         "preco": 25,
         "origem": "Italiana",
-        "imagem": "salada.jpg"
+        "imagem": "salada.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: lácteos (muçarela)."
       }
     ],
     "pratos_principais": [
@@ -460,14 +477,16 @@
         "descricao": "Filé de carne bovina grelhado, servido com molho de vinho tinto.",
         "preco": 55,
         "origem": "Francesa",
-        "imagem": "bife.jpg"
+        "imagem": "bife.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: lácteos (manteiga)."
       },
       {
         "nome": "Risoto de Frutos do Mar",
         "descricao": "Arroz arbóreo cremoso com camarões, lulas e mexilhões.",
         "preco": 45,
         "origem": "Italiana",
-        "imagem": "risoto.jpg"
+        "imagem": "risoto.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: frutos do mar (camarão, lula, mexilhões), lácteos (manteiga, queijo parmesão)."
       },
       {
         "nome": "Arroz e feijão",
@@ -475,14 +494,16 @@
         "preco": 18,
         "origem": "Brasileira",
         "pontos": 14,
-        "imagem": "rice.jpg"
+        "imagem": "rice.jpg",
+        "alerta": ""
       },
       {
         "nome": "Macarrão ao molho",
         "descricao": "Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.",
         "preco": 22,
         "origem": "Italiana",
-        "imagem": "pasta.jpg"
+        "imagem": "pasta.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: glúten (macarrão), lácteos (molho branco, queijo parmesão)."
       }
     ],
     "sobremesas": [
@@ -491,14 +512,16 @@
         "descricao": "Deliciosa torta de limão com merengue e base crocante.",
         "preco": 18,
         "origem": "Estadunidense",
-        "imagem": "torta.jpg"
+        "imagem": "torta.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: glúten (massa), lácteos (leite condensado, creme de leite), ovo (merengue)."
       },
       {
         "nome": "Gelato de Chocolate",
         "descricao": "Gelato cremoso de chocolate, feito com chocolate belga.",
         "preco": 15,
         "origem": "Italiana",
-        "imagem": "gelato.jpg"
+        "imagem": "gelato.jpg",
+        "alerta": "Alerta! Alérgicos podem conter: lácteos (leite, creme de leite), ovo, cacau (chocolate)."
       }
     ]
   },
