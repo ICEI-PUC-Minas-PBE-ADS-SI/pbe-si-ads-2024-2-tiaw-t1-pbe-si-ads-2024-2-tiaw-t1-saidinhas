@@ -132,7 +132,7 @@ function carregarReservas() {
 
 function deleteReserva(id, carregarReservas) {
     console.log("ID:", id);
-    alert("Tem certeza que deseja cancelar sua reserva?")
+    alert("Tem certeza que deseja cancelar sua reserva?");
     fetch(`${API_RESERVA}/${id}`, {
         method: 'DELETE',
         headers: {
@@ -156,12 +156,4 @@ document.getElementById('confirmarRC').addEventListener('click', salvarReserva);
 document.addEventListener('DOMContentLoaded', () => {
     carregarRestaurantes();
     carregarReservas();
-    /*botao.addEventListener('click', deleteReserva(id, refreshFunction));
-    const excluir = document.getElementsByClassName('botao-excluir');
-    if(excluir){
-        excluir.addEventListener('click', deleteReserva(id, carregarReservas));
-    }
-    else{
-        alert('Botão não funciona!');
-    }*/
 });

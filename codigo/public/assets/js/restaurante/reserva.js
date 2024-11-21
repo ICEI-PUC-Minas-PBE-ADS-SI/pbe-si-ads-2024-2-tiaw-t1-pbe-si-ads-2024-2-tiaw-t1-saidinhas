@@ -1,5 +1,6 @@
 
 const API_RESERVA = 'http://localhost:3000/reservas';
+let id;
 
 function carregarReservas() {
     fetch(API_RESERVA)
@@ -19,12 +20,21 @@ function carregarReservas() {
                 listaReservas.style.display = 'none';
             } else {
                 reservas.forEach(reserva => {
+                    id = reserva.id;
                     const li = document.createElement('li');
                     li.classList.add('reserva-item'); 
+                    li.id = `reserva-${id}`;
+
+                    const botao = document.createElement('button');
+                    botao.id = `concluir-${id}`;
+                    botao.classList.add('botao-concluir');
+
+                    const imagem = document.createElement('img');
+                    imagem.src = '../../assets/images/verificar.png';
+                    imagem.classList.add('imagem-concluir');
 
                     li.innerHTML = `
                         <div class="reserva-info">
-                        <button class="btn" id="concluir"><img src="../../assets/images/verificado (1).png" alt="" width="40px" ></button>
                             <span class="reserva-id">Reserva n°: ${reserva.id}</span><br>
                             <span class="reserva-restaurante">Restaurante: ${reserva.nomeRestaurante}</span><br>
                             <span class="reserva-data">Data: ${reserva.data}</span>
@@ -33,6 +43,13 @@ function carregarReservas() {
                         </div><br>
                     `;
                     listaReservas.appendChild(li);
+                    botao.appendChild(imagem);
+                    li.appendChild(botao);
+
+                    botao.addEventListener('click', () => {
+                        console.log(`Botão da reserva ${reserva.id} clicado!`);
+                        updateReserva(reserva.id);
+                    })
                 });
                 mensagemSemReservas.style.display = 'none';
                 listaReservas.style.display = 'block';
@@ -41,11 +58,12 @@ function carregarReservas() {
         .catch(error => console.error('Erro:', error));
 }
 
-function updateReserva(){
-
+function updateReserva(id){
+    console.log("ID:", id);
+    alert("Tem certeza que deseja marcar essa reserva como concluida?")
+    const texto = document.getElementById(`reserva-${id}`);
+    texto.classList.toggle("rasurado");
 }
-
-document.getElementById('concluir').addEventListener('click', updateReserva);
 
 document.addEventListener('DOMContentLoaded', () => {
     carregarReservas(); 
