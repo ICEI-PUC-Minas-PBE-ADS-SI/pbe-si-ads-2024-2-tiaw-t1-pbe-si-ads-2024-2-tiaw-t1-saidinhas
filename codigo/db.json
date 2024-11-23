@@ -646,5 +646,43 @@
         "Não tenho preferência"
       ]
     }
+  ],
+  "promocoes": [
+    {
+      "id": 1,
+      "nome": "Salada",
+      "imagem": "../../assets/images/salada.jpg",
+      "preco": 15.00,
+      "desconto": 10,
+      "precoComDesconto": 13.50,
+      "pontos": 50
+    },
+    {
+      "id": 2,
+      "nome": "File mignon",
+      "imagem": "../../assets/images/file.jpg",
+      "preco": 37.50,
+      "desconto": 5,
+      "precoComDesconto": 35.62,
+      "pontos": 75
+    },
+    {
+      "id": 3,
+      "nome": "Bobó de camarão",
+      "imagem": "../../assets/images/camarao.jpg",
+      "preco": 67.50,
+      "desconto": 0,
+      "precoComDesconto": null,
+      "pontos": 100
+    },
+    {
+      "id": 4,
+      "nome": "Drincks",
+      "imagem": "../../assets/images/bebida.jpg",
+      "preco": 37.50,
+      "desconto": 15,
+      "precoComDesconto": 31.88,
+      "pontos": 25
+    }
   ]
 }
