@@ -209,3 +209,13 @@ button.btn.danger:hover {
     font-size: 1.5rem;
     cursor: pointer;
 }
+#pontosContainer {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: #e02727;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
