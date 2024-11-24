@@ -426,6 +426,15 @@
       "obs": "Mesa para 2.",
       "status": false,
       "id": 1
+    },
+    {
+      "restauranteId": "1",
+      "nomeRestaurante": "Restaurante Mineiro",
+      "data": "2024-11-26",
+      "hora": "20:20",
+      "obs": "Mesa para 2.",
+      "status": false,
+      "id": 2
     }
   ],
   "cardapio": {
@@ -645,16 +654,16 @@
       "id": 1,
       "nome": "Salada",
       "imagem": "../../assets/images/salada.jpg",
-      "preco": 15.00,
+      "preco": 15,
       "desconto": 10,
-      "precoComDesconto": 13.50,
+      "precoComDesconto": 13.5,
       "pontos": 50
     },
     {
       "id": 2,
       "nome": "File mignon",
       "imagem": "../../assets/images/file.jpg",
-      "preco": 37.50,
+      "preco": 37.5,
       "desconto": 5,
       "precoComDesconto": 35.62,
       "pontos": 75
@@ -663,7 +672,7 @@
       "id": 3,
       "nome": "Bobó de camarão",
       "imagem": "../../assets/images/camarao.jpg",
-      "preco": 67.50,
+      "preco": 67.5,
       "desconto": 0,
       "precoComDesconto": null,
       "pontos": 100
@@ -672,7 +681,7 @@
       "id": 4,
       "nome": "Drincks",
       "imagem": "../../assets/images/bebida.jpg",
-      "preco": 37.50,
+      "preco": 37.5,
       "desconto": 15,
       "precoComDesconto": 31.88,
       "pontos": 25

@@ -21,6 +21,7 @@ function carregarReservas() {
             } else {
                 reservas.forEach(reserva => {
                     id = reserva.id;
+                    modo = reserva.status;
                     const li = document.createElement('li');
                     li.classList.add('reserva-item');
                     li.id = `reserva-${id}`;
@@ -49,7 +50,7 @@ function carregarReservas() {
                     botao.addEventListener('click', () => {
                         console.log(`Botão da reserva ${reserva.id} clicado!`);
                         updateReserva(reserva.id);
-                        
+
                     })
                 });
                 mensagemSemReservas.style.display = 'none';
@@ -59,12 +60,6 @@ function carregarReservas() {
         .catch(error => console.error('Erro:', error));
 }
 
-/*function updateReserva(id){
-    console.log("ID:", id);
-    alert("Tem certeza que deseja marcar essa reserva como concluida?")
-    const texto = document.getElementById(`reserva-${id}`);
-    texto.classList.toggle("rasurado");
-}*/
 function updateReserva(id, carregarReservas) {
     console.log("ID:", id);
     fetch(`${API_RESERVA}/${id}`, {
@@ -98,7 +93,7 @@ function updateReserva(id, carregarReservas) {
             console.error('Erro ao obter reserva via API JSONServer:', error);
             displayMessage("Erro ao obter reserva");
         });
-        ReservaConcluida(id);
+    ReservaConcluida(id);
 }
 function ReservaConcluida(id) {
     fetch(`${API_RESERVA}/${id}`, {
@@ -119,6 +114,7 @@ function ReservaConcluida(id) {
             displayMessage("Erro ao obter reserva");
         });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     carregarReservas();
