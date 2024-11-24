@@ -428,6 +428,47 @@
       "id": 1
     }
   ],
+  "cupons": [
+    {
+      "codigo": "DESCONTO10",
+      "descricao": "10% de desconto em qualquer produto",
+      "valido": true
+    },
+    {
+      "codigo": "FRETEGRATIS",
+      "descricao": "Frete grátis para compras acima de R$100",
+      "valido": false
+    },
+    {
+      "codigo": "DESCONTO10",
+      "descricao": "10% de desconto em qualquer produto",
+      "valido": true
+    },
+    {
+      "codigo": "FRETEGRATIS",
+      "descricao": "Frete grátis para compras acima de R$100",
+      "valido": false
+    },
+    {
+      "codigo": "BLACKFRIDAY50",
+      "descricao": "50% de desconto na Black Friday",
+      "valido": true
+    }
+  ],
+  "mensagens": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "email": "joao.silva@email.com",
+      "mensagem": "Preciso de ajuda para acessar minha conta."
+    },
+    {
+      "id": 2,
+      "nome": "Maria Oliveira",
+      "email": "maria.oliveira@email.com",
+      "mensagem": "Gostaria de saber sobre o prazo de entrega."
+    }
+  ],
   "cardapio": {
     "entradas": [
       {

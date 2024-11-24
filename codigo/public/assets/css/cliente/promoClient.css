@@ -8,19 +8,16 @@ body {
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
-
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     padding: 20px;
     margin-left: 220px;
-    /* Adicionando margem para evitar a sobreposição */
     width: calc(100% - 220px);
-    /* Ajustando a largura para compensar a sidebar */
 }
 
 .sidebar {
@@ -34,7 +31,6 @@ body {
     flex-direction: column;
 }
 
-
 .logo {
     width: 100%;
     background-color: #e02727;
@@ -45,7 +41,6 @@ body {
     top: 0;
     position: fixed;
     z-index: 1;
-
 }
 
 .logo h1 {
@@ -57,7 +52,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .menu-header h2 {
@@ -100,23 +94,29 @@ body {
     background-color: #b30000;
 }
 
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Alinha os cards lado a lado */
+    gap: 20px;
+    padding: 20px;
+}
+
 .card {
     background-color: #861414;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
-    height: 400px;
     flex-direction: column;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 50px;
-
-
+    width: calc(33.333% - 20px); /* Ajusta a largura dos cards */
+    margin-top: 20px;
 }
 
 .card-img {
     width: 100%;
     height: 200px;
+    object-fit: cover; /* Garante que a imagem se ajuste ao card */
 }
 
 .card-body {
@@ -144,7 +144,6 @@ button.btn {
 
 .btn-primary {
     background-color: red !important;
-
 }
 
 button.btn.primary:hover {
@@ -159,13 +158,31 @@ button.btn.secondary {
 button.btn.secondary:hover {
     background-color: #565e64;
 }
-#add{
+
+button.btn.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.btn.danger:hover {
+    background-color: #c82333;
+}
+
+.desconto {
+    color: red;
+}
+
+.pontos {
+    color: blue;
+}
+
+#add {
     margin-left: -35px;
     margin-top: 70px;
     height: 30px;
     width: 100px;
 }
-/* Estilo para o popup */
+
 .popup {
     display: none;
     position: fixed;
@@ -192,62 +209,3 @@ button.btn.secondary:hover {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-
-.cards-container .card {
-    background-color: #861414;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    height: 400px;
-    flex-direction: column;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 50px;
-}
-
-.cards-container .card-img {
-    width: 100%;
-    height: 200px;
-}
-
-.cards-container .card-body {
-    padding: 1rem;
-}
-
-.cards-container .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.cards-container .card-text {
-    margin-bottom: 0.5rem;
-}
-
-button.btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    display: inline-block;
-}
-
-.btn-primary {
-    background-color: red !important;
-}
-
-button.btn.primary:hover {
-    background-color: #de0e0e;
-}
-
-button.btn.secondary {
-    background-color: #6c757d;
-    color: white;
-}
-
-button.btn.secondary:hover {
-    background-color: #565e64;
-}
-

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promoções</title>
-    <link rel="stylesheet" href="../../assets/css/promo.css" />
+    <link rel="stylesheet" href="../../assets/css/restaurante/promo.css" />
     <script src="../../assets/js/perfil.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -37,6 +37,9 @@
                 <input type="text" id="urlImagem" name="urlImagem"><br>
                 <label for="preco">Preço:</label>
                 <input type="text" id="preco" name="preco"><br>
+                Pontos:</label>
+                <input type="ponto" id="ponto" name="ponto"><br>
+                
                 <button onclick="adicionarCard()">Adicionar</button>
             </div>
         </div>
@@ -45,8 +48,7 @@
             <div class="card">
                 <img class="card-img" src="../../assets/images/salada.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><strong>Salada</strong></h5>
-                    <p class="card-text"></p>
+                    <h5 class="card-title" ><strong>Salada</strong></h5>
                     <strong>R$:</strong><span id="preco1">15,00</span> <span id="desconto1"></span> <br>
                     <button class="btn primary" onclick="toggleCaixaNumerica(this)">Preço</button>
                     <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
@@ -56,7 +58,7 @@
             <div class="card">
                 <img class="card-img" src="../../assets/images/file.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">File mignon</h5>
+                    <h5 class="card-title text-primary" >File mignon</h5>
                     <strong>R$:</strong><span id="preco2">37,50</span> <span id="desconto2"></span><br>
                     <button class="btn primary" onclick="toggleCaixaNumerica(this)">Preço</button>
                     <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>

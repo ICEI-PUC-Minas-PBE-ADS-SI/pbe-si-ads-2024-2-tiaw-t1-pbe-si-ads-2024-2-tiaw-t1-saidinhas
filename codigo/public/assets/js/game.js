@@ -1,12 +1,11 @@
 const API_URL = 'http://localhost:3000/aplicarCupomBtn';
 const LOGIN_URL = "/modulos/login/indexgame.html";
 
-
 let pontos = 0;
 
 // para acumular pontos
 document.getElementById('acumularPontosBtn').addEventListener('click', () => {
-    const pontosAcumulados = Math.floor(Math.random() * 100) + 1; // Acumula de 1 a 100 pontos
+    const pontosAcumulados = Math.floor(Math.random() * 10) + 1; // Acumula de 1 a 100 pontos
     pontos += pontosAcumulados;
     document.getElementById('pontos').innerText = pontos;
     adicionarPromocao(`Você acumulou ${pontosAcumulados} pontos!`);
