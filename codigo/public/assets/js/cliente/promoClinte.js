@@ -1,40 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Simulação dos dados dos pratos do restaurante
-    const pratos = [
-        {
-            nome: "Salada",
-            imagem: "../../assets/images/salada.jpg",
-            preco: 15.00,
-            desconto: 10,
-            precoComDesconto: 13.50,
-            pontos: 50
-        },
-        {
-            nome: "File mignon",
-            imagem: "../../assets/images/file.jpg",
-            preco: 37.50,
-            desconto: 5,
-            precoComDesconto: 35.62,
-            pontos: 75
-        },
-        {
-            nome: "Bobó de camarão",
-            imagem: "../../assets/images/camarao.jpg",
-            preco: 67.50,
-            desconto: 0,
-            precoComDesconto: null,
-            pontos: 100
-        },
-        {
-            nome: "Drincks",
-            imagem: "../../assets/images/bebida.jpg",
-            preco: 37.50,
-            desconto: 15,
-            precoComDesconto: 31.88,
-            pontos: 25
-        }
-    ];
-
+     
     const cardContainer = document.getElementById('cardsContainer');
 
     pratos.forEach(prato => {

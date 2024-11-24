@@ -170,6 +170,8 @@ async function salvarDadosEditados(item, categoryName) {
         if (!updateResponse.ok) {
             throw new Error('Erro ao atualizar o item: ' + updateResponse.statusText);
         }
+
+        renderizarCardapio(data.categories);
     } catch (error) {
         console.error('Erro:', error);
     }
@@ -231,6 +233,8 @@ async function salvarNovoItem(item, categoryName) {
         body: JSON.stringify(data)
     });
 
+    renderizarCardapio(data.categories);
+
     if (!updateResponse.ok) {
         throw new Error('Erro ao salvar o novo item: ' + updateResponse.statusText);
     }
@@ -273,7 +277,6 @@ async function excluirItem(itemId) {
             const itemIndex = category.items.findIndex(item => item.id === itemId);
             if (itemIndex !== -1) {
                 category.items.splice(itemIndex, 1);
-
             }
         });
 
