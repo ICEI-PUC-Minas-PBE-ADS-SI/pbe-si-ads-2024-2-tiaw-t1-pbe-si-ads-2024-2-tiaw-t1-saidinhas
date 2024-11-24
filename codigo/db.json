@@ -408,18 +408,11 @@
     {
       "restauranteId": "1",
       "nomeRestaurante": "Restaurante Mineiro",
-      "data": "2024-11-21",
-      "hora": "12:30",
+      "data": "2024-11-25",
+      "hora": "12:45",
       "obs": "Mesa para 2.",
+      "status": false,
       "id": 1
-    },
-    {
-      "restauranteId": "1",
-      "nomeRestaurante": "Restaurante Mineiro",
-      "data": "2024-11-22",
-      "hora": "17:00",
-      "obs": "Mesa para 2.",
-      "id": 2
     }
   ],
   "cardapio": {

@@ -47,7 +47,8 @@ async function salvarReserva() {
             nomeRestaurante: nomeRestaurante,
             data: data,
             hora: hora,
-            obs: obs
+            obs: obs,
+            status: true
         };
 
         const response = await fetch(API_RESERVA, {
