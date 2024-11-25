@@ -638,7 +638,14 @@
     {
       "codigoCupom": "CUMPO90",
       "mensagemCupom": "CUPOM",
+      "pont" :15,
       "id": 1
+    },
+    {
+      "codigoCupom": "PONTOSPLUS",
+      "mensagemCupom": "CUPOM",
+      "pont" :105,
+      "id": 2
     }
   ],
   "suporte": [

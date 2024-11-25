@@ -1,39 +1,57 @@
-const API_URL = 'http://localhost:3000/aplicarCupomBtn';
-const LOGIN_URL = "/modulos/login/indexgame.html";
-
+const API_URL = 'http://localhost:3000/aplicarcupom'; // URL para buscar os cupons
 let pontos = 0;
 
-// para acumular pontos
-document.getElementById('acumularPontosBtn').addEventListener('click', () => {
-    const pontosAcumulados = Math.floor(Math.random() * 10) + 1; // Acumula de 1 a 100 pontos
-    pontos += pontosAcumulados;
-    document.getElementById('pontos').innerText = pontos;
-    adicionarPromocao(`Você acumulou ${pontosAcumulados} pontos!`);
-});
-
-// para adicionar promoções
-function adicionarPromocao(mensagem) {
-    const listaPromocoes = document.getElementById('listaPromocoes');
-    const li = document.createElement('li');
-    li.innerText = mensagem;
-    listaPromocoes.appendChild(li);
+// Função para buscar os cupons do servidor
+async function fetchCupons() {
+    try {
+        const response = await fetch(API_URL);
+        if (!response.ok) {
+            throw new Error(`Erro ao buscar os cupons: ${response.status} - ${response.statusText}`);
+        }
+        const data = await response.json();
+        console.log('Cupons obtidos:', data); // Depuração
+        return data; // Retorna a lista de cupons
+    } catch (error) {
+        console.error('Erro no fetch:', error.message);
+        return []; // Retorna lista vazia em caso de erro
+    }
 }
 
-// para aplicar cupons
-document.getElementById('aplicarCupomBtn').addEventListener('click', () => {
-    const codigoCupom = document.getElementById('codigoCupom').value;
+// Função para verificar o cupom inserido pelo usuário
+async function verificarCupom() {
+    const codigoCupom = document.getElementById('codigoCupom').value.trim();
     const mensagemCupom = document.getElementById('mensagemCupom');
+    const pontosElemento = document.getElementById('pontos');
 
-    if (codigoCupom === "DESCONTO10") {
-        mensagemCupom.innerText = "Cupom aplicado: 10% de desconto!";
-    } else if (codigoCupom === "PONTOS50") {
-        pontos += 50;
-        document.getElementById('pontos').innerText = pontos;
-        mensagemCupom.innerText = "Cupom aplicado: +50 pontos!";
+    // Validar entrada do usuário
+    if (!codigoCupom) {
+        mensagemCupom.innerText = "Por favor, insira um código de cupom.";
+        return;
+    }
+
+    // Busca os cupons do servidor
+    const cupons = await fetchCupons();
+
+    // Depuração
+    console.log('Código do Cupom inserido:', codigoCupom);
+    console.log('Lista de Cupons disponíveis:', cupons);
+
+    // Verifica se o cupom é válido
+    const cupomValido = cupons.find(cupom => cupom.codigoCupom === codigoCupom);
+
+    if (cupomValido) {
+        console.log('Cupom válido encontrado:', cupomValido); // Depuração
+        mensagemCupom.innerText = `Cupom aplicado: ${cupomValido.mensagemCupom}`;
+        pontos += cupomValido.pont; // Adiciona os pontos do cupom
+        pontosElemento.innerText = pontos;
     } else {
+        console.log('Cupom inválido:', codigoCupom); // Depuração
         mensagemCupom.innerText = "Código de cupom inválido.";
     }
 
     // Limpa o campo de entrada
     document.getElementById('codigoCupom').value = '';
-});
+}
+
+// Adiciona o evento ao botão de aplicar cupom
+document.getElementById('aplicarCupomBtn').addEventListener('click', verificarCupom);
