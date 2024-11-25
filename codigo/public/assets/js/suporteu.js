@@ -34,12 +34,12 @@ document.getElementById('supportForm').addEventListener('submit', async function
         });
 
         if (response.ok) {
-            console.log('Mensagem enviada com sucesso!');
+            alert('Agredecemos seu conato. Em breve traremos retorno via e-mail.');
         } else {
-            console.error('Erro ao enviar a mensagem:', response.statusText);
+            alert('Não foi possível enviar mensagem', response.statusText);
         }
     } catch (error) {
-        console.error('Erro ao conectar ao servidor:', error);
+        alert('Erro ao conectar ao servidor:', error);
     }
 
    
