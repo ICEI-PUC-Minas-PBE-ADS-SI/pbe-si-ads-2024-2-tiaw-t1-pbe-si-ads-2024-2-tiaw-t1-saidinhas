@@ -28,9 +28,9 @@
                     <li><a href="cardapio.html"><i class="fas fa-utensils"></i> Cardápio</a></li>
                     <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
                     <li><a href="promoCliente.html"><i class="fas fa-tags"></i> Promoções</a></li>
-                    <li><a href="indexgame.html"class="active"><i class="fa-solid fa-star"></i> Pontos</a></li>
+                    <li><a href="indexgame.html" class="active"><i class="fa-solid fa-star"></i> Pontos</a></li>
                     <li><a href="suporteu.html"><i class="fa-solid fa-headset"></i> Suporte</a></li>
-                    <li><a href="filtro.html"  ><i class="fas fa-search"></i> Buscar</a></li>
+                    <li><a href="filtro.html"><i class="fas fa-search"></i> Buscar</a></li>
                 </ul>
             </nav>
             <div class="logout">
@@ -46,15 +46,21 @@
                 <button class="btn-primary" id="acumularPontosBtn">Acumular Pontos</button>
             </div>
             <!-- Contêiner de Pontos Acumulados -->
-           
+
 
 
             <div class="promocoes">
                 <h2>Promoções</h2>
                 <ul id="listaPromocoes">
                     <!-- Promoções -->
-                </ul>
+                    <div class="cupons">
+                        <h2>Cupons</h2> <input type="text" id="codigoCupom" placeholder="Digite o código do cupom">
+                        <button class="btn-primary" id="aplicarCupomBtn">Aplicar Cupom</button>
+                        <div id="mensagemCupom"></div>
+                    </div>
             </div>
+            </ul>
+        </div>
 
 
 
