@@ -21,8 +21,9 @@ function carregarReservas() {
             } else {
                 reservas.forEach(reserva => {
                     id = reserva.id;
+                    modo = reserva.status;
                     const li = document.createElement('li');
-                    li.classList.add('reserva-item'); 
+                    li.classList.add('reserva-item');
                     li.id = `reserva-${id}`;
 
                     const botao = document.createElement('button');
@@ -49,6 +50,7 @@ function carregarReservas() {
                     botao.addEventListener('click', () => {
                         console.log(`Botão da reserva ${reserva.id} clicado!`);
                         updateReserva(reserva.id);
+
                     })
                 });
                 mensagemSemReservas.style.display = 'none';
@@ -58,13 +60,62 @@ function carregarReservas() {
         .catch(error => console.error('Erro:', error));
 }
 
-function updateReserva(id){
+function updateReserva(id, carregarReservas) {
     console.log("ID:", id);
-    alert("Tem certeza que deseja marcar essa reserva como concluida?")
-    const texto = document.getElementById(`reserva-${id}`);
-    texto.classList.toggle("rasurado");
+    fetch(`${API_RESERVA}/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(reserva => {
+            reserva.status = false;
+            alert("Tem certeza que deseja concluir esta reserva?");
+            fetch(`${API_RESERVA}/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(reserva)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('A reserva em seu restaurante foi concluida!');
+                })
+                .catch(error => {
+                    console.error('Erro ao concluir reserva via API JSONServer:', error);
+                    displayMessage("Erro ao concluir contato");
+                });
+
+        })
+        .catch(error => {
+            console.error('Erro ao obter reserva via API JSONServer:', error);
+            displayMessage("Erro ao obter reserva");
+        });
+    ReservaConcluida(id);
+}
+function ReservaConcluida(id) {
+    fetch(`${API_RESERVA}/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(reserva => {
+            if (reserva.status == false) {
+                const texto = document.getElementById(`reserva-${id}`);
+                texto.classList.toggle("active");
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao obter reserva via API JSONServer:', error);
+            displayMessage("Erro ao obter reserva");
+        });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
-    carregarReservas(); 
+    carregarReservas();
 });

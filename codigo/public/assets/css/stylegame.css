@@ -141,3 +141,13 @@ button.btn.secondary {
 button.btn.secondary:hover {
     background-color: #565e64;
 }
+#pontosContainer {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: #e02727;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
