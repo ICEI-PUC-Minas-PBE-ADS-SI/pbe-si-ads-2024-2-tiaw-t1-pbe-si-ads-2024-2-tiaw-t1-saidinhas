@@ -1,71 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte ao Usuário - App de Restaurantes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/stylesuporteu.css">
+    <script src="../../assets/js/suporteu.js" defer></script>
 </head>
+
 <body>
-        <!-- cabeçario -->
-        <header>
-            <nav class="navbar navbar-expand-sm bg-r500 bg-light" id="navbar">
-                <a href="#" class="m-2"><img src="../../assets/images/logo_saidinha.jpeg" alt="logo" id="logo"></a>
-                <div class="container-fluid d-flex justify-content-between align-items-center col-6">
-                    <form class="d-flex justify-content-center w-75">
-                        <div class="input-group">
-                            <input class="form-control m-1" type="search" placeholder="Pesquisar" aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-light m-1" type="submit" id="botao">Buscar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </nav>
-        </header>
-        <!-- itens do menu menu lateral -->
-        <div class="container-menu">
-            <aside class="sidebar mt-5">
-                <nav class="menu ">
-                    <ul>
-                        <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
-                        <li><a href="cardapio.html" ><i class="fas fa-utensils"></i> Cardápio</a></li>
-                        <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
-                        <li><a href="promoCliente.html"><i class="fas fa-tags"></i> Promoções</a></li>
-                        <li><a href="indexgame.html"><i class="fa-solid fa-star"></i> Pontos</a></li>
-                        <li><a href="suporteu.html"class="active"><i class="fa-solid fa-headset"></i> Suporte</a></li>
-                        <li><a href="filtro.html"><i class="fas fa-search"></i> Buscar</a></li>
-                    </ul>
-                </nav>
-                <div class="logout">
-                    <a href="#">Sair</a>
-                </div>
-            </aside>
-        </div>
-    <div class="container-suporte">
-        <h1>Suporte ao Usuário</h1>
-        <form id="supportForm">
-            <label for="name">Seu Nome:</label>
-            <input type="text" id="name" required>
-
-            <label for="email">Seu Email:</label>
-            <input type="email" id="email" required>
-
-            <label for="message">Mensagem:</label>
-            <textarea id="message" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-
-        <div id="messages" class="messages"></div>
+    <!-- cabeçalho -->
+    <div class="logo">
+        <h1>Saidinhas</h1>
     </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="menu">
+                <ul>
+                    <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="cardapio.html"><i class="fas fa-utensils"></i> Cardápio</a></li>
+                    <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
+                    <li><a href="promoCliente.html"><i class="fas fa-tags"></i> Promoções</a></li>
+                    <li><a href="indexgame.html"><i class="fa-solid fa-star"></i> Pontos</a></li>
+                    <li><a href="suporteu.html" class="active"><i class="fa-solid fa-headset"></i> Suporte</a></li>
+                    <li><a href="filtro.html"><i class="fas fa-search"></i> Buscar</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../index.html">Sair</a>
+            </div>
+        </aside>
 
-    <script src="../../assets/js/suporteu.js"></script>
+        <div class="suporte">
+            <h1>Suporte ao Usuário</h1>
+            <form id="supportForm">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="messages" class="messages"></div>
+        </div>
+    </div>
 </body>
+
 </html>
