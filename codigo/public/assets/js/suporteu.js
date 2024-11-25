@@ -34,7 +34,7 @@ document.getElementById('supportForm').addEventListener('submit', async function
         });
 
         if (response.ok) {
-            alert('Agredecemos seu contato. Em breve traremos retorno via e-mail.');
+            alert('Agradecemos seu contato. Em breve traremos retorno via e-mail.');
         } else {
             alert('Não foi possível enviar mensagem', response.statusText);
         }
