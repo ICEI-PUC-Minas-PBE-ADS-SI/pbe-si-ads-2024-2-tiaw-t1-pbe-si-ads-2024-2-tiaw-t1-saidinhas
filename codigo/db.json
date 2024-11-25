@@ -434,8 +434,6 @@
     {
       "restauranteId": "1",
       "nomeRestaurante": "Restaurante Mineiro",
-      "data": "2024-11-22",
-      "hora": "17:00",
       "data": "2024-11-25",
       "hora": "12:45",
       "obs": "Mesa para 2.",
@@ -649,6 +647,12 @@
       "seu email": "lili",
       "mensagem": "mensagem de erro",
       "id": 1
+    },
+    {
+      "name": "Rosé",
+      "email": "rose@gmail.com",
+      "message": "erro ",
+      "id": 2
     }
   ],
   "perguntasCliente": [
