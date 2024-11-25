@@ -415,17 +415,22 @@
       "estado": "MG",
       "senha": "610",
       "id": 11
+    },
+    {
+      "nome": "Sara Pasolini",
+      "data": "21022006",
+      "cpf": "0000000001",
+      "email": "sara@gmail.com",
+      "cep": "60000",
+      "logradouro": "Rua Brasil",
+      "bairro": "Bairro um",
+      "cidade": "Cidade dois",
+      "estado": "MG",
+      "senha": "2006",
+      "id": 12
     }
   ],
   "reservas": [
-    {
-      "restauranteId": "1",
-      "nomeRestaurante": "Restaurante Mineiro",
-      "data": "2024-11-21",
-      "hora": "12:30",
-      "obs": "Mesa para 2.",
-      "id": 1
-    },
     {
       "restauranteId": "1",
       "nomeRestaurante": "Restaurante Mineiro",
@@ -433,6 +438,14 @@
       "hora": "17:00",
       "obs": "Mesa para 2.",
       "id": 2
+    },
+    {
+      "restauranteId": "2",
+      "nomeRestaurante": "Café Central",
+      "data": "2024-11-28",
+      "hora": "15:30",
+      "obs": "Mesa para dois",
+      "id": 3
     }
   ],
   "cardapio": {
@@ -652,16 +665,16 @@
       "id": 1,
       "nome": "Salada",
       "imagem": "../../assets/images/salada.jpg",
-      "preco": 15.00,
+      "preco": 15,
       "desconto": 10,
-      "precoComDesconto": 13.50,
+      "precoComDesconto": 13.5,
       "pontos": 50
     },
     {
       "id": 2,
       "nome": "File mignon",
       "imagem": "../../assets/images/file.jpg",
-      "preco": 37.50,
+      "preco": 37.5,
       "desconto": 5,
       "precoComDesconto": 35.62,
       "pontos": 75
@@ -670,7 +683,7 @@
       "id": 3,
       "nome": "Bobó de camarão",
       "imagem": "../../assets/images/camarao.jpg",
-      "preco": 67.50,
+      "preco": 67.5,
       "desconto": 0,
       "precoComDesconto": null,
       "pontos": 100
@@ -679,7 +692,7 @@
       "id": 4,
       "nome": "Drincks",
       "imagem": "../../assets/images/bebida.jpg",
-      "preco": 37.50,
+      "preco": 37.5,
       "desconto": 15,
       "precoComDesconto": 31.88,
       "pontos": 25
