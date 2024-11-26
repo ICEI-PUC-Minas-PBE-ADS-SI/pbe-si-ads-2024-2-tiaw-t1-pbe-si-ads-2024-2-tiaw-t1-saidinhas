@@ -7,10 +7,11 @@
     <title>Acúmulo de Pontos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/stylegame.css">
+    <script src="../../assets/js/game.js" defer></script>
 </head>
 
 <body>
-    <!-- cabeçalho -->
+    <!-- Cabeçalho -->
     <div class="logo">
         <h1>Saidinhas</h1>
     </div>
@@ -21,6 +22,7 @@
     </div>
 
     <div class="container">
+        <!-- Barra lateral -->
         <aside class="sidebar">
             <nav class="menu">
                 <ul>
@@ -38,26 +40,29 @@
             </div>
         </aside>
 
+        <!-- Conteúdo principal -->
         <div class="card">
             <h1>Gamificação <br>- Acúmulo de Pontos</h1>
 
+            <!-- Promoções e Cupons -->
             <div class="promocoes">
                 <h2>Promoções</h2>
                 <ul id="listaPromocoes">
-                  <!-- cupons -->
-                    <div class="cupons">
-                        <h2>Cupons</h2> <input type="text" id="codigoCupom" placeholder="Digite o código do cupom">
-                        <button class="btn-primary" id="aplicarCupomBtn">Aplicar Cupom</button>
-                        <div id="mensagemCupom"></div>
-                    </div>
+                    <!-- Exibirá as promoções acumuladas -->
+                </ul>
+
+                <div class="cupons">
+                    <h2>Cupons</h2>
+                    <input type="text" id="codigoCupom" placeholder="Digite o código do cupom">
+                    <button class="btn-primary" id="aplicarCupomBtn">Aplicar Cupom</button>
+                    <div id="mensagemCupom"></div> <!-- Exibe a mensagem do status do cupom -->
+                </div>
             </div>
-            </ul>
         </div>
 
-
-
-        <script src="../../assets/js/game.js"></script>
+        
     </div>
+
 </body>
 
 </html>
