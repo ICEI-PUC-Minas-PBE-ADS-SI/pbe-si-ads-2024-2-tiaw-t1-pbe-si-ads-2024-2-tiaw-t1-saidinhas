@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Lista de cupons válidos e seus valores em pontos
     const cuponsValidos = {
-        "SAIDA10": 10,
+        "DESCONTO10": 10,
         "PONTOS20": 20,
-        "PREMIO50": 50
+        "BLACKFRIDAY50": 50
     };
 
     let pontosAcumulados = 0;
