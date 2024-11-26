@@ -1,57 +1,51 @@
-const API_URL = 'http://localhost:3000/aplicarcupom'; // URL para buscar os cupons
-let pontos = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    // Lista de cupons válidos e seus valores em pontos
+    const cuponsValidos = {
+        "SAIDA10": 10,
+        "PONTOS20": 20,
+        "PREMIO50": 50
+    };
 
-// Função para buscar os cupons do servidor
-async function fetchCupons() {
-    try {
-        const response = await fetch(API_URL);
-        if (!response.ok) {
-            throw new Error(`Erro ao buscar os cupons: ${response.status} - ${response.statusText}`);
+    let pontosAcumulados = 0;
+
+    // Referências aos elementos do DOM
+    const codigoCupomInput = document.getElementById("codigoCupom");
+    const aplicarCupomBtn = document.getElementById("aplicarCupomBtn");
+    const mensagemCupom = document.getElementById("mensagemCupom");
+    const pontosSpan = document.getElementById("pontos");
+
+    // Função para aplicar cupom
+    const aplicarCupom = () => {
+        const codigoCupom = codigoCupomInput.value.trim().toUpperCase(); // Normaliza o código
+        if (cuponsValidos[codigoCupom]) {
+            const pontos = cuponsValidos[codigoCupom];
+            pontosAcumulados += pontos;
+
+            // Atualiza a exibição dos pontos acumulados
+            pontosSpan.textContent = pontosAcumulados;
+
+            // Mensagem de sucesso
+            mensagemCupom.textContent = `Cupom aplicado com sucesso! Você ganhou ${pontos} pontos.`;
+            mensagemCupom.style.color = "green";
+        } else {
+            // Mensagem de erro
+            mensagemCupom.textContent = "Cupom inválido. Tente novamente.";
+            mensagemCupom.style.color = "red";
         }
-        const data = await response.json();
-        console.log('Cupons obtidos:', data); // Depuração
-        return data; // Retorna a lista de cupons
-    } catch (error) {
-        console.error('Erro no fetch:', error.message);
-        return []; // Retorna lista vazia em caso de erro
-    }
-}
 
-// Função para verificar o cupom inserido pelo usuário
-async function verificarCupom() {
-    const codigoCupom = document.getElementById('codigoCupom').value.trim();
-    const mensagemCupom = document.getElementById('mensagemCupom');
-    const pontosElemento = document.getElementById('pontos');
+        // Limpa o campo de entrada
+        codigoCupomInput.value = "";
+    };
 
-    // Validar entrada do usuário
-    if (!codigoCupom) {
-        mensagemCupom.innerText = "Por favor, insira um código de cupom.";
-        return;
-    }
+    // Evento de clique no botão "Aplicar Cupom"
+    aplicarCupomBtn.addEventListener("click", aplicarCupom);
 
-    // Busca os cupons do servidor
-    const cupons = await fetchCupons();
+    // Permite aplicar o cupom ao pressionar Enter
+    codigoCupomInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            aplicarCupom();
+        }
+    });
+});
 
-    // Depuração
-    console.log('Código do Cupom inserido:', codigoCupom);
-    console.log('Lista de Cupons disponíveis:', cupons);
 
-    // Verifica se o cupom é válido
-    const cupomValido = cupons.find(cupom => cupom.codigoCupom === codigoCupom);
-
-    if (cupomValido) {
-        console.log('Cupom válido encontrado:', cupomValido); // Depuração
-        mensagemCupom.innerText = `Cupom aplicado: ${cupomValido.mensagemCupom}`;
-        pontos += cupomValido.pont; // Adiciona os pontos do cupom
-        pontosElemento.innerText = pontos;
-    } else {
-        console.log('Cupom inválido:', codigoCupom); // Depuração
-        mensagemCupom.innerText = "Código de cupom inválido.";
-    }
-
-    // Limpa o campo de entrada
-    document.getElementById('codigoCupom').value = '';
-}
-
-// Adiciona o evento ao botão de aplicar cupom
-document.getElementById('aplicarCupomBtn').addEventListener('click', verificarCupom);
