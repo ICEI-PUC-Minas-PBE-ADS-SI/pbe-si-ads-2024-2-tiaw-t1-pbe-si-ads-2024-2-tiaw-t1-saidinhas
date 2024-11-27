@@ -18,7 +18,7 @@ A ideia é criar uma plataforma dinâmica que beneficie tanto os consumidores fi
 * Clóvis Lemos Tavares
 
 ## Acesso a Aplicação
-* Para ter acesso a nossa aplicação : 
+* Para ter acesso a nossa aplicação : [Saidinhas] (https://icei-puc-minas-pbe-ads-si.github.io/pbe-si-ads-2024-2-tiaw-t1-pbe-si-ads-2024-2-tiaw-t1-saidinhas/codigo/public/index.html)
 
 
 
