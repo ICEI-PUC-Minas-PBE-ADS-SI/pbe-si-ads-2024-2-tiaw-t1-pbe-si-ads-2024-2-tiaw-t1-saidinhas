@@ -17,6 +17,10 @@ A ideia é criar uma plataforma dinâmica que beneficie tanto os consumidores fi
 
 * Clóvis Lemos Tavares
 
+## Acesso a Aplicação
+* Para ter acesso a nossa aplicação : 
+
+
 
 
 ## Instruções de utilização 
