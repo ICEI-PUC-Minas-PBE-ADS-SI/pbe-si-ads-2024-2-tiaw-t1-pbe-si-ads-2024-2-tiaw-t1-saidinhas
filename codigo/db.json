@@ -428,6 +428,32 @@
       "estado": "MG",
       "senha": "2006",
       "id": 12
+    },
+    {
+      "nome": "edu",
+      "data": "07902008",
+      "cpf": "1245900",
+      "email": "edu@gmail.com",
+      "cep": "13468",
+      "logradouro": "rua rua",
+      "bairro": "bairro 1",
+      "cidade": "cidade 2",
+      "estado": "MG",
+      "senha": "23",
+      "id": 13
+    },
+    {
+      "nome": "nome",
+      "data": "21022006",
+      "cpf": "0000000001",
+      "email": "nome@gmail.com",
+      "cep": "60000",
+      "logradouro": "Rua Brasil",
+      "bairro": "Bairro um",
+      "cidade": "Cidade dois",
+      "estado": "MG",
+      "senha": "234",
+      "id": 14
     }
   ],
   "reservas": [
@@ -456,6 +482,15 @@
       "hora": "15:30",
       "obs": "Mesa para dois",
       "id": 3
+    },
+    {
+      "restauranteId": "2",
+      "nomeRestaurante": "Café Central",
+      "data": "2024-11-29",
+      "hora": "01:58",
+      "obs": "mes apra um",
+      "status": true,
+      "id": 4
     }
   ],
   "cupons": [
