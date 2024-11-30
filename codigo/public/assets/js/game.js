@@ -1,39 +1,51 @@
-const API_URL = 'http://localhost:3000/aplicarCupomBtn';
-const LOGIN_URL = "/modulos/login/indexgame.html";
+document.addEventListener("DOMContentLoaded", () => {
+    // Lista de cupons válidos e seus valores em pontos
+    const cuponsValidos = {
+        "DESCONTO10": 10,
+        "PONTOS20": 20,
+        "BLACKFRIDAY50": 50
+    };
 
-let pontos = 0;
+    let pontosAcumulados = 0;
 
-// para acumular pontos
-document.getElementById('acumularPontosBtn').addEventListener('click', () => {
-    const pontosAcumulados = Math.floor(Math.random() * 10) + 1; // Acumula de 1 a 100 pontos
-    pontos += pontosAcumulados;
-    document.getElementById('pontos').innerText = pontos;
-    adicionarPromocao(`Você acumulou ${pontosAcumulados} pontos!`);
+    // Referências aos elementos do DOM
+    const codigoCupomInput = document.getElementById("codigoCupom");
+    const aplicarCupomBtn = document.getElementById("aplicarCupomBtn");
+    const mensagemCupom = document.getElementById("mensagemCupom");
+    const pontosSpan = document.getElementById("pontos");
+
+    // Função para aplicar cupom
+    const aplicarCupom = () => {
+        const codigoCupom = codigoCupomInput.value.trim().toUpperCase(); // Normaliza o código
+        if (cuponsValidos[codigoCupom]) {
+            const pontos = cuponsValidos[codigoCupom];
+            pontosAcumulados += pontos;
+
+            // Atualiza a exibição dos pontos acumulados
+            pontosSpan.textContent = pontosAcumulados;
+
+            // Mensagem de sucesso
+            mensagemCupom.textContent = `Cupom aplicado com sucesso! Você ganhou ${pontos} pontos.`;
+            mensagemCupom.style.color = "green";
+        } else {
+            // Mensagem de erro
+            mensagemCupom.textContent = "Cupom inválido. Tente novamente.";
+            mensagemCupom.style.color = "red";
+        }
+
+        // Limpa o campo de entrada
+        codigoCupomInput.value = "";
+    };
+
+    // Evento de clique no botão "Aplicar Cupom"
+    aplicarCupomBtn.addEventListener("click", aplicarCupom);
+
+    // Permite aplicar o cupom ao pressionar Enter
+    codigoCupomInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            aplicarCupom();
+        }
+    });
 });
 
-// para adicionar promoções
-function adicionarPromocao(mensagem) {
-    const listaPromocoes = document.getElementById('listaPromocoes');
-    const li = document.createElement('li');
-    li.innerText = mensagem;
-    listaPromocoes.appendChild(li);
-}
 
-// para aplicar cupons
-document.getElementById('aplicarCupomBtn').addEventListener('click', () => {
-    const codigoCupom = document.getElementById('codigoCupom').value;
-    const mensagemCupom = document.getElementById('mensagemCupom');
-
-    if (codigoCupom === "DESCONTO10") {
-        mensagemCupom.innerText = "Cupom aplicado: 10% de desconto!";
-    } else if (codigoCupom === "PONTOS50") {
-        pontos += 50;
-        document.getElementById('pontos').innerText = pontos;
-        mensagemCupom.innerText = "Cupom aplicado: +50 pontos!";
-    } else {
-        mensagemCupom.innerText = "Código de cupom inválido.";
-    }
-
-    // Limpa o campo de entrada
-    document.getElementById('codigoCupom').value = '';
-});

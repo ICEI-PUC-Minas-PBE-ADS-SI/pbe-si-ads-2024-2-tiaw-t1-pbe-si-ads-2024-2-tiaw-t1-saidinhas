@@ -32,23 +32,88 @@
             </div>
         </aside>
         <main class="content">
-            <section class="menu-items">
-                <div class="menu-header">
-                    <h2>Cardápio</h2>
+            <div class="menu-section">
+                <h2>Entradas</h2>
+                <div class="card">
+                    <img src="../../assets/images/sando.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Sanduíche natural</h3>
+                    <p>É um alimento composto por duas fatias de pão com um recheio entre elas.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 15,00 <br>Origem:Inglesa <br>Alerta! Alérgicos podem conter: glúten (pão), lácteos (requeijão, maionese), ovo (maionese), soja (em alguns pães e requeijões industrializados).</p>
                 </div>
-
-                <nav class="category-nav">
-                    <button class="category-btn" data-category="all">Todos</button>
-                    <button class="category-btn" data-category="Entrada">Entrada</button>
-                    <button class="category-btn" data-category="Prato Principal">Prato Principal</button>
-                    <button class="category-btn" data-category="Bebidas">Bebidas</button>
-                </nav>
-
-                <div id="items-list" class="items-list"></div>
-
-                <div id="items-list-vazio" class="items-list-vazio"></div>
-
-            </section>
+                <div class="card">
+                    <img src="../../assets/images/sushi.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Sushi</h3>
+                    <p>É um bolinho de arroz enrolado com uma alga. </p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 35,00 <br>Origem:Japonesa <br>Alerta! Alérgicos podem conter: peixes e frutos do mar (salmão, atum), soja (shoyu), glúten (alguns tipos de shoyu), gergelim (opcional).</p>
+                </div>
+                <div class="card">
+                    <img src="../../assets/images/tomato.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Bruschetta</h3>
+                    <p>Pão tostado com tomate fresco, manjericão e azeite de oliva.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 20,00  <br>Origem:Italiana <br>Alerta! Alérgicos podem conter: glúten (pão), alho (intolerância comum), lácteos (caso seja adicionado queijo). </p>
+                </div>
+                <div class="card">
+                    <img src="../../assets/images/caprese.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Salada Caprese</h3>
+                    <p>É uma salada italiana simples, feita de mozzarella fresca fatiada, tomate e manjericão, temperada com sal e azeite de oliva.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 25,00  <br>Origem:Italiana <br>Alerta! Alérgicos podem conter: lácteos (muçarela), tomate (intolerância comum).</p>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h2>Pratos Principais</h2>
+                <div class="card">
+                    <img src="../../assets/images/bife.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Filé Mignon</h3>
+                    <p>Filé de carne bovina grelhado, servido com molho de vinho tinto.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 55,00 <br>Origem:Francesa <br>Alerta! Alérgicos podem conter: lácteos (manteiga), alho (intolerância comum).</p>
+                </div>
+                <div class="card">
+                    <img src="../../assets/images/risoto.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Risoto de Frutos do Mar</h3>
+                    <p>Arroz arbóreo cremoso com camarões, lulas e mexilhões.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 45,00 <br>Origem:Italiana <br>Alerta! Alérgicos podem conter: frutos do mar (camarão, lula, mexilhões), lácteos (manteiga, queijo parmesão), alho e cebola (intolerância comum).</p>
+                </div>
+                <div class="card">
+                    <img src="../../assets/images/rice.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Arroz e feijão</h3>
+                    <p>arroz soltinho com feijão com muito caldo, servido em um prato.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 18,00<br>Origem:Brasileira <br>Alerta! Alérgicos podem conter: alho e cebola (intolerância comum), óleo vegetal (caso seja de soja).</p>
+                </div>
+                <div class="card">
+                    <img src="../../assets/images/pasta.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Macarrão ao molho</h3>
+                    <p>Prato culinário de macarrão cozido, a que se adicionam manteiga, queijo e um molho em geral de tomate.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 22,00  <br>Origem:Italiana <br>Alerta! Alérgicos podem conter: glúten (macarrão), lácteos (molho branco, queijo parmesão), alho e cebola (intolerância comum).</p>
+                </div>
+            </div>
+    
+            <div class="menu-section">
+                <h2>Sobremesas</h2>
+                <div class="card">
+                    <img src="../../assets/images/torta.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Torta de Limão</h3>
+                    <p>Deliciosa torta de limão com merengue e base crocante.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 18,00 <br>Origem:Estadunidense <br>Alerta! Alérgicos podem conter: glúten (massa), lácteos (leite condensado, creme de leite), ovo (merengue).</p>
+                </div>
+                <div class="card">
+                    <img src="../../assets/images/gelato.jpg" alt="comida" style="width: 200px; border-radius: 8px;">
+                    <h3>Gelato de Chocolate</h3>
+                    <p>Gelato cremoso de chocolate, feito com chocolate belga.</p>
+                    <button class="button" onclick="mostrarInfo(this)">Mais informações</button>
+                    <p class="info">Preço: R$ 15,00 <br>Origem:Italiana <br>Alerta! Alérgicos podem conter: lácteos (leite, creme de leite), ovo, cacau (chocolate).</p>
+                </div>
+            </div>
+        </div>
         </main>
     </div>
 

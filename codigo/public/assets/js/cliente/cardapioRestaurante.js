@@ -94,3 +94,7 @@ function filterItems(selectedCategory, categories) {
 }
 
 carregarCardapio(renderizarCardapio);
+function mostrarInfo(button) {
+    const info = button.nextElementSibling;
+    info.style.display = info.style.display === 'block' ? 'none' : 'block';
+}

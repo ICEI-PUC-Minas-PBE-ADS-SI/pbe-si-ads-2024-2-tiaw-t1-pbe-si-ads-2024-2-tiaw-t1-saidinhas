@@ -104,3 +104,140 @@ hr {
 .botao-vermelho:hover {
     background-color: darkred;
 }
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 93.5vh;
+}
+
+.sidebar {
+    width: 200px;
+    height: auto;
+    background-color: #e02727;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    background-color: #e02727;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    margin-left: 25px;
+    font-size: 26px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.menu-header h2 {
+    color: #e02727;
+    margin-bottom: 20px;
+}
+
+.logout {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow: auto;
+}
+
+.menu li {
+    padding: 16px 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 10px;
+    position: relative;
+}
+
+.menu li a i {
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.menu li a.active,
+.menu li a:hover {
+    background-color: #b30000;
+}
+
+.botao-vermelho {
+    background-color: red; 
+    color: white; 
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.botao-vermelho:hover {
+    background-color: darkred; 
+}
+
+.restaurant-container {
+    display: grid; /* Exibe os elementos filhos em uma linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo */
+    padding: 20px; /* Espaçamento interno da div */
+    max-width: 100%; /* Garante que a largura máxima seja 100% do container pai */
+    box-sizing: border-box; /* Inclui padding na largura total */
+    justify-content: space-evenly; /* Espaça os cards uniformemente no container */
+}
+
+.restaurant {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 300px; /* Largura mínima de 300px, expansível */
+    max-width: 300px; /* Define a largura máxima de cada card */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.restaurant img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.restaurant h2 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.restaurant p {
+    margin: 5px 0;
+}
