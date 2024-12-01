@@ -6,9 +6,9 @@ function gerarRelatorio() {
     const diario = document.getElementById('diario');
     const semanal = document.getElementById('semanal');
     const mensal = document.getElementById('mensal');
-    const datainicio = document.getElementById('datain').value;
-    const datafim = document.getElementById('datafim').value;
-
+    const datainicio  = document.getElementById('datain').value.split('-').reverse().join('/');
+    const datafim = document.getElementById('datafim').value.split('-').reverse().join('/');
+  
     if ((diario || semanal || mensal) && (datainicio && datafim)) {
         if (diario.checked) {
             
