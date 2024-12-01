@@ -103,7 +103,7 @@ body {
 }
 
 .card {
-    background-color: #861414;
+    background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
