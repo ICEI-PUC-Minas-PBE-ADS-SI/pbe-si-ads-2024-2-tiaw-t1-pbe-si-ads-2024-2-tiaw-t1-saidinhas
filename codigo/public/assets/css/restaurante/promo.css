@@ -1,222 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    margin: 0;
-
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin-left: 220px;
-    /* Adicionando margem para evitar a sobreposição */
-    width: calc(100% - 220px);
-    /* Ajustando a largura para compensar a sidebar */
-}
-
-.sidebar {
-    margin-top: 50px;
-    width: 200px;
-    height: 100vh;
-    position: fixed;
-    background-color: #e02727;
+#add {
+    padding: 10px 20px;
+    background-color: #ce1e1e;
     color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.logo {
-    width: 100%;
-    background-color: #e02727;
-    color: white;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    top: 0;
-    position: fixed;
-    z-index: 1;
-
-}
-
-.logo h1 {
-    margin-left: 25px;
-    font-size: 26px;
-}
-
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.menu-header h2 {
-    color: #e02727;
-    margin-bottom: 20px;
-}
-
-.logout {
-    margin-top: 123px;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.content {
-    flex-grow: 1;
-    background-color: #f9f9f9;
-    padding: 20px;
-    overflow: auto;
-}
-
-.menu li {
-    padding: 16px 20px;
-}
-
-.menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 15px 10px;
-    position: relative;
-}
-
-.menu li a i {
-    margin-right: 15px;
-    vertical-align: middle;
-}
-
-.menu li a.active,
-.menu li a:hover {
-    background-color: #b30000;
-}
-
-
-.btn-primary {
-    background-color: red !important;
-
-}
-
-button.btn.primary:hover {
-    background-color: #de0e0e;
-}
-
-button.btn.secondary {
-    background-color: #6c757d;
-    color: white;
-}
-
-button.btn.secondary:hover {
-    background-color: #565e64;
-}
-#add{
-    margin-left: -35px;
-    margin-top: 70px;
-    height: 30px;
-    width: 100px;
-}
-/* Estilo para o popup */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-}
-
-.close {
-    float: right;
-    font-size: 1.5rem;
     cursor: pointer;
 }
 
+#add:hover {
+    background-color: #ad2121;
+}
 
-.cards-container .card {
-    background-color: #861414;
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: px;
+}
+
+.card {
+    background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
-    height: 450px;
     flex-direction: column;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 50px;
+    justify-content: space-between;
+    height: 450px;
 }
 
-.cards-container .card-img {
+.card-img {
     width: 100%;
     height: 200px;
+    object-fit: cover;
 }
 
-.cards-container .card-body {
+.card-body {
     padding: 1rem;
 }
 
-.cards-container .card-title {
+.card-body button {
+    margin-top: 0.4rem; 
+    padding: 0.5rem 1rem; 
+}
+
+.card-title {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
-.cards-container .card-text {
-    margin-bottom: 0.5rem;
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-button.btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
+.preco-novo {
+    display: block;
+    color: green;
     margin-top: 0.5rem;
-    display: inline-block;
+    font-weight: bold;
 }
 
-.btn-primary {
-    background-color: red !important;
+.popup-content {
+    position: relative;
 }
 
-button.btn.primary:hover {
-    background-color: #de0e0e;
-}
-
-button.btn.secondary {
-    background-color: #6c757d;
-    color: white;
-}
-
-button.btn.secondary:hover {
-    background-color: #565e64;
-}
-
-.desconto {
-    color: red;
-}
-
-.pontos {
-    color: blue;
-}
-.danger{
-    background-color: #e02727;
+#popup.show {
+    display: block; 
 }

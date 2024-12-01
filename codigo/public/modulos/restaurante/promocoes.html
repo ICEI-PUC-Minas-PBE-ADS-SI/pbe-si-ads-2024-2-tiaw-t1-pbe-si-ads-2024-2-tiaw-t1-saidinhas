@@ -3,30 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoções</title>
+    <title>Saidinhas - Restaurante</title>
+    <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/restaurante/promo.css" />
-    <script src="../../assets/js/perfil.js" defer></script>
+    <script src="../../assets/js/restaurante/promocao.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="logo">
         <h1>Saidinhas</h1>
     </div>
-    <aside class="sidebar">
-        <nav class="menu">
-            <ul>
-                <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
-                <li><a href="cardapio.html"><i class="fas fa-utensils"></i> Cardápio</a></li>
-                <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
-                <li><a href="promocoes.html" class="active"><i class="fas fa-tags"></i> Promoções</a></li>
-                <li><a href="relatorios.html"><i class="fas fa-chart-line"></i> Relatórios</a></li>
-                <li><a class="logout" href="../../index.html">Sair</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="menu">
+                <ul>
+                    <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="cardapio.html"><i class="fas fa-utensils"></i> Cardápio</a></li>
+                    <li><a href="reserva.html"><i class="fas fa-calendar-alt"></i> Reservas</a></li>
+                    <li><a href="promocoes.html" class="active"><i class="fas fa-tags"></i> Promoções</a></li>
+                    <li><a href="relatorios.html"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+                    <li><a class="logout" href="../../index.html">Sair</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../index.html">Sair</a>
+            </div>
+        </aside>
+
+        <div class="content">
+            <div class="menu-header">
+                <h2>Promoções</h2>
+                <button id="add" class="btn primary" onclick="showPopup()">Novo Card</button>
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="hidePopup()">&times;</span>
+                    <h2>Adicionar Novo Card</h2>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo"><br>
+                    <label for="urlImagem">URL da Imagem:</label>
+                    <input type="text" id="urlImagem" name="urlImagem"><br>
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" name="preco"><br>
+                    <label for="ponto">Pontos:</label>
+                    <input type="text" id="ponto" name="ponto"><br>
+                    <button onclick="adicionarCard()">Adicionar</button>
+                </div>
+            </div>
+            <div id="cardsContainer" class="cards-container">
+                <div class="card">
+                    <img class="card-img" src="../../assets/images/salada.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" ><strong>Salada</strong></h5>
+                        <strong>R$:</strong><span id="preco1">15,00</span> <span id="desconto1"></span> <br>
+                        <button class="btn primary" onclick="toggleCaixaNumerica(this)">Preço</button>
+                        <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                        <br><button class="btn primary" onclick="toggleCaixaPontos(this)">Adicionar Pontos</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img" src="../../assets/images/file.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary" >File mignon</h5>
+                        <strong>R$:</strong><span id="preco2">37,50</span> <span id="desconto2"></span><br>
+                        <button class="btn primary" onclick="toggleCaixaNumerica(this)">Preço</button>
+                        <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                        <br>
+                        <button class="btn primary" onclick="toggleCaixaPontos(this)">Adicionar Pontos</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img" src="../../assets/images/camarao.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Bobó de camarão</h5>
+                        <strong>R$:</strong><span id="preco3">67,50</span> <span id="desconto3"></span> <br>
+                        <button class="btn primary" onclick="toggleCaixaNumerica(this)">Preço</button>
+                        <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                        <br>
+                        <button class="btn primary" onclick="toggleCaixaPontos(this)">Adicionar Pontos</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img" src="../../assets/images/bebida.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Drincks</h5>
+                        <strong>R$:</strong><span id="preco4">37,50</span> <span id="desconto4"></span><br>
+                        <button class="btn primary" onclick="toggleCaixaNumerica(this)">Preço</button>
+                        <button class="btn secondary" onclick="toggleCaixaDesconto(this)">Desconto</button>
+                        <br>
+                        <button class="btn primary" onclick="toggleCaixaPontos(this)">Adicionar Pontos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+
+<body>
+   
 
     <div class="container">
-        <button id="add" class="btn primary" onclick="showPopup()">Novo Card</button>
+        <div class="menu-header">
+            <h2>Promoções</h2>
+            <button id="add" class="btn primary" onclick="showPopup()">Novo Card</button>
+        </div>
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span class="close" onclick="hidePopup()">&times;</span>
@@ -37,13 +143,11 @@
                 <input type="text" id="urlImagem" name="urlImagem"><br>
                 <label for="preco">Preço:</label>
                 <input type="text" id="preco" name="preco"><br>
-                Pontos:</label>
-                <input type="ponto" id="ponto" name="ponto"><br>
-                
+                <label for="ponto">Pontos:</label>
+                <input type="text" id="ponto" name="ponto"><br>
                 <button onclick="adicionarCard()">Adicionar</button>
             </div>
         </div>
-
         <div id="cardsContainer" class="cards-container">
             <div class="card">
                 <img class="card-img" src="../../assets/images/salada.jpg" alt="Card image cap">
@@ -90,6 +194,24 @@
             </div>
         </div>
     </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
     <script src="../../assets/js/promocao.js"></script>
 </body>
-</html>
+</html> -->
