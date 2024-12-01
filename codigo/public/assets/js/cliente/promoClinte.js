@@ -1,76 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const pratos = [
-        {
-            nome: "Salada",
-            imagem: "../../assets/images/salada.jpg",
-            preco: 15.00,
-            desconto: 10,
-            precoComDesconto: 13.50,
-            pontos: 50
-        },
-        {
-            nome: "File mignon",
-            imagem: "../../assets/images/file.jpg",
-            preco: 37.50,
-            desconto: 5,
-            precoComDesconto: 35.62,
-            pontos: 75
-        },
-        {
-            nome: "Bobó de camarão",
-            imagem: "../../assets/images/camarao.jpg",
-            preco: 67.50,
-            desconto: 0,
-            precoComDesconto: null,
-            pontos: 100
-        },
-        {
-            nome: "Drincks",
-            imagem: "../../assets/images/bebida.jpg",
-            preco: 37.50,
-            desconto: 15,
-            precoComDesconto: 31.88,
-            pontos: 25
-        }
-    ];
+    // Função para carregar dados do arquivo JSON
+    fetch('/codigo/db.json') // Caminho relativo ao arquivo db.json
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o arquivo JSON');
+            }
+            return response.json(); // Converte a resposta em JSON
+        })
+        .then(data => {
+            const promocoes = data.promocoes; // Acessa o array de promoções dentro do JSON
+            const cardContainer = document.getElementById('cardsContainer');
 
-    const cardContainer = document.getElementById('cardsContainer');
+            // Cria os cards para cada promoção
+            promocoes.forEach(promocao => {
+                const card = document.createElement('div');
+                card.classList.add('card');
 
-    pratos.forEach(prato => {
-        const card = document.createElement('div');
-        card.classList.add('card');
+                let cardContent = `
+                    <img class="card-img" src="${promocao.imagem}" alt="Imagem do Card">
+                    <div class="card-body">
+                        <h5 class="card-title">${promocao.nome}</h5>
+                        <strong>Preço:</strong> R$ ${promocao.preco.toFixed(2)}<br>
+                        <span class="desconto">${promocao.desconto}% off</span> <br>
+                `;
 
-        let cardContent = `
-            <img class="card-img" src="${prato.imagem}" alt="Imagem do Card">
-            <div class="card-body">
-                <h5 class="card-title">${prato.nome}</h5>
-                <strong>R$:</strong><span>${prato.preco.toFixed(2)}</span>
-                <span class="desconto">${prato.desconto}% off</span> <br>
-        `;
+                if (promocao.precoComDesconto !== null) {
+                    cardContent += `<span class="preco-novo">Preço com desconto: R$ ${promocao.precoComDesconto.toFixed(2)}</span><br>`;
+                }
 
-        if (prato.precoComDesconto !== null) {
-            cardContent += `<span class="preco-novo">R$ ${prato.precoComDesconto.toFixed(2)}</span><br>`;
-        }
+                if (promocao.pontos > 0) {
+                    cardContent += `<span class="pontos">Pontos: ${promocao.pontos}</span>`;
+                }
 
-        if (prato.pontos > 0) {
-            cardContent += `<span class="pontos">Pontos: ${prato.pontos}</span>`;
-        }
+                cardContent += `</div>`;
+                card.innerHTML = cardContent;
+                cardContainer.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error('Erro:', error); // Exibe o erro no console
+        });
 
-        cardContent += `
-            </div>
-        `;
-
-        card.innerHTML = cardContent;
-        cardContainer.appendChild(card);
-    });
     let pontos = 0;
 
-    // para acumular pontos
+    // Para acumular pontos
     document.getElementById('acumularPontosBtn').addEventListener('click', () => {
-        const pontosAcumulados = Math.floor(Math.random() * 10) + 1; // Acumula de 1 a 100 pontos
+        const pontosAcumulados = Math.floor(Math.random() * 10) + 1; // Acumula de 1 a 10 pontos
         pontos += pontosAcumulados;
         document.getElementById('pontos').innerText = pontos;
         adicionarPromocao(`Você acumulou ${pontosAcumulados} pontos!`);
     });
-
 });

@@ -10,7 +10,7 @@
       "cidade": "Betim",
       "estado": "MG",
       "senha": "123",
-      "id": 1
+      "id": "1"
     },
     {
       "nome": "Quero mais",
@@ -22,7 +22,7 @@
       "cidade": "coreia",
       "estado": "Russia",
       "senha": "08112005",
-      "id": 2
+      "id": "2"
     },
     {
       "nome": "cachorro quente da jisoo",
@@ -34,7 +34,7 @@
       "cidade": "all eyes on me",
       "estado": "bahia",
       "senha": "890",
-      "id": 3
+      "id": "3"
     }
   ],
   "menu": {
@@ -117,7 +117,7 @@
   },
   "restaurantes": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Restaurante Mineiro",
       "tipo": "Brasileira",
       "distancia": "2 km",
@@ -157,7 +157,7 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5g_tskCYBcIE-BI0WT1MZ_msPqyyVVuc9w&s"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Café Central",
       "tipo": "Cafeterias",
       "distancia": "1.5 km",
@@ -195,7 +195,7 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbvtG5Y-Qs2kYXXFlhFgCrP3YJqFBZxxSpQ&s"
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Fit e Fresh",
       "tipo": "Saudável",
       "distancia": "3.2 km",
@@ -234,7 +234,7 @@
       "image_url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/3d/2d/dc/fit-restaurante.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Sushi Express",
       "tipo": "Japonesa",
       "distancia": "5 km",
@@ -284,7 +284,7 @@
       "cidade": "Betim",
       "estado": "MG",
       "senha": "123",
-      "id": 1
+      "id": "1"
     },
     {
       "nome": "Geovanna Quezia Oliveira de Cassia",
@@ -297,7 +297,7 @@
       "cidade": "Atlanta",
       "estado": "California",
       "senha": "08112005",
-      "id": 2
+      "id": "2"
     },
     {
       "nome": "lalisa",
@@ -310,7 +310,7 @@
       "cidade": "São Joaquim de Bicas",
       "estado": "MG",
       "senha": "909",
-      "id": 3
+      "id": "3"
     },
     {
       "nome": "jennie",
@@ -323,7 +323,7 @@
       "cidade": "cidade",
       "estado": "estado",
       "senha": "7776",
-      "id": 4
+      "id": "4"
     },
     {
       "nome": "Rosé",
@@ -336,7 +336,7 @@
       "cidade": "cidade 3",
       "estado": "RJ",
       "senha": "1998",
-      "id": 5
+      "id": "5"
     },
     {
       "nome": "jsoo",
@@ -349,7 +349,7 @@
       "cidade": "belem do para",
       "estado": "BA",
       "senha": "100",
-      "id": 6
+      "id": "6"
     },
     {
       "nome": "jsoo",
@@ -362,7 +362,7 @@
       "cidade": "belem do para",
       "estado": "BA",
       "senha": "101",
-      "id": 7
+      "id": "7"
     },
     {
       "nome": "lalilsa",
@@ -375,7 +375,7 @@
       "cidade": "cidade da cisade",
       "estado": "PE",
       "senha": "900",
-      "id": 8
+      "id": "8"
     },
     {
       "nome": "lalilsa",
@@ -388,7 +388,7 @@
       "cidade": "cidade da cisade",
       "estado": "PE",
       "senha": "900",
-      "id": 9
+      "id": "9"
     },
     {
       "nome": "dudu",
@@ -401,7 +401,7 @@
       "cidade": "ca",
       "estado": "MG",
       "senha": "300",
-      "id": 10
+      "id": "10"
     },
     {
       "nome": "kaka",
@@ -414,7 +414,7 @@
       "cidade": "cidade do milagre",
       "estado": "MG",
       "senha": "610",
-      "id": 11
+      "id": "11"
     },
     {
       "nome": "Sara Pasolini",
@@ -427,7 +427,7 @@
       "cidade": "Cidade dois",
       "estado": "MG",
       "senha": "2006",
-      "id": 12
+      "id": "12"
     },
     {
       "nome": "edu",
@@ -440,7 +440,7 @@
       "cidade": "cidade 2",
       "estado": "MG",
       "senha": "23",
-      "id": 13
+      "id": "13"
     },
     {
       "nome": "nome",
@@ -453,7 +453,7 @@
       "cidade": "Cidade dois",
       "estado": "MG",
       "senha": "234",
-      "id": 14
+      "id": "14"
     }
   ],
   "reservas": [
@@ -464,7 +464,7 @@
       "hora": "12:45",
       "obs": "Mesa para 2.",
       "status": false,
-      "id": 1
+      "id": "1"
     },
     {
       "restauranteId": "1",
@@ -473,7 +473,7 @@
       "hora": "20:20",
       "obs": "Mesa para 2.",
       "status": false,
-      "id": 2
+      "id": "2"
     },
     {
       "restauranteId": "2",
@@ -481,7 +481,7 @@
       "data": "2024-11-28",
       "hora": "15:30",
       "obs": "Mesa para dois",
-      "id": 3
+      "id": "3"
     },
     {
       "restauranteId": "2",
@@ -490,45 +490,50 @@
       "hora": "01:58",
       "obs": "mes apra um",
       "status": true,
-      "id": 4
+      "id": "4"
     }
   ],
   "cupons": [
     {
       "codigo": "DESCONTO10",
       "descricao": "10% de desconto em qualquer produto",
-      "valido": true
+      "valido": true,
+      "id": "7a19"
     },
     {
       "codigo": "FRETEGRATIS",
       "descricao": "Frete grátis para compras acima de R$100",
-      "valido": false
+      "valido": false,
+      "id": "c574"
     },
     {
       "codigo": "DESCONTO10",
       "descricao": "10% de desconto em qualquer produto",
-      "valido": true
+      "valido": true,
+      "id": "7cea"
     },
     {
       "codigo": "FRETEGRATIS",
       "descricao": "Frete grátis para compras acima de R$100",
-      "valido": false
+      "valido": false,
+      "id": "d169"
     },
     {
       "codigo": "BLACKFRIDAY50",
       "descricao": "50% de desconto na Black Friday",
-      "valido": true
+      "valido": true,
+      "id": "d687"
     }
   ],
   "mensagens": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "João Silva",
       "email": "joao.silva@email.com",
       "mensagem": "Preciso de ajuda para acessar minha conta."
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Maria Oliveira",
       "email": "maria.oliveira@email.com",
       "mensagem": "Gostaria de saber sobre o prazo de entrega."
@@ -673,14 +678,14 @@
     {
       "codigoCupom": "CUMPO90",
       "mensagemCupom": "CUPOM",
-      "pont" :15,
-      "id": 1
+      "pont": 15,
+      "id": "1"
     },
     {
       "codigoCupom": "PONTOSPLUS",
       "mensagemCupom": "CUPOM",
-      "pont" :105,
-      "id": 2
+      "pont": 105,
+      "id": "2"
     }
   ],
   "suporte": [
@@ -688,36 +693,36 @@
       "seu nome": "lili",
       "seu email": "lili",
       "mensagem": "mensagem de erro",
-      "id": 1
+      "id": "1"
     },
     {
       "name": "Rosé",
       "email": "rose@gmail.com",
       "message": "erro ",
-      "id": 2
+      "id": "2"
     },
     {
       "name": "Rosé",
       "email": "rose@gmail.com",
       "message": "oi , meu emil ta errado",
-      "id": 3
+      "id": "3"
     },
     {
       "name": "SARA DE ALMEIDA PASOLINI",
       "email": "saraalmeida3606@gmail.com",
       "message": "erro ",
-      "id": 4
+      "id": "4"
     },
     {
       "name": "lilasa",
       "email": "res@gmail.com",
       "message": "erro pra mim",
-      "id": 5
+      "id": "5"
     }
   ],
   "perguntasCliente": [
     {
-      "id": 1,
+      "id": "1",
       "pergunta": "Qual tipo de comida você gosta?",
       "opcoes": [
         "Comida Japonesa",
@@ -727,7 +732,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "pergunta": "Qual é sua bebida favorita?",
       "opcoes": [
         "Refrigerante",
@@ -737,7 +742,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "pergunta": "Qual é sua sobremesa favorita?",
       "opcoes": [
         "Bolo",
@@ -747,7 +752,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "pergunta": "Com quem você costuma sair?",
       "opcoes": [
         "Amigos",
@@ -757,7 +762,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "pergunta": "Quando você costuma sair mais?",
       "opcoes": [
         "Meio de semana",
@@ -767,7 +772,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "pergunta": "Em qual horário você prefere sair?",
       "opcoes": [
         "Manhã",

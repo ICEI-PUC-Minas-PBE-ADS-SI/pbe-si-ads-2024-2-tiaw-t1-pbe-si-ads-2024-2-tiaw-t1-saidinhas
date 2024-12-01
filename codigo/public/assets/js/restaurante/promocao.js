@@ -1,84 +1,74 @@
-let pratos = [
-    {
-        id: 1,
-        nome: "Salada",
-        imagem: "../../assets/images/salada.jpg",
-        preco: 15.00,
-        desconto: 10,
-        precoComDesconto: 13.50,
-        pontos: 50
-    },
-    {
-        id: 2,
-        nome: "File mignon",
-        imagem: "../../assets/images/file.jpg",
-        preco: 37.50,
-        desconto: 5,
-        precoComDesconto: 35.62,
-        pontos: 75
-    },
-    {
-        id: 3,
-        nome: "Bobó de camarão",
-        imagem: "../../assets/images/camarao.jpg",
-        preco: 67.50,
-        desconto: 0,
-        precoComDesconto: null,
-        pontos: 100
-    },
-    {
-        id: 4,
-        nome: "Drincks",
-        imagem: "../../assets/images/bebida.jpg",
-        preco: 37.50,
-        desconto: 15,
-        precoComDesconto: 31.88,
-        pontos: 25
-    }
-];
+const apiURL = "http://localhost:3000/promocoes"; // URL da API JSON Server
 
-
+// Função para buscar e renderizar os pratos do JSON Server
 function renderCards() {
-    const cardContainer = document.getElementById('cardsContainer');
-    cardContainer.innerHTML = '';
+    fetch(apiURL)
+        .then(response => response.json())
+        .then(data => {
+            const cardContainer = document.getElementById('cardsContainer');
+            cardContainer.innerHTML = '';
+            data.forEach(prato => {
+                const card = document.createElement('div');
+                card.classList.add('card');
 
-    pratos.forEach(prato => {
-        const card = document.createElement('div');
-        card.classList.add('card');
+                let cardContent = `
+                    <img class="card-img" src="${prato.imagem}" alt="Imagem do Card">
+                    <div class="card-body">
+                        <h5 class="card-title">${prato.nome}</h5>
+                        <strong>R$:</strong><span id="preco${prato.id}">${prato.preco.toFixed(2)}</span>
+                        <span class="desconto" id="desconto${prato.id}">${prato.desconto}% off</span><br>
+                `;
 
-        let cardContent = `
-            <img class="card-img" src="${prato.imagem}" alt="Imagem do Card">
-            <div class="card-body">
-                <h5 class="card-title">${prato.nome}</h5>
-                <strong>R$:</strong><span id="preco${prato.id}">${prato.preco.toFixed(2)}</span>
-                <span class="desconto" id="desconto${prato.id}">${prato.desconto}% off</span><br>
-        `;
+                if (prato.precoComDesconto !== null) {
+                    cardContent += `<span class="preco-novo">R$ ${prato.precoComDesconto.toFixed(2)}</span><br>`;
+                }
 
-        if (prato.precoComDesconto !== null) {
-            cardContent += `<span class="preco-novo">R$ ${prato.precoComDesconto.toFixed(2)}</span><br>`;
-        }
+                if (prato.pontos > 0) {
+                    cardContent += `<span class="pontos" id="pontos${prato.id}">Pontos: ${prato.pontos}</span>`;
+                }
 
-        if (prato.pontos > 0) {
-            cardContent += `<span class="pontos" id="pontos${prato.id}">Pontos: ${prato.pontos}</span>`;
-        }
+                cardContent += `
+                    <button class="btn primary" onclick="toggleCaixaNumerica(event, ${prato.id})">Preço</button>
+                    <button class="btn secondary" onclick="toggleCaixaDesconto(event, ${prato.id})">Desconto</button><br>
+                    <button class="btn primary" onclick="toggleCaixaPontos(event, ${prato.id})">Adicionar Pontos</button><br>
+                    <button class="btn danger" onclick="deletarCard(${prato.id})">Deletar</button><br>
+                    </div>
+                `;
 
-        cardContent += `
-                <button class="btn primary" onclick="toggleCaixaNumerica(this, ${prato.id})">Preço</button>
-                <button class="btn secondary" onclick="toggleCaixaDesconto(this, ${prato.id})">Desconto</button><br>
-                <button class="btn primary" onclick="toggleCaixaPontos(this, ${prato.id})">Adicionar Pontos</button><br>
-                <button class="btn danger" onclick="deletarCard(${prato.id})">Deletar</button><br>
-                
-            </div>
-        `;
-
-        card.innerHTML = cardContent;
-        cardContainer.appendChild(card);
-    });
+                card.innerHTML = cardContent;
+                cardContainer.appendChild(card);
+            });
+        });
 }
 
-function toggleCaixaNumerica(button, id) {
-    const cardBody = button.parentElement;
+// Função para impedir o recarregamento da página
+function preventFormSubmission(event) {
+    event.preventDefault();
+}
+
+// Função para atualizar os dados no JSON Server
+function atualizarPrato(id, campo, valor) {
+    const updateData = {};
+    updateData[campo] = valor;
+
+    fetch(`${apiURL}/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    })
+        .then(response => response.json())
+        .then(() => console.log(`Atualizado ${campo} para o prato ${id}`))
+        .catch(error => console.error(`Erro ao atualizar ${campo}:`, error));
+}
+
+// Função para alternar a caixa de input de preço
+function toggleCaixaNumerica(event, id) {
+    event.stopPropagation(); // Impede qualquer outro comportamento inesperado
+    const cardBody = event.target.parentElement;
     let input = cardBody.querySelector('.input-preco');
+
     if (input) {
         input.remove();
     } else {
@@ -86,19 +76,25 @@ function toggleCaixaNumerica(button, id) {
         input.type = 'number';
         input.className = 'input-preco';
         input.placeholder = 'Digite o preço';
-        input.oninput = function () {
-            const precoSpan = cardBody.querySelector(`#preco${id}`);
-            precoSpan.textContent = input.value;
-            pratos.find(prato => prato.id === id).preco = parseFloat(input.value);
-            
-        };
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const precoSpan = cardBody.querySelector(`#preco${id}`);
+                precoSpan.textContent = input.value;
+                atualizarPrato(id, 'preco', parseFloat(input.value));
+                input.remove();
+            }
+        });
         cardBody.appendChild(input);
+        input.focus();
     }
 }
 
-function toggleCaixaDesconto(button, id) {
-    const cardBody = button.parentElement;
+// Função para alternar a caixa de input de desconto
+function toggleCaixaDesconto(event, id) {
+    event.stopPropagation();
+    const cardBody = event.target.parentElement;
     let input = cardBody.querySelector('.input-desconto');
+
     if (input) {
         input.remove();
     } else {
@@ -106,94 +102,46 @@ function toggleCaixaDesconto(button, id) {
         input.type = 'number';
         input.className = 'input-desconto';
         input.placeholder = 'Digite o desconto (%)';
-        input.oninput = function () {
-            const descontoSpan = cardBody.querySelector(`#desconto${id}`);
-            const precoSpan = cardBody.querySelector(`#preco${id}`);
-            const precoOriginal = parseFloat(precoSpan.textContent);
-            const desconto = parseFloat(input.value);
-            const precoComDesconto = precoOriginal - (precoOriginal * (desconto / 100));
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const descontoSpan = cardBody.querySelector(`#desconto${id}`);
+                const precoSpan = cardBody.querySelector(`#preco${id}`);
+                const precoOriginal = parseFloat(precoSpan.textContent);
+                const desconto = parseFloat(input.value);
+                const precoComDesconto = precoOriginal - (precoOriginal * (desconto / 100));
 
-            descontoSpan.textContent = `${desconto}% off`;
-            descontoSpan.style.color = 'red';
-            precoSpan.style.textDecoration = 'line-through';
+                descontoSpan.textContent = `${desconto}% off`;
+                let precoNovoSpan = cardBody.querySelector('.preco-novo');
 
-            let precoNovoSpan = cardBody.querySelector('.preco-novo');
-            if (!precoNovoSpan) {
-                precoNovoSpan = document.createElement('span');
-                precoNovoSpan.className = 'preco-novo';
-                precoSpan.parentElement.insertBefore(precoNovoSpan, precoSpan.nextSibling);
+                if (!precoNovoSpan) {
+                    precoNovoSpan = document.createElement('span');
+                    precoNovoSpan.className = 'preco-novo';
+                    precoSpan.parentElement.appendChild(precoNovoSpan);
+                }
+
+                precoNovoSpan.textContent = `R$ ${precoComDesconto.toFixed(2)}`;
+                atualizarPrato(id, 'desconto', desconto);
+                atualizarPrato(id, 'precoComDesconto', precoComDesconto);
+                input.remove();
             }
-            precoNovoSpan.textContent = ` R$ ${precoComDesconto.toFixed(2)}`;
-            precoNovoSpan.style.marginLeft = '10px';
-
-            pratos.find(prato => prato.id === id).desconto = desconto;
-            pratos.find(prato => prato.id === id).precoComDesconto = precoComDesconto;
-            
-        };
+        });
         cardBody.appendChild(input);
+        input.focus();
     }
 }
 
-function toggleCaixaPontos(button, id) {
-    const cardBody = button.parentElement;
-    let input = cardBody.querySelector('.input-pontos');
-    if (input) {
-        input.remove();
-    } else {
-        input = document.createElement('input');
-        input.type = 'number';
-        input.className = 'input-pontos';
-        input.placeholder = 'Digite os pontos';
-        input.oninput = function () {
-            let pontosSpan = cardBody.querySelector(`#pontos${id}`);
-            if (!pontosSpan) {
-                pontosSpan = document.createElement('span');
-                pontosSpan.className = 'pontos';
-                cardBody.appendChild(pontosSpan);
-            }
-            pontosSpan.textContent = `Pontos: ${input.value}`;
-            pratos.find(prato => prato.id === id).pontos = parseInt(input.value, 10);
-            
-        };
-        cardBody.appendChild(input);
-    }
-}
-
-function adicionarCard() {
-    const titulo = document.getElementById('titulo').value;
-    const urlImagem = document.getElementById('urlImagem').value;
-    const preco = parseFloat(document.getElementById('preco').value);
-    const ponto = parseFloat(document.getElementById('ponto').value);
-
-    if (!titulo || !urlImagem || isNaN(preco)) {
-        alert('Preencha todos os campos corretamente!');
-        return;
-    }
-
-    const novoCard = {
-        id: pratos.length + 1,
-        nome: titulo,
-        imagem: urlImagem,
-        preco: preco,
-        desconto: 0,
-        precoComDesconto: null,
-        pontos: ponto
-    };
-
-    pratos.push(novoCard);
-    renderCards();
-    hidePopup();
-    
-}
-
+// Função para deletar um prato
 function deletarCard(id) {
-    pratos = pratos.filter(prato => prato.id !== id);
-    renderCards();
-    
+    fetch(`${apiURL}/${id}`, {
+        method: 'DELETE'
+    })
+        .then(() => {
+            renderCards(); // Atualiza a página sem recarregar
+        })
+        .catch(error => console.error('Erro ao deletar prato:', error));
 }
 
-document.addEventListener('DOMContentLoaded', renderCards);
-
+// Função para exibir e fechar popup de adicionar prato
 function showPopup() {
     document.getElementById('popup').style.display = 'flex';
 }
@@ -201,3 +149,6 @@ function showPopup() {
 function hidePopup() {
     document.getElementById('popup').style.display = 'none';
 }
+
+// Inicializa a renderização dos pratos ao carregar a página
+document.addEventListener('DOMContentLoaded', renderCards);
