@@ -40,6 +40,57 @@ function renderCards() {
             });
         });
 }
+function adicionarCard() {
+    // Captura os valores dos campos do popup
+    const titulo = document.getElementById('titulo').value.trim();
+    const urlImagem = document.getElementById('urlImagem').value.trim();
+    const preco = parseFloat(document.getElementById('preco').value.trim());
+    const pontos = parseInt(document.getElementById('ponto').value.trim());
+
+    // Validação dos campos
+    if (!titulo || !urlImagem || isNaN(preco) || isNaN(pontos)) {
+        alert('Por favor, preencha todos os campos corretamente.');
+        return;
+    }
+
+    // Objeto com os dados do novo card
+    const novoPrato = {
+        nome: titulo,
+        imagem: urlImagem,
+        preco: preco,
+        pontos: pontos,
+        desconto: 0, // Inicialmente sem desconto
+        precoComDesconto: null // Nenhum preço com desconto no início
+    };
+
+    // Envia os dados para o JSON Server
+    fetch(apiURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoPrato)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao adicionar prato.');
+            }
+            return response.json();
+        })
+        .then(() => {
+            // Fecha o popup e limpa os campos
+            hidePopup();
+            document.getElementById('titulo').value = '';
+            document.getElementById('urlImagem').value = '';
+            document.getElementById('preco').value = '';
+            document.getElementById('ponto').value = '';
+
+            // Atualiza os cards na tela
+            renderCards();
+        })
+        .catch(error => console.error('Erro ao adicionar o card:', error));
+}
+
 
 // Função para impedir o recarregamento da página
 function preventFormSubmission(event) {
